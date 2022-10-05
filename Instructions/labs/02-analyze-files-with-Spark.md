@@ -6,7 +6,7 @@ lab:
 
 # <a name="analyze-data-in-a-data-lake-with-spark"></a>使用 Spark 分析 Data Lake 中的数据
 
-Apache Spark is an open source engine for distributed data processing, and is widely used to explore, process, and analyze huge volumes of data in data lake storage. Spark is available as a processing option in many data platform products, including Azure HDInsight, Azure Databricks, and Azure Synapse Analytics on the Microsoft Azure cloud platform. One of the benefits of Spark is support for a wide range of programming languages, including Java, Scala, Python, and SQL; making Spark a very flexible solution for data processing workloads including data cleansing and manipulation, statistical analysis and machine learning, and data analytics and visualization.
+Apache Spark 是用于分布式数据处理的开放源代码引擎，广泛用于探索、处理和分析 Data Lake Storage 中的大量数据。 Spark 在许多数据平台产品中作为处理选项提供，包括 Azure HDInsight、Azure Databricks 和 Microsoft Azure 云平台上的 Azure Synapse Analytics。 Spark 的优点之一是支持各种编程语言，包括 Java、Scala、Python 和 SQL；这让 Spark 一种非常灵活的数据处理工作负载（包括数据清理和操作、统计分析和机器学习以及数据分析和可视化）解决方案。
 
 完成本实验室大约需要 45 分钟。
 
@@ -21,13 +21,13 @@ Apache Spark is an open source engine for distributed data processing, and is wi
 在本练习中，你将组合使用 PowerShell 脚本和 ARM 模板来预配 Azure Synapse Analytics 工作区。
 
 1. 登录到 Azure 门户，地址为 [](https://portal.azure.com)。
-2. Use the <bpt id="p1">**</bpt>[<ph id="ph1">\&gt;</ph>_]<ept id="p1">**</ept> button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a <bpt id="p2">***</bpt>PowerShell<ept id="p2">***</ept> environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
+2. 使用页面顶部搜索栏右侧的 [\>_] 按钮在 Azure 门户中创建新的 Cloud Shell，在出现提示时选择“PowerShell”环境并创建存储。 Cloud Shell 在 Azure 门户底部的窗格中提供命令行界面，如下所示：
 
     ![具有 Cloud Shell 窗格的 Azure 门户](../images/cloud-shell.png)
 
-    > 注意：如果以前创建了使用 Bash 环境的 Cloud shell，请使用 Cloud Shell 窗格左上角的下拉菜单将其更改为 PowerShell。
+    > 注意：如果以前创建了使用 Bash 环境的 Cloud shell，请使用 Cloud Shell 窗格左上角的下拉菜单将其更改为“PowerShell”。
 
-3. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the <bpt id="p1">**</bpt>&amp;#8212;<ept id="p1">**</ept>, <bpt id="p2">**</bpt>&amp;#9723;<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>X<ept id="p3">**</ept> icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the <bpt id="p1">[</bpt>Azure Cloud Shell documentation<ept id="p1">](https://docs.microsoft.com/azure/cloud-shell/overview)</ept>.
+3. 请注意，可以通过拖动窗格顶部的分隔条或使用窗格右上角的 &#8212;、&#9723; 或 X 图标来调整 Cloud Shell 的大小，以最小化、最大化和关闭窗格  。 有关如何使用 Azure Cloud Shell 的详细信息，请参阅 [Azure Cloud Shell 文档](https://docs.microsoft.com/azure/cloud-shell/overview)。
 
 4. 在 PowerShell 窗格中，输入以下命令以克隆此存储库：
 
@@ -48,7 +48,7 @@ Apache Spark is an open source engine for distributed data processing, and is wi
 
     > 注意：请务必记住此密码！
 
-8. Apache Spark 是用于分布式数据处理的开放源代码引擎，广泛用于探索、处理和分析 Data Lake Storage 中的大量数据。
+8. 等待脚本完成 - 此过程通常需要大约 10 分钟；但在某些情况下可能需要更长的时间。 等待时，请查看 Azure Synapse Analytics 文档中的 [Azure Synapse Analytics 中的 Apache Spark](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-overview) 一文。
 
 ## <a name="query-data-in-files"></a>查询文件中的数据
 
@@ -59,19 +59,19 @@ Apache Spark is an open source engine for distributed data processing, and is wi
 1. 脚本完成后，在 Azure 门户中转到创建的 dp500-*xxxxxxx* 资源组，然后选择 Synapse 工作区。
 2. 在 Synapse 工作区“概述”页的“打开 Synapse Studio”卡中，选择“打开”，以在新浏览器标签页中打开 Synapse Studio；如果出现提示，请进行登录  。
 3. 在 Synapse Studio 左侧，使用 &rsaquo;&rsaquo; 图标展开菜单，这将显示 Synapse Studio 中用于管理资源和执行数据分析任务的不同页面。
-4. Spark 在许多数据平台产品中作为处理选项提供，包括 Azure HDInsight、Azure Databricks 和 Microsoft Azure 云平台上的 Azure Synapse Analytics。
+4. 在“管理”页上，选择“Apache Spark 池”选项卡，请注意工作区中已预配名称类似于 spark*xxxxxxx* 的 Spark 池  。 稍后，你将使用此 Spark 池从工作区的 Data Lake Storage 的文件中加载和分析数据。
 5. 在“数据”页上，查看“已链接”选项卡并验证工作区是否包含 Azure Data Lake Storage Gen2 存储帐户的链接，该帐户的名称应类似于 synapsexxxxxxx* (Primary - datalake xxxxxxx*) ** 。
 6. 展开存储帐户，验证它是否包含名为 files 的文件系统容器。
-7. Spark 的优点之一是支持各种编程语言，包括 Java、Scala、Python 和 SQL；这让 Spark 一种非常灵活的数据处理工作负载（包括数据清理和操作、统计分析和机器学习以及数据分析和可视化）解决方案。
+7. 选择“files”容器，并注意它包含名为 sales 和 synapse 的文件夹  。 synapse 文件夹由 Azure Synapse 使用，而 sales 文件夹包含要查询的数据文件 。
 8. 打开 sales 文件夹及其包含的 orders 文件夹，并观察 orders 文件夹中包含具有三年销售数据的 .csv 文件  。
-9. Right-click any of the files and select <bpt id="p1">**</bpt>Preview<ept id="p1">**</ept> to see the data it contains. Note that the files do not contain a header row, so you can unselect the option to display column headers.
+9. 右键单击任一文件，然后选择“预览”以查看它所包含的数据。 请注意，这些文件不包含标题行，因此你可以取消选择显示列标题的选项。
 
 ### <a name="use-spark-to-explore-data"></a>使用 Spark 浏览数据
 
-1. Select any of the files in the <bpt id="p1">**</bpt>orders<ept id="p1">**</ept> folder, and then in the <bpt id="p2">**</bpt>New notebook<ept id="p2">**</ept> list on the toolbar, select <bpt id="p3">**</bpt>Load to DataFrame<ept id="p3">**</ept>. A dataframe is a structure in Spark that represents a tabular dataset.
-2. In the new <bpt id="p1">**</bpt>Notebook 1<ept id="p1">**</ept> tab that opens, in the <bpt id="p2">**</bpt>Attach to<ept id="p2">**</ept> list, select your Spark pool (*<bpt id="p3">*</bpt>spark<ept id="p3">*</ept>xxxxxxx***). Then use the <bpt id="p1">**</bpt>&amp;#9655; Run all<ept id="p1">**</ept> button to run all of the cells in the notebook (there's currently only one!).
+1. 选择 orders 文件夹中的任意文件，然后在工具栏上的“新建笔记本”列表中选择“加载到 DataFrame”  。 数据帧是 Spark 中表示表格数据集的结构。
+2. 在打开的新“笔记本 1”选项卡中的“附加到”列表中，选择 Spark 池 (*sparkxxxxxxx***) 。 然后使用“&#9655; 全部运行”运行笔记本中的所有单元格（目前只有一个！）。
 
-    Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first run in the session can take a few minutes. Subsequent runs will be quicker.
+    由于这是你第一次在此会话中运行 Spark 代码，因此必须启动 Spark 池。 这意味着会话中的第一次运行可能需要几分钟时间。 后续运行速度会更快。
 
 3. 在等待 Spark 会话初始化时，请查看生成的代码；如下所示：
 
@@ -84,8 +84,8 @@ Apache Spark is an open source engine for distributed data processing, and is wi
     display(df.limit(10))
     ```
 
-4. When the code has finished running, review the output beneath the cell in the notebook. It shows the first ten rows in the file you selected, with automatic column names in the form <bpt id="p1">**</bpt>_c0<ept id="p1">**</ept>, <bpt id="p2">**</bpt>_c1<ept id="p2">**</ept>, <bpt id="p3">**</bpt>_c2<ept id="p3">**</ept>, and so on.
-5. Modify the code so that the <bpt id="p1">**</bpt>spark.read.load<ept id="p1">**</ept> function reads data from <bpt id="p2">&lt;u&gt;</bpt>all<ept id="p2">&lt;/u&gt;</ept> of the CSV files in the folder, and the <bpt id="p3">**</bpt>display<ept id="p3">**</ept> function shows the first 100 rows. Your code should look like this (with <bpt id="p1">*</bpt>datalakexxxxxxx<ept id="p1">*</ept> matching the name of your data lake store):
+4. 代码运行完成后，请查看笔记本中单元格下方的输出。 它显示所选文件中的前十行，它们采用 _c0、_c1、_c2 等格式的自动列名  。
+5. 修改代码，使 spark.read.load 函数从文件夹中<u>所有</u> CSV 文件中读取数据，使 display 函数显示前 100 行 。 代码应类似于（datalakexxxxxxx 与 Data Lake Storage 的名称相匹配）：
 
     ```Python
     %%pyspark
@@ -96,9 +96,9 @@ Apache Spark is an open source engine for distributed data processing, and is wi
 
 6. 使用代码单元格左侧的“&#9655;”按钮仅运行该单元格，然后查看结果。
 
-    The dataframe now includes data from all of the files, but the column names are not useful. Spark uses a "schema-on-read" approach to try to determine appropriate data types for the columns based on the data they contain, and if a header row is present in a text file it can be used to identify the column names (by specifying a <bpt id="p1">**</bpt>header=True<ept id="p1">**</ept> parameter in the <bpt id="p2">**</bpt>load<ept id="p2">**</ept> function). Alternatively, you can define an explicit schema for the dataframe.
+    数据帧现包含所有文件的数据，但列名没有用。 Spark 使用“读取时架构”方法来尝试根据列包含的数据确定列的适当数据类型，如果文本文件中存在标题行，则可以使用它来标识列名（方法是在 load 函数中指定 header=True 参数） 。 或者，可以为数据帧定义显式架构。
 
-7. Modify the code as follows (replacing <bpt id="p1">*</bpt>datalakexxxxxxx<ept id="p1">*</ept>), to define an explicit schema for the dataframe that includes the column names and data types. Rerun the code in the cell.
+7. 按如下方式修改代码（替换 datalakexxxxxxx），为包含列名和数据类型的数据帧定义显式架构。 在单元格中重新运行代码。
 
     ```Python
     %%pyspark
@@ -121,13 +121,13 @@ Apache Spark is an open source engine for distributed data processing, and is wi
     display(df.limit(100))
     ```
 
-8. 使用页面顶部搜索栏右侧的 [\>_] 按钮在 Azure 门户中创建新的 Cloud Shell，在出现提示时选择“PowerShell”环境并创建存储。
+8. 在结果下，使用“+ 代码”向笔记本添加一个新的代码单元格。 然后在新单元格中，添加以下代码以显示数据帧的架构：
 
     ```Python
     df.printSchema()
     ```
 
-9. Cloud Shell 在 Azure 门户底部的窗格中提供命令行界面，如下所示：
+9. 运行新单元格并验证数据帧架构是否与定义的 orderSchema 相匹配。 使用具有自动推断的架构的数据帧时，printSchema 函数非常有用。
 
 ## <a name="analyze-data-in-a-dataframe"></a>分析数据帧中的数据
 
@@ -144,10 +144,10 @@ Spark 中的 dataframe 对象类似于 Python 中的 Pandas 数据帧，它包�
     display(customers.distinct())
     ```
 
-2. Run the new code cell, and review the results. Observe the following details:
+2. 运行新的代码单元格，并查看结果。 观察以下详细信息：
     - 对数据帧执行操作时，结果是一个新数据帧（在本例中，是一个新客户数据帧，它是通过从 df 数据帧中选择特定的列子集来创建的） 
     - 数据帧提供 count 和 distinct 等函数，可用于汇总和筛选它们包含的数据 。
-    - The <ph id="ph1">`dataframe['Field1', 'Field2', ...]`</ph> syntax is a shorthand way of defining a subset of column. You can also use <bpt id="p1">**</bpt>select<ept id="p1">**</ept> method, so the first line of the code above could be written as <ph id="ph1">`customers = df.select("CustomerName", "Email")`</ph>
+    - `dataframe['Field1', 'Field2', ...]` 语法是用于定义列子集的快速方法。 还可以使用 select 方法，所以上述代码的第一行可以编写为 `customers = df.select("CustomerName", "Email")`
 
 3. 按如下所示修改代码：
 
@@ -158,7 +158,7 @@ Spark 中的 dataframe 对象类似于 Python 中的 Pandas 数据帧，它包�
     display(customers.distinct())
     ```
 
-4. Run the modified code to view the customers who have purchased the <bpt id="p1">*</bpt>Road-250 Red, 52<ept id="p1">*</ept> product. Note that you can "chain" multiple functions together so that the output of one function becomes the input for the next - in this case, the dataframe created by the <bpt id="p1">**</bpt>select<ept id="p1">**</ept> method is the source dataframe for the <bpt id="p2">**</bpt>where<ept id="p2">**</ept> method that is used to apply filtering criteria.
+4. 运行修改后的代码来查看已购买 Road-250 Red, 52 产品的客户。 请注意，可以“链接”多个函数，使一个函数的输出成为下一个函数的输入；在这种情况下，由 select 方法创建的数据帧是用于应用筛选条件的 where 方法的源数据帧 。
 
 ### <a name="aggregate-and-group-data-in-a-dataframe"></a>在数据帧中对数据进行聚合和分组
 
@@ -169,7 +169,7 @@ Spark 中的 dataframe 对象类似于 Python 中的 Pandas 数据帧，它包�
     display(productSales)
     ```
 
-2. 请注意，可以通过拖动窗格顶部的分隔条或使用窗格右上角的 &#8212;、&#9723; 或 X 图标来调整 Cloud Shell 的大小，以最小化、最大化和关闭窗格  。
+2. 运行添加的代码单元格，并注意结果显示按产品分组的订单数量之和。 groupBy 方法按“项”对行进行分组，随后将 sum 聚合函数应用于所有剩余的数值列（在本例中为“数量”）
 
 3. 在笔记本中再次新增一个代码单元格，并在其中输入以下代码：
 
@@ -178,15 +178,15 @@ Spark 中的 dataframe 对象类似于 Python 中的 Pandas 数据帧，它包�
     display(yearlySales)
     ```
 
-4. 有关如何使用 Azure Cloud Shell 的详细信息，请参阅 [Azure Cloud Shell 文档](https://docs.microsoft.com/azure/cloud-shell/overview)。
+4. 运行添加的代码单元格，并注意结果显示每年的销售订单数。 请注意，select 方法包括一个 SQL year 函数，它用于提取 OrderDate 字段的年份部分，然后 alias 方法用于为提取的年份值分配一个列名称 。 接下来，按派生的“年份”列对数据进行分组，并计算每个组中的行计数，最后使用 orderBy 方法对生成的数据帧进行排序。
 
 ## <a name="query-data-using-spark-sql"></a>使用 Spark SQL 查询数据
 
-As you've seen, the native methods of the dataframe object enable you to query and analyze data quite effectively. However, many data analysts are more comfortable working with SQL syntax. Spark SQL is a SQL language API in Spark that you can use to run SQL statements, or even persist data in relational tables.
+如你所见，dataframe 对象的本机方法能让你非常有效地查询和分析数据。 但是，许多数据分析师更习惯使用 SQL 语法。 Spark SQL 是 Spark 中的 SQL 语言 API，可用于运行 SQL 语句，甚至可将数据保存在关系表中。
 
 ### <a name="use-spark-sql-in-pyspark-code"></a>在 PySpark 代码中使用 Spark SQL
 
-The default language in Azure Synapse Studio notebooks is PySpark, which is a Spark-based Python runtime. Within this runtime, you can use the <bpt id="p1">**</bpt>spark.sql<ept id="p1">**</ept> library to embed Spark SQL syntax within your Python code, and work with SQL constructs such as tables and views.
+Azure Synapse Studio 笔记本中的默认语言是 PySpark，它是一个基于 Spark 的 Python 运行时。 在此运行时中，可以使用 spark.sql 库将 Spark SQL 语法嵌入到 Python 代码中，并处理表和视图等 SQL 构造。
 
 1. 在笔记本中新增一个代码单元格，并在其中输入以下代码：
 
@@ -197,8 +197,8 @@ The default language in Azure Synapse Studio notebooks is PySpark, which is a Sp
     display(spark_df)
     ```
 
-2. Run the cell and review the results. Observe that:
-    - The code persists the data in the <bpt id="p1">**</bpt>df<ept id="p1">**</ept> dataframe as a temporary view named <bpt id="p2">**</bpt>salesorders<ept id="p2">**</ept>. Spark SQL supports the use of temporary views or persisted tables as sources for SQL queries.
+2. 运行单元格并查看结果。 观察以下情况：
+    - 代码将 df 数据帧中的数据保存为名为 salesorders 的临时视图 。 Spark SQL 支持使用临时视图或永久性表作为 SQL 查询的源。
     - 然后，使用 spark.sql 方法对 salesorders 视图运行 SQL 查询 。
     - 查询结果存储在数据帧中。
 
@@ -217,7 +217,7 @@ The default language in Azure Synapse Studio notebooks is PySpark, which is a Sp
     ORDER BY OrderYear;
     ```
 
-2. Run the cell and review the results. Observe that:
+2. 运行单元格并查看结果。 观察以下情况：
     - 单元格开头的 `%%sql` 行（称为 magic）指示应使用 Spark SQL 语言运行时来运行此单元格中的代码，而不是 PySpark。
     - SQL 代码引用以前使用 PySpark 创建的 salesorder 视图。
     - SQL 查询的输出将自动显示为单元格下的结果。
@@ -226,7 +226,7 @@ The default language in Azure Synapse Studio notebooks is PySpark, which is a Sp
 
 ## <a name="visualize-data-with-spark"></a>使用 Spark 直观呈现数据
 
-A picture is proverbially worth a thousand words, and a chart is often better than a thousand rows of data. While notebooks in Azure Synapse Analytics include a built in chart view for data that is displayed from a dataframe or Spark SQL query, it is not designed for comprehensive charting. However, you can use Python graphics libraries like <bpt id="p1">**</bpt>matplotlib<ept id="p1">**</ept> and <bpt id="p2">**</bpt>seaborn<ept id="p2">**</ept> to create charts from data in dataframes.
+众所周知，一张图片胜过千言万语，而图表通常胜过千行数据。 虽然 Azure Synapse Analytics 中的笔记本包含一个内置图表视图，用于从数据帧或 Spark SQL 查询显示的数据，但它并非专为全面的图表而设计。 但是，可以使用 Python 图形库（如 matplotlib 和 seaborn）根据数据帧中的数据创建图表 。
 
 ### <a name="view-results-as-a-chart"></a>以图表形式查看结果
 
@@ -239,7 +239,7 @@ A picture is proverbially worth a thousand words, and a chart is often better th
 
 2. 运行代码并观察它是否从之前创建的 salesorders 视图返回数据。
 3. 在单元格下方的结果部分中，将“视图”选项从“表格”更改为“图表”  。
-4. 等待脚本完成 - 此过程通常需要大约 10 分钟；但在某些情况下可能需要更长的时间。
+4. 使用图表右上角的“视图选项”按钮显示图表的选项窗格。 然后按如下方式设置选项并选择“应用”：
     - **图表类型**：条形图
     - **键**：项
     - **值**：数量
@@ -267,7 +267,7 @@ A picture is proverbially worth a thousand words, and a chart is often better th
 
 2. 运行代码并观察它是否返回包含年收入的 Spark 数据帧。
 
-    等待时，请查看 Azure Synapse Analytics 文档中的 [Azure Synapse Analytics 中的 Apache Spark](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-overview) 一文。
+    若要将数据可视化为图表，要首先使用 matplotlib Python 库。 此库是其他许多库所基于的核心绘图库，在创建图表方面提供了极大的灵活性。
 
 3. 在笔记本中新增一个代码单元格，并在其中添加以下代码：
 
@@ -284,9 +284,9 @@ A picture is proverbially worth a thousand words, and a chart is often better th
     plt.show()
     ```
 
-4. Run the cell and review the results, which consist of a column chart with the total gross revenue for each year. Note the following features of the code used to produce this chart:
+4. 运行单元格并查看结果，结果中包含每年总收入的柱形图。 请注意用于生成此图表的代码的以下功能：
     - matplotlib 库需要 Pandas 数据帧，因此需要将 Spark SQL 查询返回的 Spark 数据帧转换为此格式 。
-    - At the core of the <bpt id="p1">**</bpt>matplotlib<ept id="p1">**</ept> library is the <bpt id="p2">**</bpt>pyplot<ept id="p2">**</ept> object. This is the foundation for most plotting functionality.
+    - matplotlib 库的核心是 pyplot 对象 。 这是大多数绘图功能的基础。
     - 默认设置会生成一个可用图表，但它有很大的自定义空间
 
 5. 修改代码以绘制图表，如下所示：
@@ -309,9 +309,9 @@ A picture is proverbially worth a thousand words, and a chart is often better th
     plt.show()
     ```
 
-6. Re-run the code cell and view the results. The chart now includes a little more information.
+6. 重新运行代码单元格并查看结果。 图表现在包含更多信息。
 
-    A plot is technically contained with a <bpt id="p1">**</bpt>Figure<ept id="p1">**</ept>. In the previous examples, the figure was created implicitly for you; but you can create it explicitly.
+    严格来说，绘图包含图。 在前面的示例中，图是隐式创建的；但也可以显式创建它。
 
 7. 修改代码以绘制图表，如下所示：
 
@@ -336,7 +336,7 @@ A picture is proverbially worth a thousand words, and a chart is often better th
     plt.show()
     ```
 
-8. Re-run the code cell and view the results. The figure determines the shape and size of the plot.
+8. 重新运行代码单元格并查看结果。 图确定绘图的形状和大小。
 
     图可以包含多个子图，每个子图都其自己的轴上。
 
@@ -366,13 +366,13 @@ A picture is proverbially worth a thousand words, and a chart is often better th
     plt.show()
     ```
 
-10. Re-run the code cell and view the results. The figure contains the subplots specified in the code.
+10. 重新运行代码单元格并查看结果。 图包含代码中指定的子图。
 
 > 注意：若要详细了解如何使用 matplotlib 绘图，请参阅 [matplotlib 文档](https://matplotlib.org/)。
 
 ### <a name="use-the-seaborn-library"></a>使用 seaborn 库
 
-While <bpt id="p1">**</bpt>matplotlib<ept id="p1">**</ept> enables you to create complex charts of multiple types, it can require some complex code to achieve the best results. For this reason, over the years, many new libraries have been built on the base of matplotlib to abstract its complexity and enhance its capabilities. One such library is <bpt id="p1">**</bpt>seaborn<ept id="p1">**</ept>.
+虽然 matplotlib 可创建多种类型的复杂图表，但它可能需要一些复杂的代码才能获得最佳结果。 因此，多年来，许多新库都建立在 matplotlib 的基础之上，移除了其复杂性，增强了其功能。 seaborn 就是这样的一种库。
 
 1. 在笔记本中新增一个代码单元格，并在其中输入以下代码：
 

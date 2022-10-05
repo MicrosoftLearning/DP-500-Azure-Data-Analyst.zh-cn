@@ -20,7 +20,7 @@ lab:
 
 ## <a name="get-started"></a>入门
 
-在本练习中，你将准备环境。
+在本练习中，需要准备好环境。
 
 ### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
 
@@ -41,11 +41,11 @@ lab:
     
     `git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst DP500`
    
-1. When the repository has been cloned, open the D drive in the file explorer to ensure the files have been downloaded. Do not close the command prompt window, you will use it in the next task, Deploy an Azure SQL Database.
+1. 克隆存储库后，在文件资源管理器中打开 D 驱动器，以确保文件已下载。 “关闭命令提示符”窗口。
 
 ### <a name="deploy-an-azure-sql-database"></a>部署 Azure SQL 数据库 
 
-In this task, you'll create an Azure SQL database that you'll use as a data source for Power BI. Running the setup script will create the Azure SQL database server and load the AdventureWorksDW2022 database.
+在此任务中，你将创建一个 Azure SQL 数据库，该数据库将用作 Power BI 的数据源。 运行安装脚本就会创建 Azure SQL 数据库服务器并加载 AdventureWorksDW2022 数据库。
 
 1. 若要打开“文件资源管理器”，请选择任务栏上的“文件资源管理器”快捷方式。
 
@@ -54,7 +54,7 @@ In this task, you'll create an Azure SQL database that you'll use as a data sour
 2. 转到 D:\DP500\Allfiles\10 文件夹。
 
 3. 双击以打开 setup2.ps1 文件脚本。
-    - Read through the script in notepad if you're interested in understanding what resources the script is setting up. The lines beginning with # denote what the script is doing.
+    - 如果有兴趣了解脚本正在设置的资源，请在记事本中阅读该脚本。 以 # 开头的行表示脚本正在执行的操作。
     - 关闭脚本。
 
 5. 在任务栏上的搜索框中，键入 `PowerShell`.  
@@ -76,7 +76,7 @@ In this task, you'll create an Azure SQL database that you'll use as a data sour
 
     ![](../images/powershell-script.png)
 
-2. When prompted, enter your <bpt id="p1">**</bpt>Azure account username<ept id="p1">**</ept>, <bpt id="p2">**</bpt>password<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>resource group name<ept id="p3">**</ept>. Press <bpt id="p1">**</bpt>Enter<ept id="p1">**</ept>. 
+2. 出现提示时，输入 Azure 帐户用户名、密码资和源组名称  。 按 **Enter**。 
 
     ![](../images/powershell-enter-account-info.png)
 
@@ -87,7 +87,7 @@ In this task, you'll create an Azure SQL database that you'll use as a data sour
 
 ### <a name="set-up-the-azure-sql-database"></a>设置 Azure SQL 数据库
 
-In this task, you will set up the Azure SQL Database to allow connections from your virtual machine's (VM's) IP address. This script will take about 10 minutes to run after you enter your username, password, and resource group.
+在此任务中，将设置 Azure SQL 数据库，以便从虚拟机的 (VM) IP 地址建立连接。 输入用户名、密码和资源组后，此脚本大约需要 10 分钟才能运行。
 
 1. 在 Web 浏览器中，转到 https://portal.azure.com。
 
@@ -115,7 +115,7 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image12.png)
 
-8. Keep the Azure portal web browser session open. You will need to copy the database connection string in the <bpt id="p1">**</bpt>Set up Power BI Desktop task<ept id="p1">**</ept>.
+8. 使 Azure 门户 Web 浏览器会话保持打开状态。 需要在“设置 Power BI Desktop任务”中复制数据库连接字符串。
 
 ### <a name="set-up-the-power-bi-service"></a>设置 Power BI 服务
 
@@ -139,17 +139,17 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
 5. 执行所有剩余任务以完成试用设置。
 
-    提示：Power BI Web 浏览器体验称为 Power BI 服务**。
+    提示：Power BI Web 浏览器体验被称为 Power BI 服务。
 
 ### <a name="create-a-workspace"></a>创建工作区
 
 在此任务中，你将创建一个工作区。
 
-1. 若要在 Power BI 服务中创建工作区，请在“导航”窗格中（位于左侧），选择“工作区”，然后选择“创建工作区”。  
+1. 若要在 Power BI 服务中创建工作区，请在“导航”窗格中（位于左侧）选择“工作区”，然后选择“创建工作区”  。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image3.png)
 
-2. 在“创建工作区”窗格（位于右侧）的“工作区名称”框中，输入工作区的名称。 
+2. 在“创建工作区”窗格（位于右侧）的“工作区名称”框中，输入工作区的名称 。
 
     工作区名称在租户内必须唯一
 
@@ -191,7 +191,7 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image15.png)
 
-6. In the <bpt id="p1">**</bpt>SQL Server database<ept id="p1">**</ept> window, in the <bpt id="p2">**</bpt>Server<ept id="p2">**</ept> box, replace the text with the lab Azure SQL Database server. This is located in the Azure portal, SQL databases.
+6. 在“SQL Server 数据库”窗口中的“服务器”框中，将文本替换为实验室 Azure SQL 数据库服务器。  这位于 SQL Azure 门户 SQL 数据库中。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image15a.png)
 
@@ -215,7 +215,7 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image15b.png)
 
-11.  Select <bpt id="p1">**</bpt>OK<ept id="p1">**</ept>.
+11.  选择“确定”。
     ![](../images/dp500-improve-performance-with-hybrid-tables-image19.png)
 
 12. 在“数据源设置”窗口中，选择“关闭”。 
@@ -234,7 +234,7 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
 17. 选择“保存”。
 
-18. If you're not already signed in, at the top-right corner of Power BI Desktop, select <bpt id="p1">**</bpt>Sign In<ept id="p1">**</ept>. Use the lab credentials to complete the sign in process.
+18. 如果尚未登录，请在 Power BI Desktop 右上角选择“登录”。 使用实验室凭据完成登录过程。
 
     重要说明：必须使用登录 Power BI 服务的相同凭据。
 
@@ -446,11 +446,15 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image54.png)
 
-5. 在窗口中，TBC
+5. 在窗口中输入用户名和密码，并将隐私级别设置为“组织”。
+       
+    用户名：`sqladmin`
 
-6. TODO：屏幕截图
+    密码：`P@ssw0rd01`
 
-7. 选择“登录”。
+    ![](../images/dp500-improve-performance-with-hybrid-tables-image54b.png)
+
+6. 选择“登录”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image55.png)
 
@@ -566,7 +570,7 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image70.png)
 
-5. 在“连接到服务器”窗口中，确保“服务器名称”下拉列表设置为实验室 Azure SQL 数据库服务器。 
+5. 在“连接到数据库引擎”窗口中，确保“服务器名称”下拉列表设置为实验室 Azure SQL 数据库服务器 。
 
 6. 在“身份验证”下拉列表中，选择“Azure Active Directory - 密码”。 
 
