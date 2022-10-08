@@ -10,7 +10,7 @@ lab:
 
 **预估完成本实验室需要 45 分钟**
 
-In this lab, you will work with model relationships specifically to address the need for role-playing dimensions. It will involve working with active and inactive relationships, and also Data Analysis Expressions (DAX) functions that modify relationship behavior.
+在本实验室中，你将专门使用模型关系来满足角色扮演维度的需求。 它将涉及使用活动和非活动关系，以及用于修改关系行为的数据分析表达式 (DAX) 函数。
 
 在此实验室中，你将了解如何完成以下操作：
 
@@ -22,7 +22,7 @@ In this lab, you will work with model relationships specifically to address the 
 
 ## <a name="explore-model-relationships"></a>探索模型关系
 
-In this exercise, you will open a pre-developed Power BI Desktop solution to learn about the data model. You will then explore the behavior of active model relationships.
+在本练习中，你将打开预先开发的 Power BI Desktop 解决方案来了解数据模型。 然后，你将探索活动模型关系的行为。
 
 ## <a name="get-started"></a>入门
 ### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
@@ -71,7 +71,7 @@ In this exercise, you will open a pre-developed Power BI Desktop solution to lea
 
 在此任务中，你将查看数据模型。
 
-1. 在 Power BI Desktop 中的左侧部分切换到“模型”视图。
+1. 在 Power BI Desktop 左侧，切换到“模型”视图。
 
     ![](../images/dp500-work-with-model-relationships-image2.png)
 
@@ -441,7 +441,7 @@ In this exercise, you will open a pre-developed Power BI Desktop solution to lea
 
 ### <a name="finish-up"></a>完成
 
-在此任务中，你将完成操作。
+在此任务中，你将完成以下操作。
 
 1. 保存 Power BI Desktop 文件。
 

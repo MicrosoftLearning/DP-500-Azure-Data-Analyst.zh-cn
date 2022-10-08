@@ -4,7 +4,7 @@
 
 **预估完成本实验室需要 45 分钟**
 
-In this lab, you will use Power BI Report Builder to develop a pixel-perfect paginated report layout that sources data from the <bpt id="p1">**</bpt>AdventureWorksDW2022-DP500<ept id="p1">**</ept> SQL Server database. You will then create a data source and dataset, and also configure a report parameter. The report layout will allow data to render over multiple pages and to be exported in PDF and other formats.
+在此实验室中，使用 Power BI Report Builder 开发一个从 AdventureWorksDW2022-DP500 SQL Server 数据库中获取数据的像素完美分页报表布局。 然后创建数据源和数据集，并配置报表参数。 报表布局可使数据呈现在多个页面上，并以 PDF 格式和其他格式导出。
 
 最终报表如下所示：
 

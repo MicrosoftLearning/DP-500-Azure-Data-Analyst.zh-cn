@@ -10,7 +10,7 @@ lab:
 
 **预估完成本实验室需要 45 分钟**
 
-In this lab, you will create a specialized Power BI dataset that extends a core dataset. The specialized dataset will enable the analysis of US sales per capita.
+在本实验室中，你将创建可扩展核心数据集的专用 Power BI 数据集。 专用数据集将能够分析美国人均销售额。
 
 在此实验室中，你将了解如何完成以下操作：
 
@@ -22,11 +22,11 @@ In this lab, you will create a specialized Power BI dataset that extends a core 
 
 ## <a name="get-started"></a>入门
 
-在本练习中，你将准备环境。
+在本练习中，需要准备好环境。
 
 ### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
 
-1. 在“开始”菜单上打开命令提示符
+1. 在“开始”菜单上，打开“命令提示符”
 
     ![](../images/command-prompt.png)
 
@@ -69,7 +69,7 @@ In this lab, you will create a specialized Power BI dataset that extends a core 
 
 5. 执行所有剩余任务以完成试用设置。
 
-    提示：Power BI Web 浏览器体验被称为 Power BI 服务**。
+    提示：Power BI Web 浏览器体验被称为 Power BI 服务。
 
 ### <a name="create-a-workspace"></a>创建工作区
 
@@ -80,7 +80,7 @@ In this lab, you will create a specialized Power BI dataset that extends a core 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image3.png)
 
 
-2. 在“创建工作区”窗格（位于右侧）的“工作区名称”框中，输入工作区的名称。 
+2. 在“创建工作区”窗格（位于右侧）的“工作区名称”框中，输入工作区的名称 。
 
     工作区名称在租户内必须是唯一的。
 
@@ -104,7 +104,7 @@ In this lab, you will create a specialized Power BI dataset that extends a core 
 
 3. 若要打开预先开发的 Power BI Desktop 文件，请双击“Sales Analysis - Create reusable Power BI artifacts.pbix”文件。
 
-4. If you're not already signed in, at the top-right corner of Power BI Desktop, select <bpt id="p1">**</bpt>Sign In<ept id="p1">**</ept>. Use the lab credentials to complete the sign in process.
+4. 如果尚未登录，请在 Power BI Desktop 右上角选择“登录”。 使用实验室凭据完成登录过程。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image7.png)
 
@@ -112,7 +112,7 @@ In this lab, you will create a specialized Power BI dataset that extends a core 
 
 在此任务中，你将查看数据模型。
 
-1. 在 Power BI Desktop 中的左侧部分切换到“模型”视图。
+1. 在 Power BI Desktop 左侧，切换到“模型”视图。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image8.png)
 
@@ -150,7 +150,7 @@ In this lab, you will create a specialized Power BI dataset that extends a core 
 
 ## <a name="create-a-specialized-dataset"></a>创建专用数据集
 
-In this exercise, you will create a specialized dataset to allow the analysis of US sales per capita. Because the core dataset doesn't contain population values, you will add a new table to extend the model.
+在本练习中，你将创建一个专用数据集，以便分析美国人均销售额。 因为核心数据集不包含总体值，所以需添加新表以扩展模型。
 
 ### <a name="create-a-live-connection"></a>创建实时连接
 
@@ -217,7 +217,7 @@ In this exercise, you will create a specialized dataset to allow the analysis of
     ![](../images/dp500-create-reusable-power-bi-artifacts-image25.png)
 
     *注意：如果未看到更改此模型的选项，则需要启用预览功能：适用于 PBI 数据集和 AS 的 DirectQuery*
-    - Navigate to <bpt id="p1">**</bpt>File<ept id="p1">**</ept><ph id="ph1"> &gt; </ph><bpt id="p2">**</bpt>Options and settings<ept id="p2">**</ept><ph id="ph2"> &gt; </ph><bpt id="p3">**</bpt>Options<ept id="p3">**</ept>, and in the Preview features section, select the DirectQuery for Power BI datasets and Analysis Services checkbox to enable this preview feature. You may need to restart Power BI Desktop for the change to take effect. 
+    - 请导航至“文件” > “选项和设置” > “选项”，然后在“预览功能”部分，选中“适用于 Power BI 数据集和 Analysis Services 的 DirectQuery”复选框来启用此预览功能  。 可能需要重新启动 Power BI Desktop 以使更改生效。 
 
 2. 出现提示时，请阅读对话框窗口消息，然后选择“添加本地模型”。
 

@@ -6,7 +6,7 @@ lab:
 
 # <a name="setup-local-lab-environment"></a>设置本地实验室环境
 
-Ideally, you should complete these labs in a hosted lab environment. If you want to complete them on your own computer, you can do so by installing the following software. You may experience unexpected dialogs and behavior when using your own environment. Due to the wide range of possible local configurations, the course team cannot support issues you may encounter in your own environment.
+理想情况下，应在托管实验室环境中完成这些实验室。 如果要在你自己的计算机上完成它们，可以通过安装以下软件来完成。 使用自己的环境时，可能会遇到意外的对话和行为。 由于可能的本地配置的范围很广，因此课程团队可能无法解决你在自己的环境中遇到的问题。
 
 可在 [GitHub](https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst/tree/main/Allfiles/00-Setup) 上找到设置详细信息和数据库备份文件。
 
@@ -38,7 +38,7 @@ Ideally, you should complete these labs in a hosted lab environment. If you want
 
 ### <a name="power-bi-desktop"></a>Power BI Desktop
 
-1. Download and install from the Microsoft store. If you do not have access to the Microsoft store, download from the <bpt id="p1">[</bpt>web<ept id="p1">](https://www.microsoft.com/download/details.aspx?id=58494)</ept>.
+1. 从 Microsoft Store 下载并安装。 如果你无权访问 Microsoft Store，请从 [Web](https://www.microsoft.com/download/details.aspx?id=58494) 下载。
 
     - 使用安装程序中的默认选项。
 

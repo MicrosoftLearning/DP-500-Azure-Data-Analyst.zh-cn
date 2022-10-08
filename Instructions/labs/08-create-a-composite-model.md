@@ -22,11 +22,11 @@ lab:
 
 ## <a name="get-started"></a>入门
 
-在本练习中，你将准备环境。
+在本练习中，需要准备好环境。
 
 ### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
 
-1. 在开始菜单上，打开命令提示符
+1. 在“开始”菜单上，打开“命令提示符”
 
     ![](../images/command-prompt.png)
 
@@ -61,7 +61,7 @@ lab:
 
 1. 出现批准潜在安全风险的提示时，请选择“确定”。
 
-1. Enter the SQLServerInstance, SqlServerDatabase, and Culture as provided below. Select <bpt id="p1">**</bpt>Load<ept id="p1">**</ept>.
+1. 输入如下所示的 SQLServerInstance、SqlServerDatabase 和 Culture。 选择“加载”。
 
     SqlServerInstance = ```localhost```
 
@@ -77,9 +77,9 @@ lab:
 
 1. 在“原生数据库查询”窗口中，选择“运行”。
 
-1. Save the file. On the <bpt id="p1">**</bpt>File<ept id="p1">**</ept> ribbon tab, select <bpt id="p2">**</bpt>Save as<ept id="p2">**</ept>.
+1. 保存文件。 在“文件”功能区选项卡上，选择“另存为” 。
 
-1. In the <bpt id="p1">**</bpt>Save As<ept id="p1">**</ept> window, go to the <bpt id="p2">**</bpt>D:\DP500\Allfiles\08\MySolution<ept id="p2">**</ept> folder. The file name is Sales Analysis - Create a composite model.pbix.
+1. 在“另存为”窗口中，转到 D:\DP500\Allfiles\08\MySolution 文件夹 。 文件名为“Sales Analysis - Create a composite model.pbix”。
 
 1. 选择“保存”。
 

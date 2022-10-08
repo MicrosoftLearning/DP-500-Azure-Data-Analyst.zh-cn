@@ -10,7 +10,7 @@ lab:
 
 完成本实验室预计需要 30 分钟
 
-In this lab, you will configure a report to use automatic page refresh. That way, it will be possible for report consumers to monitor real-time internet sales results.
+在本实验室中，你将报表配置为使用自动页面刷新。 这样，报表使用者就可以实时监视 Internet 销售结果。
 
 在此实验室中，你将了解如何完成以下操作：
 
@@ -22,7 +22,7 @@ In this lab, you will configure a report to use automatic page refresh. That way
 
 ## <a name="get-started"></a>入门
 
-在本练习中，你将准备环境。
+在本练习中，需要准备好环境。
 
 ### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
 
@@ -55,7 +55,7 @@ In this lab, you will configure a report to use automatic page refresh. That way
 
     ![](../images/dp500-monitor-data-in-real-time-image1.png)
 
-2. In the <bpt id="p1">**</bpt>Connect to Server<ept id="p1">**</ept> window, ensure that the <bpt id="p2">**</bpt>Server name<ept id="p2">**</ept> dropdown list is set to <bpt id="p3">**</bpt>localhost<ept id="p3">**</ept>, and that the Authentication dropdown list is set to <bpt id="p4">**</bpt>Windows Authentication<ept id="p4">**</ept>.
+2. 在“连接到服务器”窗口中，确保“服务器名称”下拉列表设置为 localhost，并且“身份验证”下拉列表设置为 Windows 身份验证   。
     ![](../images/dp500-monitor-data-in-real-time-image2.png)
 
 3. 选择“连接”。
@@ -236,7 +236,7 @@ In this lab, you will configure a report to use automatic page refresh. That way
 
 ### <a name="finish-up"></a>完成
 
-在此任务中，你将完成操作。
+在此任务中，你将完成以下操作。
 
 1. 保存 Power BI Desktop 文件。
 

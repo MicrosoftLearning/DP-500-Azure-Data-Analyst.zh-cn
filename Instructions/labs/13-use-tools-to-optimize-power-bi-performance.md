@@ -21,7 +21,7 @@ lab:
 ## <a name="get-started"></a>入门
 ### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
 
-1. 在开始菜单上，打开命令提示符
+1. 在“开始”菜单上，打开“命令提示符”
 
     ![](../images/command-prompt.png)
 
@@ -44,7 +44,7 @@ lab:
 
 ## <a name="use-best-practice-analyzer"></a>使用最佳做法分析器
 
-In this exercise, you will install Tabular Editor 2 and load Best Practice Analyzer (BPA) rules. You will review the BPA rules, and then address specific issues found in the data model.
+在本练习中，你将安装表格编辑器 2 并加载最佳做法分析器 (BPA) 规则。 你将查看 BPA 规则，然后解决在数据模型中发现的具体问题。
 
 *BPA 是一款免费的第三方工具，可提醒你潜在的建模错误或可作出哪些更改来改进模型设计和性能。它包括关于命名、用户体验和常用优化的建议，你可以应用这些建议来提高性能。有关详细信息，请参阅[提高模型性能的最佳做法规则](https://powerbi.microsoft.com/blog/best-practice-rules-to-improve-your-models-performance/)。*
 
@@ -63,7 +63,7 @@ In this exercise, you will install Tabular Editor 2 and load Best Practice Analy
 
     ```https://github.com/TabularEditor/TabularEditor/releases```
     
-1. Scroll down to the <bpt id="p1">**</bpt>Assets<ept id="p1">**</ept> section and select the <bpt id="p2">**</bpt>TabularEditor.Installer.msi<ept id="p2">**</ept> file. This will initiate the file install.
+1. 向下滚动到“资产”部分，然后选择 TabularEditor.Installer.msi 文件 。 该操作将启动文件安装。
 
 1. 完成后，选择“打开文件”以运行安装程序。
 
@@ -308,8 +308,8 @@ In this exercise, you will install Tabular Editor 2 and load Best Practice Analy
 
     ```https://daxstudio.org/downloads/```
     
-1. Select <bpt id="p1">**</bpt>DAX Studio v.2.x.x (installer)<ept id="p1">**</ept> - this will initiate the file install.
-    <bpt id="p1">*</bpt>note: The version of DAX studio will change slightly over time. Download the latest release.<ept id="p1">*</ept>
+1. 选择“DAX Studio v.2.x.x (安装程序)”- 这将启动文件安装。
+                    注意：随着时间的推移，DAX Studio 的版本会略有变化。请下载最新版本。
 
 1. 完成后，选择“打开文件”以运行安装程序。
 
@@ -333,8 +333,8 @@ In this exercise, you will install Tabular Editor 2 and load Best Practice Analy
     ![图形用户界面，应用程序 自动生成的描述](../images/dp500-use-tools-to-optimize-power-bi-performance-image31e.png)
 1. 选择“安装”  。
 
-1. Upon completion, with <bpt id="p1">**</bpt>Launch DAX Studio<ept id="p1">**</ept> selected, select <bpt id="p2">**</bpt>Finish<ept id="p2">**</ept>. This will open DAX Studio.
-    <ph id="ph1">![</ph>Graphical user interface, application Description automatically generated<ph id="ph2">](../images/dp500-use-tools-to-optimize-power-bi-performance-image31f.png)</ph>
+1. 完成后，在选中“启动 DAX Studio”后，选择“完成” 。 这将打开 DAX Studio。
+    ![图形用户界面，应用程序 自动生成的描述](../images/dp500-use-tools-to-optimize-power-bi-performance-image31f.png)
 
 1. 在“连接”窗口中，选择“PBI/SSDT 模型”选项 。
 

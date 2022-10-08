@@ -10,7 +10,7 @@ lab:
 
 **预估完成本实验室需要 45 分钟**
 
-In this lab, you will create a dataflow to deliver date dimension data sourced from the Azure Synapse Adventure Works data warehouse. The dataflow will provide a consistent definition of date-related data for use by the organization's business analysts.
+在本实验室中，你将创建一个数据流来提供源自 Azure Synapse Adventure Works 数据仓库的日期维度数据。 该数据流将提供与日期相关的数据的一致定义，供组织的业务分析师使用。
 
 在此实验室中，你将了解如何完成以下操作：
 
@@ -27,13 +27,13 @@ In this lab, you will create a dataflow to deliver date dimension data sourced f
    > 注意：如果已使用 git 克隆将数据加载到 Azure Synapse Analytics 中，则可以跳过此任务并继续“设置 Power BI” 。
 
 1. 使用 VM 右侧“资源”选项卡上的登录信息登录到 [Azure 门户](https://portal.azure.com)。
-2. Use the <bpt id="p1">**</bpt>[<ph id="ph1">\&gt;</ph>_]<ept id="p1">**</ept> button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a <bpt id="p2">***</bpt>PowerShell<ept id="p2">***</ept> environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
+2. 使用页面顶部搜索栏右侧的 [\>_] 按钮在 Azure 门户中创建新的 Cloud Shell，在出现提示时选择“PowerShell”环境并创建存储。 Cloud Shell 在 Azure 门户底部的窗格中提供命令行界面，如下所示：
 
     ![具有 Cloud Shell 窗格的 Azure 门户](../images/cloud-shell.png)
 
     > 注意：如果以前创建了使用 Bash 环境的 Cloud shell，请使用 Cloud Shell 窗格左上角的下拉菜单将其更改为“PowerShell”。
 
-3. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the <bpt id="p1">**</bpt>&amp;#8212;<ept id="p1">**</ept>, <bpt id="p2">**</bpt>&amp;#9723;<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>X<ept id="p3">**</ept> icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the <bpt id="p1">[</bpt>Azure Cloud Shell documentation<ept id="p1">](https://docs.microsoft.com/azure/cloud-shell/overview)</ept>.
+3. 请注意，可以通过拖动窗格顶部的分隔条或使用窗格右上角的 &#8212;、&#9723; 或 X 图标来调整 Cloud Shell 的大小，以最小化、最大化和关闭窗格  。 有关如何使用 Azure Cloud Shell 的详细信息，请参阅 [Azure Cloud Shell 文档](https://docs.microsoft.com/azure/cloud-shell/overview)。
 
 4. 在 PowerShell 窗格中，输入以下命令以克隆此存储库：
 
@@ -55,7 +55,7 @@ In this lab, you will create a dataflow to deliver date dimension data sourced f
 
 7. 等待脚本完成 - 这通常需要大约 20 分钟；但在某些情况下可能需要更长的时间。
 
-1. After creating the Synapse workspace and SQL Pool and loading the data, the script pauses the pool to prevent unnecessary Azure charges. When you're ready to work with your data in Azure Synapse Analytics, you'll need to resume the SQL Pool.
+1. 在创建 Synapse 工作区和 SQL 池并加载数据后，脚本将暂停池以防止产生不必要的 Azure 费用。 准备好在 Azure Synapse Analytics 中使用数据时，需要恢复 SQL 池。
 
 ### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
 
@@ -94,7 +94,7 @@ In this lab, you will create a dataflow to deliver date dimension data sourced f
 
 1. 若要打开预先开发的 Power BI Desktop 文件，请双击“Sales Analysis - Create a dataflow.pbix”文件。
 
-1. If you're not already signed in, at the top-right corner of Power BI Desktop, select <bpt id="p1">**</bpt>Sign In<ept id="p1">**</ept>. Use the lab credentials to complete the sign in process.
+1. 如果尚未登录，请在 Power BI Desktop 右上角选择“登录”。 使用实验室凭据完成登录过程。
 
     ![](../images/dp500-create-a-dataflow-image2.png)
 
@@ -163,9 +163,11 @@ In this lab, you will create a dataflow to deliver date dimension data sourced f
 
 1. 使用搜索栏查找 Azure Synapse Analytics。 
 
-1. 在本实验室中，你将创建一个数据流来提供源自 Azure Synapse Adventure Works 数据仓库的日期维度数据。
+1. 选择 Azure Synapse Analytics 实例。
+    ![](../images/synapse-instance.png)
 
-1. 该数据流将提供与日期相关的数据的一致定义，供组织的业务分析师使用。
+1. 找到并选择专用 SQL 池。
+    ![](../images/dedicated-sql-pool.png)
 
 1. 恢复专用 SQL 池。
 
@@ -175,7 +177,7 @@ In this lab, you will create a dataflow to deliver date dimension data sourced f
 
 ## <a name="develop-a-dataflow"></a>开发数据流
 
-In this exercise, you will develop a dataflow to support Power BI model development. It will provide a consistent representation of the data warehouse date dimension table.
+在本练习中，你将开发用于支持 Power BI 模型开发的数据流。 它将提供数据仓库日期维度表的一致表示。
 
 ### <a name="review-the-data-model"></a>查看数据模型
 
@@ -221,7 +223,7 @@ In this exercise, you will develop a dataflow to support Power BI model developm
      - 输入 Azure 门户中的服务器名称 ![](../images/synapse-sql-pool-connection-string.png)
      
         服务器名称应类似于：synapsewsxxxxx.sql.azuresynapse.net
-     - Ensure the Authentication kind is <bpt id="p1">**</bpt>Organizational account<ept id="p1">**</ept>. If you are prompted to sign in, use the lab provided credentials.
+     - 确保“身份验证类型”为“组织帐户”。 如果系统提示登录，请使用实验室提供的凭据。
      ![](../images/synapse-sql-pool-sign-in.png)
 
 1. 在右下角，选择“下一步”。

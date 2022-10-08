@@ -10,7 +10,7 @@ lab:
 
 **预估完成本实验室需要 45 分钟**
 
-In this lab, you will update a pre-developed data model to enforce security. Specifically, salespeople at the Adventure Works company should only be able to see sales data related to their assigned sales region.
+在本实验室中，你将更新预先开发的数据模型以强制实施安全性。 具体来说，Adventure Works 公司的销售人员应该只能看到与其指定销售区域相关的销售数据。
 
 在此实验室中，你将了解如何完成以下操作：
 
@@ -28,7 +28,7 @@ In this lab, you will update a pre-developed data model to enforce security. Spe
 
 ### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
 
-1. 在开始菜单上，打开命令提示符
+1. 在“开始”菜单上，打开“命令提示符”
 
     ![](../images/command-prompt.png)
 
@@ -61,7 +61,7 @@ In this lab, you will update a pre-developed data model to enforce security. Spe
 
 3. 若要打开预先开发的 Power BI Desktop 文件，请双击“Sales Analysis - Enforce model security.pbix”文件。
 
-4. If you're not already signed in, at the top-right corner of Power BI Desktop, select <bpt id="p1">**</bpt>Sign In<ept id="p1">**</ept>. Use the lab credentials to complete the sign in process.
+4. 如果尚未登录，请在 Power BI Desktop 右上角选择“登录”。 使用实验室凭据完成登录过程。
 
     ![](../images/dp500-enforce-model-security-image2.png)
 
@@ -77,13 +77,13 @@ In this lab, you will update a pre-developed data model to enforce security. Spe
 
 在此任务中，你将登录到 Power BI 服务并启动试用许可证，然后创建工作区。
 
-重要提示：如果已在 VM 环境中设置 Power BI，请继续执行下一个任务。
+重要说明：如果已在 VM 环境中设置 Power BI，请继续执行下一个任务。
 
 1. 在 Web 浏览器中，转到 https://powerbi.com。
 
 2. 使用实验室凭据完成登录过程。
 
-    重要提示：请务必使用登录 Power BI Desktop 时使用的凭据。
+    重要说明：请务必使用登录 Power BI Desktop 时使用的凭据。
 
 3. 在右上角选择“个人资料”图标，然后选择“开始试用”。
 
@@ -128,7 +128,7 @@ In this lab, you will update a pre-developed data model to enforce security. Spe
     ![](../images/dp500-enforce-model-security-image8.png)
 
 
-2. 使用模型关系图查看模型设计。
+2. 使用模型图查看模型设计。
 
     ![](../images/dp500-enforce-model-security-image9.png)
 
@@ -251,7 +251,7 @@ In this lab, you will update a pre-developed data model to enforce security. Spe
 
 ### <a name="configure-row-level-security"></a>配置行级别安全性
 
-In this task, you will see how to configure row-level security in the Power BI service. This task relies on the existence of a <bpt id="p1">**</bpt>Salespeaople_Australia<ept id="p1">**</ept> security group in the tenant you are working in. Please read through the tasks, but note that you will not be able to complete them in the absence of the existence of the security group. After reading through, proceed to the Clean Up task.
+在此任务中，你将了解如何在 Power BI 服务中配置行级别安全性。 此任务依赖于你所使用的租户中存在的 Salespeaople_Australia 安全组。 请通读任务，但请注意，如果缺少此安全组，则无法完成这些任务。 通读后，请继续执行“清理”任务。
 
 1. 切换到 Power BI 服务（Web 浏览器）。
 

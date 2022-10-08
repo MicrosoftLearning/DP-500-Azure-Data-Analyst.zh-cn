@@ -48,7 +48,7 @@ lab:
 
 ### <a name="download-and-install-tabular-editor-2"></a>下载并安装表格编辑器 2
 
-下载并安装表格编辑器 2 以创建计算组。
+下载并安装表格编辑器 2 才能创建计算组。
 
 重要提示：如果已在 VM 环境中安装了表格编辑器 2，请继续执行下一个任务。
 
@@ -60,13 +60,13 @@ lab:
 
     ```https://github.com/TabularEditor/TabularEditor/releases```
     
-1. Scroll down to the <bpt id="p1">**</bpt>Assets<ept id="p1">**</ept> section and select the <bpt id="p2">**</bpt>TabularEditor.Installer.msi<ept id="p2">**</ept> file. This will initiate the file install.
+1. 向下滚动到“资产”部分，然后选择 TabularEditor.Installer.msi 文件 。 该操作将启动文件安装。
 
 1. 完成后，选择“打开文件”以运行安装程序。
 
     ![图形用户界面，应用程序 自动生成的描述](../images/calculationgroups-downloadTE.png)
 
-1.  在表格编辑器安装程序窗口中，选择“下一步”。
+1.  在“表格编辑器安装程序”窗口中，选择“下一步”。
 
     ![图形用户界面，应用程序 自动生成的描述](../images/image2.png)
 
@@ -192,11 +192,11 @@ lab:
 
 ## <a name="create-a-calculation-group"></a>创建计算组
 
-Now you'll create two calculation groups. The first will support time intelligence. The second will support currency conversion.
+现在，你将创建两个计算组。 第一个将支持时间智能。 第二个将支持币种转换。
 
 ### <a name="create-the-time-intelligence-calculation-group"></a>创建时间智能计算组
 
-Use Tabular Editor to create the <bpt id="p1">**</bpt>Time Intelligence<ept id="p1">**</ept> calculation group. It will simplify the creation of many time-related calculations, including PY (prior year), YoY (year-over-year), and YoY % (year-over-year percentage). The calculation group will allow analyzing any measure by using different Time Intelligence calculations.
+使用表格编辑器创建时间智能计算组。 它将简化创建许多与时间相关的计算，包括 PY（上一年）、YoY（同比）和 YoY %（同比百分比）。 计算组支持使用不同的时间智能计算来分析任何度量值。
 
 Power BI Desktop 不支持创建或管理计算组。
 
@@ -336,7 +336,7 @@ Power BI Desktop 不支持创建或管理计算组。
 
 ### <a name="create-the-currency-conversion-calculation-group"></a>创建币种转换计算组
 
-Now you'll create the <bpt id="p1">**</bpt>Currency Conversion<ept id="p1">**</ept> calculation group. It will provide flexibility to convert the <bpt id="p1">**</bpt>Sales<ept id="p1">**</ept> table measures to a selected currency. It will also apply appropriate formatting for the selected currency.
+现在，你将创建币种转换计算组。 它可灵活地将 Sales 表度量值转换为所选货币。 它还将为所选货币应用适当的格式。
 
 1.  在 Power BI Desktop 中切换到“数据”视图。
 
@@ -383,7 +383,7 @@ Now you'll create the <bpt id="p1">**</bpt>Currency Conversion<ept id="p1">**</e
     ```
     SELECTEDVALUE ( 'Currency'[FormatString] )
     ```
-    This formula returns the format string of the selected currency. This way, formatting is dynamically driven by the data in the <bpt id="p1">**</bpt>Currency<ept id="p1">**</ept> dimension table.
+    此公式返回所选货币的格式字符串。 这样，就可以由 Currency 维度表中的数据动态地驱动格式设置。
 
 9.  保存对 Power BI Desktop 模型的更改。
 

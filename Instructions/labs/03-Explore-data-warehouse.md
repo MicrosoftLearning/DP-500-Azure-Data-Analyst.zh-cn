@@ -6,7 +6,7 @@ lab:
 
 # <a name="explore-a-relational-data-warehouse"></a>实验室 - 探索关系数据仓库
 
-Azure Synapse Analytics is built on a scalable set capabilities to support enterprise data warehousing; including file-based data analytics in a data lake as well as large-scale relational data warehouses and the data transfer and transformation pipelines used to load them. In this lab, you'll explore how to use a dedicated SQL pool in Azure Synapse Analytics to store and query data in a relational data warehouse.
+Azure Synapse Analytics 基于可缩放集功能构建，以支持企业数据仓库;包括数据湖中的基于文件的数据分析，以及用于加载数据的大规模关系数据仓库以及用于加载它们的数据传输和转换管道。 在本实验室中，你将了解如何使用 Azure Synapse Analytics 中的专用 SQL 池在关系数据仓库中存储和查询数据。
 
 完成本实验室大约需要 45 分钟。
 
@@ -16,18 +16,18 @@ Azure Synapse Analytics is built on a scalable set capabilities to support enter
 
 ## <a name="provision-an-azure-synapse-analytics-workspace"></a>预配 Azure Synapse Analytics 工作区
 
-An Azure Synapse Analytics <bpt id="p1">*</bpt>workspace<ept id="p1">*</ept> provides a central point for managing data and data processing runtimes. You can provision a workspace using the interactive interface in the Azure portal, or you can deploy a workspace and resources within it by using a script or template. In most production scenarios, it's best to automate provisioning with scripts and templates so that you can incorporate resource deployment into a repeatable development and operations (<bpt id="p1">*</bpt>DevOps<ept id="p1">*</ept>) process.
+Azure Synapse Analytics *工作区*提供用于管理数据和数据处理运行时的中心点。 可以使用Azure 门户中的交互式界面预配工作区，也可以使用脚本或模板部署工作区和资源。 在大多数生产方案中，最好使用脚本和模板自动预配，以便在 *DevOps*) 过程中将资源部署合并到可重复的开发操作和 (操作中。
 
 在本练习中，你将组合使用 PowerShell 脚本和 ARM 模板来预配 Azure Synapse Analytics 工作区。
 
 1. 登录到 Azure 门户，地址为 [](https://portal.azure.com)。
-2. Use the <bpt id="p1">**</bpt>[<ph id="ph1">\&gt;</ph>_]<ept id="p1">**</ept> button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a <bpt id="p2">***</bpt>PowerShell<ept id="p2">***</ept> environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
+2. 使用页面顶部搜索栏右侧的 [\>_] 按钮在 Azure 门户中创建新的 Cloud Shell，在出现提示时选择“PowerShell”环境并创建存储。 Cloud Shell 在 Azure 门户底部的窗格中提供命令行界面，如下所示：
 
     ![具有 Cloud Shell 窗格的 Azure 门户](../images/cloud-shell.png)
 
     > 注意：如果以前创建了使用 Bash 环境的 Cloud shell，请使用 Cloud Shell 窗格左上角的下拉菜单将其更改为“PowerShell”。
 
-3. Azure Synapse Analytics 基于可缩放集功能构建，以支持企业数据仓库;包括数据湖中的基于文件的数据分析以及用于加载数据的大型关系数据仓库和数据传输和转换管道。
+3. 请注意，可以通过拖动窗格顶部的分隔条或使用窗格右上角的 &#8212;、&#9723; 或 X 图标来调整 Cloud Shell 的大小，以最小化、最大化和关闭窗格  。 有关如何使用 Azure Cloud Shell 的详细信息，请参阅 [Azure Cloud Shell 文档](https://docs.microsoft.com/azure/cloud-shell/overview)。
 
 4. 在 PowerShell 窗格中，输入以下命令以克隆此存储库：
 
@@ -48,53 +48,53 @@ An Azure Synapse Analytics <bpt id="p1">*</bpt>workspace<ept id="p1">*</ept> pro
 
     > 注意：请务必记住此密码！
 
-8. 在本实验室中，你将了解如何使用 Azure Synapse Analytics 中的专用 SQL 池在关系数据仓库中存储和查询数据。
+8. 等待脚本完成 - 此过程通常需要大约 10 分钟；但在某些情况下可能需要更长的时间。 等待时，请查看 Azure Synapse Analytics 文档中的 [Azure Synapse Analytics 中的无服务器 SQL 池](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)一文。
 
 ## <a name="explore-the-data-warehouse-schema"></a>浏览数据仓库架构
 
-在此实验室中，数据仓库托管在 Azure Synapse Analytics 中的专用 SQL 池中。
+在此实验室中，数据仓库托管在 Azure Synapse Analytics 的专用 SQL 池中。
 
 ### <a name="start-the-dedicated-sql-pool"></a>启动专用 SQL 池
 
 1. 脚本完成后，在 Azure 门户中转到创建的 dp500-*xxxxxxx* 资源组，然后选择 Synapse 工作区。
 2. 在 Synapse 工作区“概述”页的“打开 Synapse Studio”卡中，选择“打开”，以在新浏览器标签页中打开 Synapse Studio；如果出现提示，请进行登录  。
 3. 在 Synapse Studio 左侧，使用 &rsaquo;&rsaquo; 图标展开菜单，这将显示 Synapse Studio 中用于管理资源和执行数据分析任务的不同页面。
-4. 在 **“管理** ”页上，确保选择了 **“SQL 池** ”选项卡，然后选择 **sql*xxxxxxx*** 专用 SQL 池，并使用其 **&#9655;** 图标启动它;确认在出现提示时要恢复它。
-5. Wait for the SQL pool to resume. This can take a few minutes. Use the <bpt id="p1">**</bpt>&amp;#8635; Refresh<ept id="p1">**</ept> button to check its status periodically. The status will show as <bpt id="p1">**</bpt>Online<ept id="p1">**</ept> when it is ready.
+4. 在 **“管理** ”页上，确保选中“ **SQL 池** ”选项卡，然后选择 **sql*xxxxxxx*** 专用 SQL 池，并使用其 **&#9655;** 图标启动它;确认在出现提示时要恢复它。
+5. 等待 SQL 池恢复。 这可能需要几分钟的时间。 使用 ** “&#8635;刷新** ”按钮定期检查其状态。 状态将在准备就绪时显示为 **“联机** ”。
 
 ### <a name="view-the-tables-in-the-database"></a>查看数据库中的表
 
-1. 在Synapse Studio中，选择 **“数据**”页并确保选择了 **“工作区**”选项卡并包含 **SQL 数据库**类别。
-2. 展开 **SQL 数据库**、 **sql*xxxxxxx*** 池及其 **表** 文件夹以查看数据库中的表。
+1. 在Synapse Studio中，选择 **“数据**”页并确保已选择 **“工作区**”选项卡，并包含 **SQL 数据库**类别。
+2. 展开 **SQL 数据库**、 **sql*xxxxxxx*** 池及其 **“表”** 文件夹以查看数据库中的表。
 
-    A relational data warehouse is typically based on a schema that consists of <bpt id="p1">*</bpt>fact<ept id="p1">*</ept> and <bpt id="p2">*</bpt>dimension<ept id="p2">*</ept> tables. The tables are optimized for analytical queries in which numeric metrics in the fact tables are aggregated by attributes of the entities represented by the dimension tables - for example, enabling you to aggregate Internet sales revenue by product, customer, date, and so on.
+    关系数据仓库通常基于由 *事实* 表和 *维度* 表组成的架构。 这些表针对分析查询进行了优化，其中事实数据表中的数值指标由维度表表示的实体属性进行聚合，例如，使你可以按产品、客户、日期等聚合 Internet 销售收入。
     
-3. Expand the <bpt id="p1">**</bpt>dbo.FactInternetSales<ept id="p1">**</ept> table and its <bpt id="p2">**</bpt>Columns<ept id="p2">**</ept> folder to see the columns in this table. Note that many of the columns are <bpt id="p1">*</bpt>keys<ept id="p1">*</ept> that reference rows in the dimension tables. Others are numeric values (<bpt id="p1">*</bpt>measures<ept id="p1">*</ept>) for analysis.
+3. 展开 **dbo。FactInternetSales** 表及其 **Columns** 文件夹以查看此表中的列。 请注意，许多列是引用维度表中行的 *键* 。 另一些是用于分析的度量值)  (*度量* 值。
     
-    键用于将事实数据表与一个或多个维度表相关联，通常为 *星* 型架构;其中事实数据表与每个维度表直接相关， (在中心) 与事实数据表形成多尖的“星形”。
+    这些键用于将事实数据表与一个或多个维度表相关联，通常位于 *星* 型架构中;其中事实数据表与每个维度表直接相关， (形成多指向的“星形”，中心) 事实数据表。
 
-4. View the columns for the <bpt id="p1">**</bpt>dbo.DimPromotion<ept id="p1">**</ept> table, and note that it has a unique <bpt id="p2">**</bpt>PromotionKey<ept id="p2">**</ept> that uniquely identifies each row in the table. It also has an <bpt id="p1">**</bpt>AlternateKey<ept id="p1">**</ept>.
+4. 查看 dbo 的列 **。DimPromotion** 表，并请注意，它具有唯一的 **PromotionKey** ，用于唯一标识表中的每一行。 它还有 **** 属性。
 
-    Usually, data in a data warehouse has been imported from one or more transactional sources. The <bpt id="p1">*</bpt>alternate<ept id="p1">*</ept> key reflects the business identifier for the instance of this entity in the source, but a unique numeric <bpt id="p2">*</bpt>surrogate<ept id="p2">*</ept> key is usually generated to uniquely identify each row in the data warehouse dimension table. One of the benefits of this approach is that it enables the data warehouse to contain multiple instances of the same entity at different points in time (for example, records for the same customer reflecting their address at the time an order was placed).
+    通常，数据仓库中的数据已从一个或多个事务源导入。 *备用*键反映源中此实体实例的业务标识符，但通常会生成唯一的数字*代理*键来唯一标识数据仓库维度表中的每一行。 此方法的优点之一是，它使数据仓库能够在不同时间点包含同一实体的多个实例 (，例如，在订单) 时反映其地址的同一客户记录。
 
-5. 查看 dbo 的列 **。DimProduct**，请注意它包含一个 **ProductSubcategoryKey** 列，该列引用 **dbo。DimProductSubcategory** 表，后者又包含引用 dbo 的 **ProductCategoryKey** 列  **。DimProductCategory** 表。
+5. 查看 dbo 的列 **。DimProduct**，并请注意，它包含一个 **ProductSubcategoryKey** 列，该列引用 **dbo。DimProductSubcategory** 表，后者又包含引用 dbo 的 **ProductCategoryKey** 列  **。DimProductCategory** 表。
 
-    Azure Synapse Analytics *工作区*提供用于管理数据和数据处理运行时的中心点。
+    在某些情况下，维度部分规范化为多个相关表，以允许不同级别的粒度（例如可分组到子类别和类别的产品）。 这会导致一个简单的星形扩展到 *雪花* 架构，其中中心事实数据表与维度表相关，该表与进一步维度表相关。
 
-6. 查看 dbo 的列 **。DimDate** 表，并请注意，它包含反映日期的不同时态属性的多个列，包括星期几、月日、月、年、日名称、月名、月名等。
+6. 查看 dbo 的列 **。DimDate** 表，并请注意，它包含反映日期的不同时态属性的多个列-包括星期几、月日、月、年、日名称、月名、月名等。
 
-    可以使用Azure 门户中的交互式界面预配工作区，也可以使用脚本或模板部署工作区和资源。
+    数据仓库中的时间维度通常作为维度表实现，其中包含每个最小粒度单位的行 (通常称为维度的 *粒度*) ，以便聚合事实数据表中的度量值。 在这种情况下，可聚合度量值的最低粒度是单个日期，表包含数据中引用的第一个日期到最后一个日期的每个日期的行。 **DimDate** 表中的属性使分析师能够基于事实数据表中的任何日期键聚合度量值，例如，使用一组一致的临时属性 (，根据订单日期) 按月查看订单。 **FactInternetSales** 表包含三个与 **DimDate** 表相关的键：**OrderDateKey**、**DueDateKey** 和 **ShipDateKey**。
 
 ## <a name="query-the-data-warehouse-tables"></a>查询数据仓库表
 
-现在，你已经了解了数据仓库架构的一些更重要方面，现在可以查询表并检索某些数据。
+了解数据仓库架构的一些更重要方面后，即可查询表并检索某些数据。
 
 ### <a name="query-fact-and-dimension-tables"></a>比较事实数据表和维度表
 
-在大多数生产方案中，最好使用脚本和模板自动预配，以便可以将资源部署合并到可重复的开发和操作中， (*DevOps*) 过程。
+关系数据仓库中的数值存储在具有相关维度表的事实表中，可用于跨多个属性聚合数据。 此设计意味着关系数据仓库中的大多数查询都涉及使用聚合函数和 GROUP BY 子句 (聚合和分组数据) ， (使用 JOIN 子句) 。
 
-1. 在 **“数据**”页上，选择 **sql*xxxxxxx*** SQL 池，并在其 **...** 菜单中，选择 **“新建 SQL 脚本****空脚本** > ”。
-2. When a new <bpt id="p1">**</bpt>SQL Script 1<ept id="p1">**</ept> tab opens, in its <bpt id="p2">**</bpt>Properties<ept id="p2">**</ept> pane, change the name of the script to <bpt id="p3">**</bpt>Analyze Internet Sales<ept id="p3">**</ept> and change the <bpt id="p4">**</bpt>Result settings per query<ept id="p4">**</ept> to return all rows. Then use the <bpt id="p1">**</bpt>Publish<ept id="p1">**</ept> button on the toolbar to save the script, and use the <bpt id="p2">**</bpt>Properties<ept id="p2">**</ept> button (which looks similar to <bpt id="p3">**</bpt>&amp;#128463;.<ept id="p3">**</ept>) on the right end of the toolbar to close the <bpt id="p4">**</bpt>Properties<ept id="p4">**</ept> pane so you can see the script pane.
+1. 在 **“数据**”页上，选择 **sql*xxxxxxx*** SQL 池并在其 **...** 菜单中，选择 **“新建 SQL 脚本****空脚本** > ”。
+2. 当新的 **SQL 脚本 1** 选项卡打开时，在其 **“属性** ”窗格中，更改脚本的名称以 **分析 Internet Sales** ，并 **更改每个查询的结果设置** 以返回所有行。 然后在工具栏中，选择“发布”以保存脚本并使用工具栏右侧的“属性”按钮（类似于 &#128463;.）隐藏“属性”窗格   。
 3. 在新的空代码单元格中，添加以下代码：
 
     ```sql
@@ -106,7 +106,7 @@ An Azure Synapse Analytics <bpt id="p1">*</bpt>workspace<ept id="p1">*</ept> pro
     ORDER BY Year;
     ```
 
-4. Use the <bpt id="p1">**</bpt>&amp;#9655; Run<ept id="p1">**</ept> button to run the script, and review the results, which should show the Internet sales totals for each year. This query joins the fact table for Internet sales to a time dimension table based on the order date, and aggregates the sales amount measure in the fact table by the calendar month attribute of the dimension table.
+4. 使用 ** “&#9655;运行** ”按钮运行脚本，并查看结果，其中应显示每年的 Internet 销售总额。 此查询根据订单日期将 Internet 销售的事实数据表联接到时间维度表，并通过维度表的日历月属性聚合事实数据表中的销售额度量值。
 
 5. 按如下所示修改查询，从时间维度添加月份属性，然后运行修改后的查询。
 
@@ -120,7 +120,7 @@ An Azure Synapse Analytics <bpt id="p1">*</bpt>workspace<ept id="p1">*</ept> pro
     ORDER BY Year, Month;
     ```
 
-    Note that the attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
+    请注意，时间维度中的属性使你可以在多个分层级别（在本例中、年份和月份）聚合事实数据表中的度量值。 这是数据仓库中的常见模式。
 
 6. 按如下所示修改查询以删除月份，并将第二个维度添加到聚合中，然后运行该查询以查看结果 (，其中显示了每个区域的每年 Internet 销售总额) ：
 
@@ -136,7 +136,7 @@ An Azure Synapse Analytics <bpt id="p1">*</bpt>workspace<ept id="p1">*</ept> pro
     ORDER BY Year, Region;
     ```
 
-    使用页面顶部搜索栏右侧的 [\>_] 按钮在 Azure 门户中创建新的 Cloud Shell，在出现提示时选择“PowerShell”环境并创建存储。
+    请注意，地理位置是一个 *雪花* 维度，它与通过客户维度的 Internet 销售事实数据表相关。 因此，查询中需要两个联接才能按地理位置聚合 Internet 销售。
 
 7. 修改并重新运行查询以添加另一个雪花维度，并按产品类别聚合年度区域销售额：
 
@@ -164,7 +164,7 @@ An Azure Synapse Analytics <bpt id="p1">*</bpt>workspace<ept id="p1">*</ept> pro
 
 分析大量数据时的另一个常见要求是按分区对数据进行分组，并根据特定指标确定分区中每个实体的 *排名* 。
 
-1. 在现有查询下，添加以下 SQL 以根据国家/地区名称检索 2022 分区的销售值：
+1. 在现有查询下，添加以下 SQL 以根据国家/地区名称检索 2022 年分区的销售值：
 
     ```sql
     SELECT  g.EnglishCountryRegionName AS Region,
@@ -183,7 +183,7 @@ An Azure Synapse Analytics <bpt id="p1">*</bpt>workspace<ept id="p1">*</ept> pro
     ORDER BY Region;
     ```
 
-2. Cloud Shell 在 Azure 门户底部的窗格中提供命令行界面，如下所示：
+2. 仅选择新的查询代码，并使用 ** “&#9655;运行** ”按钮运行它。 然后查看结果，结果应类似于下表：
 
     | 区域 | RowNumber | OrderNo | LineItem | SalesAmount | RegionTotal | RegionAverage |
     |--|--|--|--|--|--|--|
@@ -236,7 +236,7 @@ An Azure Synapse Analytics <bpt id="p1">*</bpt>workspace<ept id="p1">*</ept> pro
     ORDER BY Region;
     ```
 
-4. Select only the new query code, and use the <bpt id="p1">**</bpt>&amp;#9655; Run<ept id="p1">**</ept> button to run it. Then review the results, and observe the following:
+4. 仅选择新的查询代码，并使用 ** “&#9655;运行** ”按钮运行它。 然后查看结果，并观察以下内容：
     - 结果包括每个城市（按区域分组）的行。
     - 为每个城市计算单个销售金额的总销售额 (总和) 
     - 区域销售总额 (区域) 中每个城市的销售额总和是根据区域分区计算的。
@@ -244,11 +244,11 @@ An Azure Synapse Analytics <bpt id="p1">*</bpt>workspace<ept id="p1">*</ept> pro
 
 5. 发布更新的脚本以保存更改。
 
-> <bpt id="p1">**</bpt>Tip<ept id="p1">**</ept>: ROW_NUMBER and RANK are examples of ranking functions available in Transact-SQL. For more details, see the <bpt id="p1">[</bpt>Ranking Functions<ept id="p1">](https://docs.microsoft.com/sql/t-sql/functions/ranking-functions-transact-sql)</ept> reference in the Transact-SQL language documentation.
+> **提示**：ROW_NUMBER和 RANK 是 Transact-SQL 中可用的排名函数的示例。 有关详细信息，请参阅 Transact-SQL 语言文档中的 [排名函数](https://docs.microsoft.com/sql/t-sql/functions/ranking-functions-transact-sql) 参考。
 
 ### <a name="retrieve-an-approximate-count"></a>检索近似计数
 
-When exploring very large volumes of data, queries can take significant time and resources to run. Often, data analysis doesn't require absolutely precise values - a comparison of approximate values may be sufficient.
+浏览大量数据时，查询可能需要很长时间和资源才能运行。 通常，数据分析不需要绝对精确的值 - 近似值的比较可能足够。
 
 1. 在现有查询下，添加以下代码以检索每个日历年度的销售订单数：
 
@@ -261,10 +261,10 @@ When exploring very large volumes of data, queries can take significant time and
     ORDER BY CalendarYear;
     ```
 
-2. 请注意，可以通过拖动窗格顶部的分隔条或使用窗格右上角的 &#8212;、&#9723; 或 X 图标来调整 Cloud Shell 的大小，以最小化、最大化和关闭窗格  。
+2. 仅选择新的查询代码，并使用 ** “&#9655;运行** ”按钮运行它。 然后查看返回的输出：
     - 在查询下的 **“结果** ”选项卡上，查看每年的订单计数。
     - 在 **“消息** ”选项卡上，查看查询的总执行时间。
-3. 有关如何使用 Azure Cloud Shell 的详细信息，请参阅 [Azure Cloud Shell 文档](https://docs.microsoft.com/azure/cloud-shell/overview)。
+3. 按如下所示修改查询，以返回每年的近似计数。 然后重新运行查询。
 
     ```sql
     SELECT d.CalendarYear AS CalendarYear,
@@ -276,8 +276,8 @@ When exploring very large volumes of data, queries can take significant time and
     ```
 
 4. 查看返回的输出：
-    - On the <bpt id="p1">**</bpt>Results<ept id="p1">**</ept> tab under the query, view the order counts for each year. These should be within 2% of the actual counts retrieved by the previous query.
-    - On the <bpt id="p1">**</bpt>Messages<ept id="p1">**</ept> tab, view the total execution time for the query. This should be shorter than for the previous query.
+    - 在查询下的 **“结果** ”选项卡上，查看每年的订单计数。 这些应位于上一查询检索的实际计数的 2% 以内。
+    - 在 **“消息** ”选项卡上，查看查询的总执行时间。 这应该比上一个查询短。
 
 5. 发布脚本以保存更改。
 
