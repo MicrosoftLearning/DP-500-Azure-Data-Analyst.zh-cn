@@ -155,6 +155,7 @@ lab:
 ### <a name="link-your-power-bi-workspace-to-azure-synapse-analytics"></a>将 Power BI 工作区链接到 Azure Synapse Analytics
 
 在此任务中，你将把现有 Power BI 工作区链接到 Azure Synapse Analytics 工作区。
+
 1. 在 Azure 门户的专用 SQL 池中，从功能区中选择“在 Synapse Studio 中打开”。
 
 1. 在 Azure Synapse Studio 主页上，选择“可视化”以链接 Power BI 工作区。

@@ -249,295 +249,297 @@ lab:
 
     ![](../images/dp500-enforce-model-security-image30.png)
 
-### <a name="configure-row-level-security"></a>配置行级别安全性
+### <a name="configure-row-level-security-optional"></a>配置行级别安全性
 
-在此任务中，你将了解如何在 Power BI 服务中配置行级别安全性。 此任务依赖于你所使用的租户中存在的 Salespeaople_Australia 安全组。 请通读任务，但请注意，如果缺少此安全组，则无法完成这些任务。 通读后，请继续执行“清理”任务。
+在此任务中，你将了解如何在 Power BI 服务中配置行级别安全性。 
 
-1. 切换到 Power BI 服务（Web 浏览器）。
+此任务依赖于你所使用的租户中存在的 Salespeaople_Australia 安全组。 请通读任务，但请注意，如果缺少此安全组，则无法完成这些任务。 通读后，请继续执行“清理”任务。 切换到 Power BI 服务（Web 浏览器）。 在工作区登陆页面中，请注意“Sales Analysis - Enforce model security”数据集。 将光标悬停在此数据集上，出现省略号时，选择省略号，然后选择“安全性”。
 
-2. 在工作区登陆页面中，请注意“Sales Analysis - Enforce model security”数据集。
+1. “安全性”选项支持映射 Microsoft Azure Active Directory (Azure AD) 安全主体，其中包括安全组和用户。
+
+2. 在左侧，请注意角色列表，并且“Australia”处于选中状态。
 
     ![](../images/dp500-enforce-model-security-image31.png)
 
 
-3. 将光标悬停在此数据集上，出现省略号时，选择省略号，然后选择“安全性”。
+3. 在“成员”框中，开始输入 Salespeople_Australia 。
 
     ![](../images/dp500-enforce-model-security-image32.png)
 
-    “安全性”选项支持映射 Microsoft Azure Active Directory (Azure AD) 安全主体，其中包括安全组和用户。
+    步骤 5 到 8 仅用于演示目的，因为需要创建或存在 Salespeople_Australia 安全组才能执行这些步骤。如果你具有创建安全组的权限和知识，请随时继续操作。否则，请继续执行“清理”任务。
 
-4. 在左侧，请注意角色列表，并且“Australia”处于选中状态。
+4. 选择 **添加** 。
 
     ![](../images/dp500-enforce-model-security-image33.png)
 
-5. 在“成员”框中，开始输入 Salespeople_Australia 。 
-
-    步骤 5 到 8 仅用于演示目的，因为需要创建或存在 Salespeople_Australia 安全组才能执行这些步骤。如果你具有创建安全组的权限和知识，请随时继续操作。否则，请继续执行“清理”任务。
-
-    ![](../images/dp500-enforce-model-security-image34.png)
-
-6. 选择 **添加** 。
-
-    ![](../images/dp500-enforce-model-security-image35.png)
-
-7. 若要完成角色映射，请选择“保存”。
-
-    ![](../images/dp500-enforce-model-security-image36.png)
+5. 若要完成角色映射，请选择“保存”。 
 
     现在，Salespeople_Australia 安全组的所有成员都已映射到 Australia 角色，这会将数据访问权限限制为仅查看澳大利亚的销售数据 。
 
-    在实际解决方案中，每个角色都应映射到安全组。
+    ![](../images/dp500-enforce-model-security-image34.png)
 
-    当安全组对于每个区域都存在时，此设计方法非常简单且有效。但是，有一些缺点：创建和设置需要执行更多工作量。当载入新区域时，还需要更新和重新发布数据集。
+6. 在实际解决方案中，每个角色都应映射到安全组。
+
+    ![](../images/dp500-enforce-model-security-image35.png)
+
+7. 当安全组对于每个区域都存在时，此设计方法非常简单且有效。但是，有一些缺点：创建和设置需要执行更多工作量。当载入新区域时，还需要更新和重新发布数据集。
+
+    ![](../images/dp500-enforce-model-security-image36.png)
 
     在下一个练习中，你将创建一个数据驱动的动态角色。此设计方法可以帮助解决这些缺点。
 
-8. 若要返回到工作区登陆页面，请在“导航”窗格中选择工作区。
+    若要返回到工作区登陆页面，请在“导航”窗格中选择工作区。
+
+    清理解决方案
+
+    在此任务中，你将通过移除数据集和模型角色来清理解决方案。
+
+8. 若要移除数据集，请将光标悬停在此数据集上，出现省略号时，选择省略号，然后选择“删除”。
 
 
-### <a name="clean-up-the-solution"></a>清理解决方案
+### <a name="clean-up-the-solution"></a>在下一个练习中，你将重新发布修改后的数据集。
 
-在此任务中，你将通过移除数据集和模型角色来清理解决方案。
+当看到确认删除的提示时，选择“删除”。
 
-1. 若要移除数据集，请将光标悬停在此数据集上，出现省略号时，选择省略号，然后选择“删除”。
+1. 切换到 Power BI Desktop。
 
     ![](../images/dp500-enforce-model-security-image37.png)
 
-    在下一个练习中，你将重新发布修改后的数据集。
+    若要移除安全角色，在“建模”功能区选项卡上的“安全”组中，选择“管理角色”  。
 
-2. 当看到确认删除的提示时，选择“删除”。
+2. 在“管理角色”窗口中，若要移除第一个角色，请选择“删除” 。
 
     ![](../images/dp500-enforce-model-security-image38.png)
 
-3. 切换到 Power BI Desktop。
+3. 当系统提示确认删除时，按“是，删除”。
  
 
-4. 若要移除安全角色，在“建模”功能区选项卡上的“安全”组中，选择“管理角色”  。
+4. 此外，请删除第二个角色。
 
     ![](../images/dp500-enforce-model-security-image39.png)
 
-5. 在“管理角色”窗口中，若要移除第一个角色，请选择“删除” 。
+5. 选择“保存”。
 
     ![](../images/dp500-enforce-model-security-image40.png)
 
-6. 当系统提示确认删除时，按“是，删除”。
+6. 创建动态角色
 
     ![](../images/dp500-enforce-model-security-image41.png)
 
-7. 此外，请删除第二个角色。
+7. 在本练习中，你将向模型添加一个表，创建并验证动态角色，然后将安全主体映射到数据集角色。
 
-8. 选择“保存”。
+8. 添加“Salesperson”表
 
     ![](../images/dp500-enforce-model-security-image42.png)
 
 
-## <a name="create-a-dynamic-role"></a>创建动态角色
+## <a name="create-a-dynamic-role"></a>在此任务中，你将向模型添加“Salesperson”表。
 
-在本练习中，你将向模型添加一个表，创建并验证动态角色，然后将安全主体映射到数据集角色。
+切换到“模型”视图。
 
-### <a name="add-the-salesperson-table"></a>添加“Salesperson”表
+### <a name="add-the-salesperson-table"></a>在“主页”功能区选项卡的“查询”组中，选择“转换数据”图标  。
 
-在此任务中，你将向模型添加“Salesperson”表。
+在“Power Query 编辑器”窗口的“查询”窗格（位于左侧）中，右键单击“客户”查询，然后选择“复制”   。
 
-1. 切换到“模型”视图。
+1. 由于“客户”查询已包含连接数据仓库的步骤，因此复制它是开始开发新查询的有效方法。
 
     ![](../images/dp500-enforce-model-security-image43.png)
 
-2. 在“主页”功能区选项卡的“查询”组中，选择“转换数据”图标  。
+2. 在“查询设置”窗格（位于右侧）的“名称”框中，将文本替换为“Salesperson”  。
 
     ![](../images/dp500-enforce-model-security-image44.png)
 
 
-3. 在“Power Query 编辑器”窗口的“查询”窗格（位于左侧）中，右键单击“客户”查询，然后选择“复制”   。
+3. 在“应用的步骤”列表中，右键单击“已移除的其他列”步骤（第三步），然后选择“删除到末尾”  。
 
     ![](../images/dp500-enforce-model-security-image45.png)
 
-    由于“客户”查询已包含连接数据仓库的步骤，因此复制它是开始开发新查询的有效方法。
+    当系统提示确认删除步骤时，请选择“删除”。
 
-4. 在“查询设置”窗格（位于右侧）的“名称”框中，将文本替换为“Salesperson”  。
+4. 要从其他数据仓库表中获取数据，请在“应用的步骤”列表的“导航”步骤（第二步）中，选择齿轮图标（位于右侧） 。
 
     ![](../images/dp500-enforce-model-security-image46.png)
 
 
-5. 在“应用的步骤”列表中，右键单击“已移除的其他列”步骤（第三步），然后选择“删除到末尾”  。
+5. 在“导航”窗口中，选择“DimEmployee”表 。
 
     ![](../images/dp500-enforce-model-security-image47.png)
 
-6. 当系统提示确认删除步骤时，请选择“删除”。
+6. 选择“确定”。
 
     ![](../images/dp500-enforce-model-security-image48.png)
 
-7. 要从其他数据仓库表中获取数据，请在“应用的步骤”列表的“导航”步骤（第二步）中，选择齿轮图标（位于右侧） 。
+7. 若要移除不必要的列，请在“主页”功能区选项卡上的“管理列”组中，选择“选择列”图标  。
 
     ![](../images/dp500-enforce-model-security-image49.png)
 
-8. 在“导航”窗口中，选择“DimEmployee”表 。
+8. 在“选择列”窗口中，取消选中“(选择所有列)”项 。
 
     ![](../images/dp500-enforce-model-security-image50.png)
 
 
-9. 选择“确定”。
+9. 检查以下三列：
 
     ![](../images/dp500-enforce-model-security-image51.png)
 
-10. 若要移除不必要的列，请在“主页”功能区选项卡上的“管理列”组中，选择“选择列”图标  。
+10. EmployeeKey
 
     ![](../images/dp500-enforce-model-security-image52.png)
 
-11. 在“选择列”窗口中，取消选中“(选择所有列)”项 。
+11. SalesTerritoryKey
 
     ![](../images/dp500-enforce-model-security-image53.png)
 
-12. 检查以下三列：
+12. EmailAddress
 
-    - EmployeeKey
+    - 选择“确定”。
 
-    - SalesTerritoryKey
+    - 若要对“EmailAddress”列进行重命名，请双击“EmailAddress”列标题 。
 
-    - EmailAddress
+    - 将文本替换为“UPN”，然后按 Enter 。
 
-13. 选择“确定”。
+13. UPN 是用户主体名称的首字母缩略词。此列中的值与 Azure AD 帐户名称匹配。
 
     ![](../images/dp500-enforce-model-security-image54.png)
 
-14. 若要对“EmailAddress”列进行重命名，请双击“EmailAddress”列标题 。
+14. 要将表加载到模型中，请在“主页”功能区选项卡上选择“关闭并应用”图标 。
 
-15. 将文本替换为“UPN”，然后按 Enter 。
+15. 已将表添加到模型时，请注意，会自动创建与“Sales Territory”表的关系。
 
-    UPN 是用户主体名称的首字母缩略词。此列中的值与 Azure AD 帐户名称匹配。
+    配置关系
 
     ![](../images/dp500-enforce-model-security-image55.png)
 
-16. 要将表加载到模型中，请在“主页”功能区选项卡上选择“关闭并应用”图标 。
+16. 在此任务中，你将配置新关系的属性。
 
     ![](../images/dp500-enforce-model-security-image56.png)
 
-17. 已将表添加到模型时，请注意，会自动创建与“Sales Territory”表的关系。
+17. 右键单击“Salesperson”与“Sales Territory”表之间的关系，然后选择“属性”  。
 
-### <a name="configure-the-relationship"></a>配置关系
+### <a name="configure-the-relationship"></a>在“编辑关系”窗口的“交叉筛选方向”下拉列表中，选择“双向”  。
 
-在此任务中，你将配置新关系的属性。
+选中“在两个方向上应用安全筛选器”复选框。
 
-1. 右键单击“Salesperson”与“Sales Territory”表之间的关系，然后选择“属性”  。
+1. 由于从“Sales Territory”表到“Salesperson”表存在一对多关系，因此筛选器仅从“Sales Territory”表传播到“Salesperson”表。若要强制在另一方向进行传播，必须同时将交叉筛选方向设置为这两个方向   。
 
     ![](../images/dp500-enforce-model-security-image57.png)
 
 
-2. 在“编辑关系”窗口的“交叉筛选方向”下拉列表中，选择“双向”  。
+2. 选择“确定”。
 
-3. 选中“在两个方向上应用安全筛选器”复选框。
+3. 若要隐藏表，请在“Salesperson”表的右上角选择睛形图标。
 
     ![](../images/dp500-enforce-model-security-image58.png)
 
-    由于从“Sales Territory”表到“Salesperson”表存在一对多关系，因此筛选器仅从“Sales Territory”表传播到“Salesperson”表。若要强制在另一方向进行传播，必须同时将交叉筛选方向设置为这两个方向   。
+    “Salesperson”表的目的是强制实施数据权限。隐藏时，报表作者和问答体验将看不到此表或其字段。
 
-4. 选择“确定”。
+4. 创建动态角色
 
     ![](../images/dp500-enforce-model-security-image59.png)
 
-5. 若要隐藏表，请在“Salesperson”表的右上角选择睛形图标。
+5. 在此任务中，你将创建一个动态角色，该角色基于模型中的数据强制实施权限。
 
     ![](../images/dp500-enforce-model-security-image60.png)
 
-    “Salesperson”表的目的是强制实施数据权限。隐藏时，报表作者和问答体验将看不到此表或其字段。
+    切换到“报表”视图。
  
 
-### <a name="create-a-dynamic-role"></a>创建动态角色
+### <a name="create-a-dynamic-role"></a>若要添加安全角色，在“建模”功能区选项卡上的“安全”组中，选择“管理角色”  。
 
-在此任务中，你将创建一个动态角色，该角色基于模型中的数据强制实施权限。
+在“管理角色”窗口中，选择“创建” 。
 
-1. 切换到“报表”视图。
+1. 若要对角色进行命名，请将所选文本替换为“Salespeople”。
 
     ![](../images/dp500-enforce-model-security-image61.png)
 
-2. 若要添加安全角色，在“建模”功能区选项卡上的“安全”组中，选择“管理角色”  。
+2. 这时，只需要创建一个角色。
 
     ![](../images/dp500-enforce-model-security-image62.png)
 
-3. 在“管理角色”窗口中，选择“创建” 。
+3. 将筛选器添加到“Salesperson”表的“UPN”列 。
 
     ![](../images/dp500-enforce-model-security-image63.png)
 
-4. 若要对角色进行命名，请将所选文本替换为“Salespeople”。
+4. 在“表筛选 DAX 表达式”框中，将“值”替换为“USERPRINCIPALNAME()”  。
 
     ![](../images/dp500-enforce-model-security-image64.png)
 
-    这时，只需要创建一个角色。
+    此表达式通过 USERPRINCIPALNAME 函数筛选“UPN”列，该函数返回经过身份验证的用户的用户主体名称 (UPN)。
 
-5. 将筛选器添加到“Salesperson”表的“UPN”列 。
+5. 当 UPN 筛选“Salesperson”表时，它会筛选“Sales Territory”表，继而筛选“Sales”表。这样一来，经过身份验证的用户只会看到其指定区域的销售数据  。
 
     ![](../images/dp500-enforce-model-security-image65.png)
 
-6. 在“表筛选 DAX 表达式”框中，将“值”替换为“USERPRINCIPALNAME()”  。
+6. 选择“保存”。
 
     ![](../images/dp500-enforce-model-security-image66.png)
 
-    此表达式通过 USERPRINCIPALNAME 函数筛选“UPN”列，该函数返回经过身份验证的用户的用户主体名称 (UPN)。
+    验证动态角色
 
-    当 UPN 筛选“Salesperson”表时，它会筛选“Sales Territory”表，继而筛选“Sales”表。这样一来，经过身份验证的用户只会看到其指定区域的销售数据  。
+    在此任务中，你将验证动态角色。
 
-7. 选择“保存”。
+7. 在“建模”功能区选项卡上的“安全组”中，选择“查看方式”  。
 
     ![](../images/dp500-enforce-model-security-image67.png)
 
-### <a name="validate-the-dynamic-role"></a>验证动态角色
+### <a name="validate-the-dynamic-role"></a>在“以角色身份查看”窗口中，勾选“其他用户”，然后在相应的框中输入：michael9@adventure-works.com  
 
-在此任务中，你将验证动态角色。
+出于测试目的，“其他用户”是 USERPRINCIPALNAME 函数将返回的值。请注意，此销售人员已分配给“Northeast”区域 。
 
-1. 在“建模”功能区选项卡上的“安全组”中，选择“查看方式”  。
+1. 选中“销售员”角色。
 
     ![](../images/dp500-enforce-model-security-image68.png)
 
 
-2. 在“以角色身份查看”窗口中，勾选“其他用户”，然后在相应的框中输入：michael9@adventure-works.com  
+2. 选择“确定”。
 
     ![](../images/dp500-enforce-model-security-image69.png)
 
-    出于测试目的，“其他用户”是 USERPRINCIPALNAME 函数将返回的值。请注意，此销售人员已分配给“Northeast”区域 。
+    在报表页上，请注意，堆积柱形图视觉对象仅显示 Northeast 的数据。
 
-3. 选中“销售员”角色。
+3. 在报表顶部，请注意确认已强制执行角色的黄色横幅。
 
     ![](../images/dp500-enforce-model-security-image70.png)
 
-4. 选择“确定”。
+4. 若要使用角色停止查看，请在黄色横幅的右侧，选择“停止查看”。
 
     ![](../images/dp500-enforce-model-security-image71.png)
 
-5. 在报表页上，请注意，堆积柱形图视觉对象仅显示 Northeast 的数据。
+5. 完成设计
 
     ![](../images/dp500-enforce-model-security-image72.png)
 
-6. 在报表顶部，请注意确认已强制执行角色的黄色横幅。
+6. 在此任务中，通过发布报表并将安全组映射到角色即可完成设计。
 
     ![](../images/dp500-enforce-model-security-image73.png)
 
 
-7. 若要使用角色停止查看，请在黄色横幅的右侧，选择“停止查看”。
+7. 此任务中的步骤是特意简化的。有关完整步骤详细信息，请参阅上一练习的任务步骤。
 
     ![](../images/dp500-enforce-model-security-image74.png)
 
-### <a name="finalize-the-design"></a>完成设计
+### <a name="finalize-the-design"></a>保存 Power BI Desktop 文件。
 
-在此任务中，通过发布报表并将安全组映射到角色即可完成设计。
+将报表发布到你的工作区。
 
-此任务中的步骤是特意简化的。有关完整步骤详细信息，请参阅上一练习的任务步骤。
+关闭 Power BI Desktop。
 
-1. 保存 Power BI Desktop 文件。
+1. 切换到 Power BI 服务（Web 浏览器）。
 
     ![](../images/dp500-enforce-model-security-image75.png)
 
-2. 将报表发布到你的工作区。
+2. 转到“Sales Analysis - Enforce model security”数据集的安全设置。 
 
-3. 关闭 Power BI Desktop。
+3. 将 Salespeople 安全组映射到 Salespeople 角色 。
 
-4. 切换到 Power BI 服务（Web 浏览器）。
+4. 现在，Salespeople 安全组的所有成员都已映射到 Salespeople 角色。如果经过身份验证的用户由“Salesperson”表中的一行表示，则已分配的销售区域将用于筛选销售表  。
 
-5. 转到“Sales Analysis - Enforce model security”数据集的安全设置。
+5. 当数据模型存储用户主体名称值时，此设计方法非常简单且有效。添加或移除销售人员，或将销售人员分配到不同的销售区域时，此设计方法将很有效。
 
-6. 将 Salespeople 安全组映射到 Salespeople 角色 。
+6. Map the <bpt id="p1">**</bpt>Salespeople<ept id="p1">**</ept> security group the <bpt id="p2">**</bpt>Salespeople<ept id="p2">**</ept> role.
 
     ![](../images/dp500-enforce-model-security-image76.png)
 
-    现在，Salespeople 安全组的所有成员都已映射到 Salespeople 角色。如果经过身份验证的用户由“Salesperson”表中的一行表示，则已分配的销售区域将用于筛选销售表  。
+    <bpt id="p1">*</bpt>Now all members of the <bpt id="p2">**</bpt>Salespeople<ept id="p2">**</ept> security group are mapped to the <bpt id="p3">**</bpt>Salespeople<ept id="p3">**</ept> role. Providing the authenticated user is represented by a row in the <bpt id="p4">**</bpt>Salesperson<ept id="p4">**</ept> table, the assigned sales territory will be used to filter the sales table.<ept id="p1">*</ept>
 
-    当数据模型存储用户主体名称值时，此设计方法非常简单且有效。添加或移除销售人员，或将销售人员分配到不同的销售区域时，此设计方法将很有效。
+    <bpt id="p1">*</bpt>This design approach is simple and effective when the data model stores the user principal name values. When salespeople are added or removed, or are assigned to different sales territories, this design approach will simply work.<ept id="p1">*</ept>
