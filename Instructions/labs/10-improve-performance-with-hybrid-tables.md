@@ -304,326 +304,326 @@ lab:
 
 8. 在“当前值”框中输入 6/1/2022（2022 年 6 月 1 日 - VM 使用美国日期格式）。  
 
-    设置参数时，可以使用任意值。Power BI 会在创建和管理分区时更新参数值。在此实验室中，你将为 2022 年 6 月设定一个范围。
+    请注意，对于非 MM-DD-YYYY 格式位置，日期应输入为 1/6/2022
 
-    若要创建第二个参数，请选择“新建”。
+    设置参数时，可以使用任意值。Power BI 会在创建和管理分区时更新参数值。在此实验室中，你将为 2022 年 6 月设定一个范围。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image30.png)
 
-9. 设置以下参数属性：
+9. 若要创建第二个参数，请选择“新建”。
 
-10. 名称：RangeEnd
+10. 设置以下参数属性：
+
+    - 名称：RangeEnd
 
     - 类型：日期/时间
 
     - 当前值：7/1/2022（2022 年 7 月 1 日）
 
-    - 选择“确定”。
-
-      筛选查询
+     请注意，对于非 MM-DD-YYYY 格式位置，日期应输入为 1/7/2022
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image31.png)
 
-11. 在此任务中，你将向 Sales 查询添加筛选器。
+11. 选择“确定”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image32.png)
 
-### <a name="filter-the-query"></a>在“查询”窗格中，选择 Sales 查询。 
+### <a name="filter-the-query"></a> 筛选查询
 
-在 OrderDate 列的标题中，选择向下箭头，然后选择“日期/时间筛选器” > “两者之间”。  
+在此任务中，你将向 Sales 查询添加筛选器。
 
-1. 在“筛选器行”窗口中，选择第一个日历图标下拉列表，然后选择参数。 
+1. 在“查询”窗格中，选择 Sales 查询。 
 
-2. 在相邻的下拉列表中，请注意已设置 RangeStart 参数。
+2. 在 OrderDate 列的标题中，选择向下箭头，然后选择“日期/时间筛选器” > “两者之间”。  
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image33.png)
 
-3. 默认参数选择是正确的。
+3. 在“筛选器行”窗口中，选择第一个日历图标下拉列表，然后选择参数。 
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image34.png)
 
-4. 在第二个 range 下拉列表中，选择“早于”。
+4. 在相邻的下拉列表中，请注意已设置 RangeStart 参数。
 
-    在相应的下拉列表中，选择 RangeEnd 参数。
+    默认参数选择是正确的。
 
-5. 选择“确定”。
+5. 在第二个 range 下拉列表中，选择“早于”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image35.png)
 
-6. 在“主页”功能区选项卡的“关闭”组内，单击“关闭并应用”图标。  
+6. 在相应的下拉列表中，选择 RangeEnd 参数。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image36.png)
 
-7. 请注意，Power BI Desktop 已将 5,134 行加载到 Sales 表中。
+7. 选择“确定”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image37.png)
 
-8. 这些是 2022 年 6 月的筛选行。
+8. 在“主页”功能区选项卡的“关闭”组内，单击“关闭并应用”图标。  
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image38.png)
 
-9. 保存 Power BI Desktop 文件。
+9. 请注意，Power BI Desktop 已将 5,134 行加载到 Sales 表中。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image39.png)
 
-    设置增量刷新
+    这些是 2022 年 6 月的筛选行。
 
-10. 在此任务中，将为 Sales 表设置增量刷新策略。
+10. 保存 Power BI Desktop 文件。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image40.png)
 
-### <a name="set-up-incremental-refresh"></a>在模型图中，右键单击 Sales 表标题，然后选择“增量刷新” 。
+### <a name="set-up-incremental-refresh"></a>设置增量刷新
 
-在“增量刷新和实时数据”窗口中，在步骤 2 中打开增量刷新。
+在此任务中，将为 Sales 表设置增量刷新策略。
 
-1. 设置以下内容：刷新日期前 2 年开始存档数据。
+1. 在模型图中，右键单击 Sales 表标题，然后选择“增量刷新” 。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image41.png)
 
-2. 此设置确定历史记录时期。在此实例中，Power BI 将为历史数据创建两个全年分区。
+2. 在“增量刷新和实时数据”窗口中，在步骤 2 中打开增量刷新。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image42.png)
 
-3. 设置以下内容：从刷新日期前 7 天开始增量刷新数据。
+3. 设置以下内容：刷新日期前 2 年开始存档数据。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image43.png)
 
-    这个设置确定了增量刷新周期，日期/时间在此周期内的所有行都包含在刷新分区中，并在执行每次刷新操作时刷新。
+    此设置确定历史记录时期。在此实例中，Power BI 将为历史数据创建两个全年分区。
 
-4. 在步骤 3 中，选中“使用 DirectQuery 实时获取最新数据”选项。
+4. 设置以下内容：从刷新日期前 7 天开始增量刷新数据。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image44.png)
 
-    超出增量刷新周期后，此设置可让人使用 DirectQuery 从数据源的所选表提取最新更改。所有晚于增量刷新周期的日期/时间行都包含在 DirectQuery 分区中，并通过每个数据集查询从数据源中提取这些行。此设置令表成为混合表，因为它将包含导入分区和一个 DirectQuery 分区。
+    这个设置确定了增量刷新周期，日期/时间在此周期内的所有行都包含在刷新分区中，并在执行每次刷新操作时刷新。
 
-5. 选择“应用”。
+5. 在步骤 3 中，选中“使用 DirectQuery 实时获取最新数据”选项。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image45.png)
 
-    保存 Power BI Desktop 文件。
+    超出增量刷新周期后，此设置可让人使用 DirectQuery 从数据源的所选表提取最新更改。所有晚于增量刷新周期的日期/时间行都包含在 DirectQuery 分区中，并通过每个数据集查询从数据源中提取这些行。此设置令表成为混合表，因为它将包含导入分区和一个 DirectQuery 分区。
 
-6. 发布数据集
+6. 选择“应用”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image46.png)
 
-7. 在此任务中，你将发布数据集。
+7. 保存 Power BI Desktop 文件。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image47.png)
 
-### <a name="publish-the-dataset"></a>若要发布报表，请在“主页”功能区选项卡上，选择“发布”。 
+### <a name="publish-the-dataset"></a>发布数据集
 
-在“发布到 Power BI”窗口中，选择在此实验室中创建的工作区，然后选择“选择”。
+在此任务中，你将发布数据集。
 
-1. 发布成功后，选择“知道了”。
+1. 若要发布报表，请在“主页”功能区选项卡上，选择“发布”。 
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image48.png)
 
-2. 关闭 Power BI Desktop。
+2. 在“发布到 Power BI”窗口中，选择在此实验室中创建的工作区，然后选择“选择”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image49.png)
 
-3. 当系统提示选择是否保存更改时，请选择“保存”。
+3. 发布成功后，选择“知道了”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image50.png)
 
-4. 设置数据集
+4. 关闭 Power BI Desktop。
 
-5. 在此任务中，你将设置数据源凭据并刷新数据集。
+5. 当系统提示选择是否保存更改时，请选择“保存”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image51.png)
 
-### <a name="set-up-the-dataset"></a>切换到 Power BI 服务 Web 浏览器会话。
+### <a name="set-up-the-dataset"></a>设置数据集
 
-在工作区登陆页中，找到报表和数据集。
+在此任务中，你将设置数据源凭据并刷新数据集。
 
-1. 将光标悬停在数据集上，出现省略号时，选择省略号，然后选择“设置”。
+1. 切换到 Power BI 服务 Web 浏览器会话。
 
-2. 在“数据源凭据”部分，选择“编辑凭据”链接 。
+2. 在工作区登陆页中，找到报表和数据集。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image52.png)
 
-3. 在窗口中输入用户名和密码，并将隐私级别设置为“组织”。
+3. 将光标悬停在数据集上，出现省略号时，选择省略号，然后选择“设置”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image53.png)
 
-4. 用户名：`sqladmin`
+4. 在“数据源凭据”部分，选择“编辑凭据”链接 。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image54.png)
 
-5. 密码：`P@ssw0rd01`
+5. 在窗口中输入用户名和密码，并将隐私级别设置为“组织”。
        
-    选择“登录”。
+    用户名：`sqladmin`
 
-    展开“计划刷新和性能优化”部分。
+    密码：`P@ssw0rd01`
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image54b.png)
 
-6. 但请注意，不要更改任何设置。
+6. 选择“登录”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image55.png)
 
-8. 在实际设置中，计划数据刷新，以便 Power BI 定期刷新和管理分区。
+8. 展开“计划刷新和性能优化”部分。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image56.png)
 
-9. 在此实验室中，你将进行按需刷新。
+9. 但请注意，不要更改任何设置。
 
-    在“导航”窗格（位于左侧）中，选择工作区。
+    在实际设置中，计划数据刷新，以便 Power BI 定期刷新和管理分区。
 
-    在“工作区登陆”页中，将光标悬停在数据集上，然后选择“刷新”图标。
+    在此实验室中，你将进行按需刷新。
 
-10. 在“刷新”列中，请注意旋转图标，并等它停止（指示刷新已完成）。
+10. 在“导航”窗格（位于左侧）中，选择工作区。
 
-11. 要打开工作区设置，请在右上角选择“设置”。
+11. 在“工作区登陆”页中，将光标悬停在数据集上，然后选择“刷新”图标。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image57.png)
 
-12. 在“设置”窗格中，选择“高级”选项卡。 
+12. 在“刷新”列中，请注意旋转图标，并等它停止（指示刷新已完成）。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image58.png)
 
-13. 若要将工作区连接复制到剪贴板，请选择“复制”。
+13. 要打开工作区设置，请在右上角选择“设置”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image59.png)
 
-14. 你将使用工作区连接，以便在 SQL Server Management Studio (SSMS) 中连接到它。
+14. 在“设置”窗格中，选择“高级”选项卡。 
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image60.png)
 
-15. 要关闭窗格，请选择“取消”。
+15. 若要将工作区连接复制到剪贴板，请选择“复制”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image61.png)
 
-    查看表分区
+    你将使用工作区连接，以便在 SQL Server Management Studio (SSMS) 中连接到它。
 
-16. 在此任务中，你将使用 SSMS 查看表分区。
+16. 要关闭窗格，请选择“取消”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image62.png)
 
-### <a name="review-the-table-partitions"></a>若要打开 SSMS，请在任务栏上选择 SSMS 快捷方式。
+### <a name="review-the-table-partitions"></a>查看表分区
 
-在“连接到服务器”窗口的“服务器类型”下拉列表中，选择“分析服务”。  
+在此任务中，你将使用 SSMS 查看表分区。
 
-1. 可以使用 SSMS 通过 XMLA 读/写终结点连接到工作区。该终结点仅适用于高级工作区。
+1. 若要打开 SSMS，请在任务栏上选择 SSMS 快捷方式。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image63.png)
 
-2. 在“服务器名称”框中，将文本粘贴到工作区连接中（按 Ctrl+V 键）以进行替换。 
+2. 在“连接到服务器”窗口的“服务器类型”下拉列表中，选择“分析服务”。  
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image64.png)
 
-    在“身份验证”下拉列表中，选择“Azure Active Directory - 密码”。 
+    可以使用 SSMS 通过 XMLA 读/写终结点连接到工作区。该终结点仅适用于高级工作区。
 
-3. 输入你的实验室凭据。
+3. 在“服务器名称”框中，将文本粘贴到工作区连接中（按 Ctrl+V 键）以进行替换。 
 
-4. 选择“连接”。
+4. 在“身份验证”下拉列表中，选择“Azure Active Directory - 密码”。 
 
-5. 在对象资源管理器（位于左侧）中，依次展开 Databases 文件夹、Sales Analysis... 数据库（数据集）和 Tables 文件夹。  
+5. 输入你的实验室凭据。
 
-6. 右键单击 Sales 表，然后选择“分区”。 
+6. 选择“连接”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image65.png)
 
-7. 在“分区”窗口中，请注意两年历史记录的分区列表，后跟季度分区和每日分区。
+7. 在对象资源管理器（位于左侧）中，依次展开 Databases 文件夹、Sales Analysis... 数据库（数据集）和 Tables 文件夹。  
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image66.png)
 
-8. 滚动到列表底部，注意最后一个是当前和将来日期的 DirectQuery 分区。
+8. 右键单击 Sales 表，然后选择“分区”。 
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image67.png)
 
-9. Power BI 会自动创建和管理所有这些分区。
+9. 在“分区”窗口中，请注意两年历史记录的分区列表，后跟季度分区和每日分区。
 
-10. 选择“取消”  。
+10. 滚动到列表底部，注意最后一个是当前和将来日期的 DirectQuery 分区。
 
-    测试混合表
+    Power BI 会自动创建和管理所有这些分区。
 
-11. 在本练习中，你将打开报表，添加销售订单，然后查看报表数据更新。
+11. 选择“取消”  。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image68.png)
 
-## <a name="test-the-hybrid-table"></a>打开报表
+## <a name="test-the-hybrid-table"></a>测试混合表
+
+在本练习中，你将打开报表，添加销售订单，然后查看报表数据更新。
+
+### <a name="open-the-report"></a>打开报表
 
 在此任务中，你将打开报表。
 
-### <a name="open-the-report"></a>切换到 Power BI 服务 Web 浏览器会话。
+1. 切换到 Power BI 服务 Web 浏览器会话。
 
-在工作区登陆页中，选择报表。
-
-1. 如果需要，在会计年度切片器中，选择包含当前月份（基于今天的日期）的会计年度。
-
-2. 当前月份应显示为条形图中的条形。
+2. 在工作区登陆页中，选择报表。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image69.png)
 
-3. 向数据库添加一个订单
+3. 如果需要，在会计年度切片器中，选择包含当前月份（基于今天的日期）的会计年度。
 
-    在此任务中，你将向数据库添加一个订单。
+    当前月份应显示为条形图中的条形。
 
-    切换到 SSMS。
+    请注意，2022 年 8 月开始不属于 2022 财年，这是切片器的默认值。
 
-### <a name="add-an-order-to-the-database"></a>若要打开脚本文件，请在“文件”菜单上选择“打开” > “文件”  。
+### <a name="add-an-order-to-the-database"></a>向数据库添加一个订单
 
-在“打开文件”窗口中，转到 D:\DP500\Allfiles\10\Assets 文件夹 。
+在此任务中，你将向数据库添加一个订单。
 
-1. 选择 1-InsertOrder.sql 文件，然后选择“打开”。 
+1. 切换到 SSMS。
 
-2. 在“连接到数据库引擎”窗口中，确保“服务器名称”下拉列表设置为实验室 Azure SQL 数据库服务器 。
+2. 若要打开脚本文件，请在“文件”菜单上选择“打开” > “文件”  。
 
-3. 在“身份验证”下拉列表中，选择“Azure Active Directory - 密码”。 
+3. 在“打开文件”窗口中，转到 D:\DP500\Allfiles\10\Assets 文件夹 。
 
-4. 输入你的实验室凭据。
+4. 选择 1-InsertOrder.sql 文件，然后选择“打开”。 
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image70.png)
 
-5. 选择“连接”。
+5. 在“连接到数据库引擎”窗口中，确保“服务器名称”下拉列表设置为实验室 Azure SQL 数据库服务器 。
 
-6. 查看脚本。
+6. 在“身份验证”下拉列表中，选择“SQL Server 身份验证” 。
 
-7. 此脚本把今天作为订单日期，将单个订单插入 FactInternetSales 表中。**
+7. 输入用户名 sqladmin 和密码。
 
-8. 若要运行脚本，请在工具栏上选择“执行”（或按 F5） 。
+8. 选择“连接”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image71.png)
 
-9. 若要关闭文件，请在“文件”菜单上选择“关闭” 。
+9. 查看脚本。
 
-    刷新报表
+    此脚本把今天作为订单日期，将单个订单插入 FactInternetSales 表中。**
 
-10. 在此任务中，你将刷新报表。
+10. 若要运行脚本，请在工具栏上选择“执行”（或按 F5） 。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image72.png)
 
-11. 切换到 Power BI 服务 Web 浏览器会话。
+11. 若要关闭文件，请在“文件”菜单上选择“关闭” 。
 
-### <a name="refresh-the-report"></a>在报表中，记下本月的销售额。
+### <a name="refresh-the-report"></a>刷新报表
 
-在操作栏上，选择“刷新”命令。
+在此任务中，你将刷新报表。
 
-1. 报表刷新完成后，验证当前月份的销售额是否增加了 10,000 美元。
+1. 切换到 Power BI 服务 Web 浏览器会话。
 
-2. Power BI 查询 Sales 表时，它从 DirectQuery 分区中检索当前数据，该分区直接查询 Azure SQL 数据库。**
+2. 在报表中，记下本月的销售额。
 
-3. 提示：混合表特别适用于自动页面刷新，这是自动刷新 Power BI 报表的功能。
+3. 在操作栏上，选择“刷新”命令。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image73.png)
 
-4. 完成
+4. 报表刷新完成后，验证当前月份的销售额是否增加了 10,000 美元。
 
-    在此任务中，你将完成以下操作。
+    Power BI 查询 Sales 表时，它从 DirectQuery 分区中检索当前数据，该分区直接查询 Azure SQL 数据库。**
 
-    在 SSMS 中，打开 2-Cleanup.sql 文件。
+    提示：混合表特别适用于自动页面刷新，这是自动刷新 Power BI 报表的功能。
 
-### <a name="finish-up"></a>此脚本将删除插入的订单。
+### <a name="finish-up"></a>完成
 
-运行该脚本。 关闭 SSMS。
+在此任务中，你将完成操作。 打开 SSMS 并确保已连接到数据库 AdventureWorksDW2022-DP500。
 
-1. In SSMS, open the <bpt id="p1">**</bpt>2-Cleanup.sql<ept id="p1">**</ept> file.
+1. 在 SSMS 中，打开 2-Cleanup.sql 文件。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image74.png)
 
-    This script removes the order that you inserted.
+    此脚本将删除插入的订单。
 
-2. Run the script.
+2. 运行该脚本。
 
-3. Close SSMS.
+3. 关闭 SSMS。
