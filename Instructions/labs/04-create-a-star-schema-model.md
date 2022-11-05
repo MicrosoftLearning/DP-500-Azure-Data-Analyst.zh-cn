@@ -168,7 +168,7 @@ lab:
 
     ![](../images/dp500-create-a-star-schema-model-image3h.png)
 
-1. 出现提示时，选择“发布”。
+1. 导航到“管理”并选择“全部发布”以确保发布更改 。
 
 ## <a name="develop-a-data-model"></a>开发数据模型
 
