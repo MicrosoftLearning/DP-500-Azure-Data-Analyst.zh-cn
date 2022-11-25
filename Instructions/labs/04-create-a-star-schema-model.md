@@ -190,6 +190,8 @@ lab:
 
     ![](../images/dp500-create-a-star-schema-model-image5.png)
 
+    注意：如果在此处看不到任何数据，请确认专用 SQL 池正在运行，并且 Power BI 工作区已链接到 Synapse 工作区。
+
 4. 在“Power BI 数据集”窗格中，选择“新建 Power BI 数据集” 。
 
     ![](../images/dp500-create-a-star-schema-model-image6.png)
@@ -234,11 +236,15 @@ lab:
 
     ![](../images/dp500-create-a-star-schema-model-image12.png)
 
-7. 要创建（将成为模型表的）查询，请选中以下五个表：
+7. 若要创建（将成为模型表的）查询，请选中以下七个表：
 
     - DimDate
 
     - DimProduct
+  
+    - DimProductCategory
+  
+    - DimProductSubcategory
 
     - DimReseller
 
@@ -332,7 +338,6 @@ lab:
 
     - 将 FiscalYear 重命名为 Year 
 
-
 23. 若要验证查询设计，请在状态栏（位于窗口底部）中，验证查询是否包含五列。
 
     ![](../images/dp500-create-a-star-schema-model-image26.png)
@@ -354,7 +359,40 @@ lab:
     ![](../images/dp500-create-a-star-schema-model-image28.png)
 
 
-27. 选择 DimProduct 查询。
+27. 选择 DimProductCategory 表。 
+    
+28. 将查询重命名为“产品详细信息”。
+
+29. 在功能区“主页”选项卡上的“合并”组中，选择“合并查询”。 
+
+    注意：我们正在合并查询以获取产品详细信息、类别和子类别。这将在“产品”维度中使用。
+
+1. 选择 DimProductSubcategory 表，然后选择每个表中的 ProductCategoryKey 列 。 选择“确定”。
+
+    ![](../images/dp500-create-a-star-schema-model-image28a.png)
+
+    
+    注意：对此合并使用默认联接，即左外部联接。
+
+2. 展开 DimProductSubcategory 列。 选择 ProductSubcategoryKey 和 EnglishProductSubcategoryName 列 。 取消选择“使用原始列名作为前缀”。
+
+    ![](../images/dp500-create-a-star-schema-model-image28b.png)
+
+    此扩展功能允许基于源数据中的外键约束联接表。本实验室采用的设计方法是将雪花维度表联接在一起，以生成数据的非规范化表示形式。
+
+1. 选择“确定”。
+   
+2. 删除所有列，以下列除外：
+
+   - ProductSubcategoryKey
+   
+   - EnglishProductCategoryName
+
+   - EnglishProductSubcategoryName
+
+   现在应该得到 3 列、37 行。
+
+3.  选择 DimProduct 查询。
 
     ![](../images/dp500-create-a-star-schema-model-image29.png)
 
@@ -362,12 +400,25 @@ lab:
 
     ![](../images/dp500-create-a-star-schema-model-image30.png)
 
-29. 若要筛选查询，请在 FinishedGoodsFlag 列标题中打开下拉菜单，取消选中 FALSE 。
+1. 在功能区“主页”选项卡上的“合并”组中，选择“合并查询”。 
+
+1. 选择“产品详细信息”表，然后在“产品”表和“产品详细信息”表中选择 ProductSubcategoryKey 列 。
+
+    ![](../images/dp500-create-a-star-schema-model-image30a.png)
+
+1. 选择“确定”。
+
+1. 展开“产品详细信息”列，然后选择 EnglishProductSubcategoryName 和 EnglishProductCategoryName 列 。 
+
+    ![](../images/dp500-create-a-star-schema-model-image30b.png)
+
+1. 选择“确定”。
+
+2.  若要筛选查询，请在 FinishedGoodsFlag 列标题中打开下拉菜单，取消选中 FALSE 。
 
     ![](../images/dp500-create-a-star-schema-model-image31.png)
 
 30. 选择“确定”。
-
 
 31. 删除所有列，以下列除外：
 
@@ -377,26 +428,9 @@ lab:
 
     - Color
 
-    - DimProductSubcategory
-
-32. 若要配置查询以联接表，请在 DimProductSubcategory 列标题中选择“展开”按钮，然后取消选中“(选择所有列)”  。
-
-    此功能允许基于源数据中的外键约束联接表。本实验室采用的设计方法是将雪花维度表联接在一起，以生成数据的非规范化表示形式。
-
-33. 取消选中“使用原始列名作为前缀”。
-
-    ![](../images/dp500-create-a-star-schema-model-image32.png)
-
-34. 选中以下两列：
-
     - EnglishProductSubcategoryName
 
-    - DimProductCategory
-
-35. 选择“确定”。
-
-36. 重复上述步骤以展开 DimProductCategory 并引入 EnglishProductCategoryName 列 。
-
+    - EnglishProductCategoryName
 
 37. 为以下列重命名：
 
@@ -411,8 +445,6 @@ lab:
     ![](../images/dp500-create-a-star-schema-model-image33.png)
 
 39. 在“原生查询”窗口中，查看反映查询设计的 SELECT 语句。
-
-    该语句包含嵌套子查询，用于生成非规范化查询结果。
 
 40. 若要关闭“原生查询”窗口，请选择“确定” 。
 
@@ -528,6 +560,11 @@ lab:
 
     现在，Sales 查询设计就完成了**。
 
+1. 右键单击“产品详细信息”表，然后取消选择“启用加载” 。 这样会禁止将“产品详细信息”表加载到数据模型，并且不会显示在报表中。
+
+    ![](../images/dp500-create-a-star-schema-model-image40a.png)
+
+1. 重复此步骤，为 DimProductSubcategory 表取消选择“启用加载”。
 
 63. 若要应用查询，请在“主页”功能区选项卡上，从“关闭”组中选择“关闭并应用”图标  。
 
