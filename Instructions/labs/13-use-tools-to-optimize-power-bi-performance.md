@@ -149,7 +149,9 @@ lab:
 
     表格编辑器在新窗口中打开，并实时连接到 Power BI Desktop 中托管的数据模型。保存在表格编辑器中对模型所做的更改之前，这些更改不会传播到 Power BI Desktop。
 
-2. 若要加载 BPA 规则，请选择“高级脚本编写”选项卡。
+2. 若要加载 BPA 规则，请选择“C# 脚本”选项卡。
+
+    注意：在旧版表格编辑器中，可能将其称为“高级脚本编写”选项卡。
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image13.png)
 
@@ -243,7 +245,7 @@ lab:
     提示：所有公式都可从 D:\DP500\Allfiles\13\Assets\Snippets.txt 复制和粘贴**。
 
     ```
-    DIVIDE ( [Profit], SUM ( 'Sales'[Sales Amount] ) )
+    DIVIDE ( [Profit], SUM ( 'Sales'[Sales Amount] ) )C#
     ```
 
 7. 若要保存模型更改，请在工具栏上选择“保存对连接的数据库的更改”命令（或按 Ctrl+S） 。
@@ -268,9 +270,11 @@ lab:
 
 12. 当系统通知 BPA 已将修复脚本复制到剪贴板时，选择“确定”。
 
-13. 切换到表格编辑器，然后选择“高级脚本编写”选项卡。
+13. 切换到表格编辑器，然后选择“C# 脚本”选项卡。
 
-    ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image26.png)
+    注意：在旧版表格编辑器中，可能将其称为“高级脚本编写”选项卡。
+    
+    ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image13.png)
 
 14. 若要复制修复脚本，请在窗格内右键单击，然后按 Ctrl+C。
 
@@ -280,7 +284,7 @@ lab:
 
 15. 若要运行脚本，请在工具栏上选择“运行脚本”命令。
 
-    ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image28.png)
+    ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image14.png)
 
 16. 保存模型更改。
 

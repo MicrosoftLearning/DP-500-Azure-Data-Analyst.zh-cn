@@ -146,7 +146,7 @@ SQL 可能是世界上处理数据最常用的语言。 大多数数据分析师
         TOP 100 *
     FROM
         OPENROWSET(
-            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/parquet/',
+            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/parquet/**',
             FORMAT = 'PARQUET'
         ) AS [result]
     ```
@@ -159,7 +159,7 @@ SQL 可能是世界上处理数据最常用的语言。 大多数数据分析师
            COUNT(*) AS OrderedItems
     FROM
         OPENROWSET(
-            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/parquet/',
+            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/parquet/**',
             FORMAT = 'PARQUET'
         ) AS [result]
     GROUP BY YEAR(OrderDate)
