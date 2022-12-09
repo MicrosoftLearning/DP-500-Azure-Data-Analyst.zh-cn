@@ -95,7 +95,7 @@ lab:
 
 5. 执行所有剩余任务以完成试用设置。
 
-    提示：Power BI Web 浏览器体验被称为 Power BI 服务。
+    提示：Power BI Web 浏览器体验称为 Power BI 服务**。
 
 
 ### <a name="create-a-workspace"></a>创建工作区
