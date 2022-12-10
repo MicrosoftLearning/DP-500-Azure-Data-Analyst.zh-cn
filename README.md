@@ -1,7 +1,7 @@
-# <a name="dp-500-designing-and-implementing-enterprise-scale-analytics-solutions-using-microsoft-azure"></a>DP-500：使用 Microsoft Azure 和 Microsoft Power BI 设计和实现企业级分析解决方案
+# <a name="dp-500-designing-and-implementing-enterprise-scale-analytics-solutions-using-microsoft-azure"></a>DP-500：使用 Microsoft Azure 设计和实现企业级分析解决方案
 
 - 你是 MCT 吗？ - 查看 [MCT GitHub 用户指南](https://microsoftlearning.github.io/MCT-User-Guide/)
-- 将学生定向到 ILT 模块列表及其关联实验室 [的内容目录](https://microsoftlearning.github.io/DP-500-Azure-Data-Analyst/) 。
+- 引导学生访问[内容目录](https://microsoftlearning.github.io/DP-500-Azure-Data-Analyst/)查看 ILT 模块及相关实验室的列表。
 
 ## <a name="what-are-we-doing"></a>我们要做什么？
 
@@ -21,9 +21,9 @@
 
 - 任何 MCT 都可向 GitHub 存储库中的代码或内容提交拉取请求，Microsoft 和课程作者将根据需要进行分流并纳入内容和实验室代码的更改。
 
-- 你可以提交 bug、更改、改进和想法。  先于我们找到了新的 Azure 功能？  提交新的演示吧！
+- 你可以提交 bug、更改、改进和想法。  先于我们找到了新的 Azure 功能？  提交新演示！
 
-## <a name="notes"></a>说明
+## <a name="notes"></a>注释
 
 ### <a name="classroom-materials"></a>课堂材料
 

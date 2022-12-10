@@ -69,7 +69,7 @@ lab:
 
 5. 执行所有剩余任务以完成试用设置。
 
-    提示：Power BI Web 浏览器体验被称为 Power BI 服务。
+    提示：Power BI Web 浏览器体验称为 Power BI 服务**。
 
 ### <a name="create-a-workspace"></a>创建工作区
 
@@ -116,7 +116,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image8.png)
 
-2. 使用模型图查看模型设计。
+2. 使用模型关系图查看模型设计。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image9.png)
 

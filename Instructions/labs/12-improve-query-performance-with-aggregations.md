@@ -20,11 +20,11 @@ lab:
 
 ## <a name="get-started"></a>入门
 
-在本练习中，你将准备环境。
+在本练习中，需要准备好环境。
 
 ### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
 
-1. 在“开始”菜单上打开命令提示符
+1. 在“开始”菜单上，打开“命令提示符”
 
     ![](../images/command-prompt.png)
 
@@ -117,7 +117,7 @@ lab:
 
     ![](../images/dp500-improve-query-performance-with-aggregations-image8.png)
 
-    性能分析器检查并显示更新或刷新视觉对象所需的持续时间。每个视觉对象至少向源数据库发出一个查询。有关详细信息，请参阅[使用性能分析器检查报表元素性能](https://docs.microsoft.com/power-bi/create-reports/desktop-performance-analyzer)。
+    性能分析器检查并显示更新或刷新视觉对象所需的时间。每个视觉对象都至少向源数据库发出一个查询。有关详细信息，请参阅[使用性能分析器检查报表元素性能](https://docs.microsoft.com/power-bi/create-reports/desktop-performance-analyzer)。
 
 4. 选择“刷新视觉对象”。
 
@@ -405,7 +405,7 @@ Power BI 中的聚合可以提高针对异常大型的 DirectQuery 表的查询�
 
 ### <a name="finish-up"></a>完成
 
-在此任务中，你将完成以下操作。
+在此任务中，你将完成操作。
 
 1. 保存 Power BI Desktop 文件。
 
