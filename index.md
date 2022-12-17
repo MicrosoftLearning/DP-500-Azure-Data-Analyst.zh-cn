@@ -6,9 +6,9 @@ layout: home
 
 # <a name="data-analyst-exercises"></a>数据分析师练习
 
-DP-500：使用 Microsoft Azure 和 Microsoft Power BI 设计和实现企业级分析解决方案
+这些练习支持 Microsoft 课程 [DP-500：使用 Microsoft Azure 和 Microsoft Power BI 设计和实现企业级分析解决方案](https://docs.microsoft.com/training/courses/dp-500t00)
 
-{% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
+{% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/labs'" %}
 | ILT 模块 | 实验室 |
 | --- | --- | 
 {% 表示实验室 % 中的活动}| {{ activity.lab.module }} | [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |

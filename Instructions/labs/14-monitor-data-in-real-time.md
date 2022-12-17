@@ -236,7 +236,7 @@ lab:
 
 ### <a name="finish-up"></a>完成
 
-在此任务中，你将完成以下操作。
+在此任务中，你将完成操作。
 
 1. 保存 Power BI Desktop 文件。
 

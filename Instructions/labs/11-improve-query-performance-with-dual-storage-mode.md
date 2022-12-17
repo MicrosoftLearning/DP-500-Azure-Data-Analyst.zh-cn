@@ -20,11 +20,11 @@ lab:
 
 ## <a name="get-started"></a>入门
 
-在本练习中，你将准备环境。
+在本练习中，需要准备好环境。
 
 ### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
 
-1. 在开始菜单上，打开命令提示符
+1. 在“开始”菜单上，打开“命令提示符”
 
     ![](../images/command-prompt.png)
 
@@ -115,11 +115,11 @@ lab:
 
     ![](../images/dp500-improve-query-performance-with-dual-storage-mode-image7.png)
 
-2. 若要检查视觉对象刷新事件，请在“视图”功能区选项卡上的“显示”窗格组内，选择“性能分析器”  。
+2. 若要检查视觉对象刷新事件，请在“视图”功能区选项卡上的“显示”窗格组内选择“性能分析器”  。
 
     ![](../images/dp500-improve-query-performance-with-dual-storage-mode-image8.png)
 
-3. 在“性能分析器”窗格（位于“可视化效果”窗格的左侧）中，选择“开始记录”  。
+3. 在“性能分析器”窗格（位于“可视化效果”窗格左侧）中，选择“开始录制”  。
 
     ![](../images/dp500-improve-query-performance-with-dual-storage-mode-image9.png)
 
@@ -215,7 +215,7 @@ lab:
 
 ### <a name="finish-up"></a>完成
 
-在此任务中，你将完成以下操作。
+在此任务中，你将完成操作。
 
 1. 保存 Power BI Desktop 文件。
 
