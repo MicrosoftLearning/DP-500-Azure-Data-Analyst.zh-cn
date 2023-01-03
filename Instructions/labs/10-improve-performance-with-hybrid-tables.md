@@ -117,7 +117,31 @@ lab:
 
 8. 使 Azure 门户 Web 浏览器会话保持打开状态。 需要在“设置 Power BI Desktop任务”中复制数据库连接字符串。
 
-### <a name="set-up-the-power-bi-service"></a>设置 Power BI 服务
+### <a name="set-up-power-bi"></a>设置 Power BI
+
+#### <a name="set-up-a-power-bi-account-in-power-bi-desktop"></a>在 Power BI Desktop 中设置 Power BI 帐户
+
+在此任务中，你将设置 Power BI Desktop。
+
+1. 若要打开文件资源管理器，请选择任务栏上的文件资源管理器快捷方式。
+
+    ![](../images/dp500-create-a-dataflow-image1.png)
+
+1. 转到 D:\DP500\Allfiles\10\Starter 文件夹。
+
+1. 若要打开预先开发的 Power BI Desktop 文件，请双击“销售分析 - 使用混合表提高性能”文件。
+
+1. 如果尚未登录，请在 Power BI Desktop 右上角选择“登录”。 使用实验室凭据完成登录过程。
+
+    ![](../images/dp500-create-a-dataflow-image2.png)
+
+    注意：这可能会将你带到 Power BI 服务以完成注册过程。
+
+1. 若要保存文件，请在“文件”功能区上选择“另存为” 。
+
+1. 在“另存为”窗口中，转到 D:\DP500\Allfiles\10\MySolution 文件夹 。
+
+#### <a name="set-up-power-bi-premium-trial"></a>设置 Power BI Premium 试用版
 
 在此任务中，你将登录到 Power BI 服务并启动试用许可证。
 
