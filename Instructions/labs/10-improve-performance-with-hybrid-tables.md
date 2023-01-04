@@ -82,7 +82,8 @@ lab:
 
     该脚本大约需要 10-15 分钟的运行时间。
 
-    注意：此实验室要求资源组创建 Azure SQL 数据库。如果在托管实验室环境中没有提供的资源组，请在 Azure 订阅中[创建资源组](https://docs.microsoft.com/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups)。
+    注意：此实验室需要资源组来创建 Azure SQL 数据库。如果在托管实验室环境中执行此实验室，可能需要登录到 [Azure 门户](portal.azure.com)以获取资源组名称。如果未在托管实验室环境中提供资源组，请在 Azure 订阅中[创建资源组](https://docs.microsoft.com/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups)。
+
 3. 脚本完成后，关闭 PowerShell 窗口。
 
 ### <a name="set-up-the-azure-sql-database"></a>设置 Azure SQL 数据库
