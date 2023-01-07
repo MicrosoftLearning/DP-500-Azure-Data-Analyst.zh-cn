@@ -276,7 +276,7 @@ lab:
     
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image13.png)
 
-14. 若要复制修复脚本，请在窗格内右键单击，然后按 Ctrl+C。
+14. 若要粘贴修复脚本，请在窗格内右键单击，然后按 Ctrl+V。
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image27.png)
 

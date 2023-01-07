@@ -82,7 +82,8 @@ lab:
 
     该脚本大约需要 10-15 分钟的运行时间。
 
-    注意：此实验室要求资源组创建 Azure SQL 数据库。如果在托管实验室环境中没有提供的资源组，请在 Azure 订阅中[创建资源组](https://docs.microsoft.com/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups)。
+    注意：此实验室需要资源组来创建 Azure SQL 数据库。如果在托管实验室环境中执行此实验室，可能需要登录到 [Azure 门户](portal.azure.com)以获取资源组名称。如果未在托管实验室环境中提供资源组，请在 Azure 订阅中[创建资源组](https://docs.microsoft.com/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups)。
+
 3. 脚本完成后，关闭 PowerShell 窗口。
 
 ### <a name="set-up-the-azure-sql-database"></a>设置 Azure SQL 数据库
@@ -117,7 +118,31 @@ lab:
 
 8. 使 Azure 门户 Web 浏览器会话保持打开状态。 需要在“设置 Power BI Desktop任务”中复制数据库连接字符串。
 
-### <a name="set-up-the-power-bi-service"></a>设置 Power BI 服务
+### <a name="set-up-power-bi"></a>设置 Power BI
+
+#### <a name="set-up-a-power-bi-account-in-power-bi-desktop"></a>在 Power BI Desktop 中设置 Power BI 帐户
+
+在此任务中，你将设置 Power BI Desktop。
+
+1. 若要打开文件资源管理器，请选择任务栏上的文件资源管理器快捷方式。
+
+    ![](../images/dp500-create-a-dataflow-image1.png)
+
+1. 转到 D:\DP500\Allfiles\10\Starter 文件夹。
+
+1. 若要打开预先开发的 Power BI Desktop 文件，请双击“销售分析 - 使用混合表提高性能”文件。
+
+1. 如果尚未登录，请在 Power BI Desktop 右上角选择“登录”。 使用实验室凭据完成登录过程。
+
+    ![](../images/dp500-create-a-dataflow-image2.png)
+
+    注意：这可能会将你带到 Power BI 服务以完成注册过程。
+
+1. 若要保存文件，请在“文件”功能区上选择“另存为” 。
+
+1. 在“另存为”窗口中，转到 D:\DP500\Allfiles\10\MySolution 文件夹 。
+
+#### <a name="set-up-power-bi-premium-trial"></a>设置 Power BI Premium 试用版
 
 在此任务中，你将登录到 Power BI 服务并启动试用许可证。
 
