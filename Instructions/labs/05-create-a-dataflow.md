@@ -199,7 +199,7 @@ lab:
 
 在此任务中，你将创建表示与日期相关的数据的一致定义的数据流。
 
-1. 在位于“导航”窗格左下角的 Power BI 服务中，选择“获取数据” 。
+1. 在 Power BI 服务中，依次选择“新建”、“数据流” 。
 
     ![](../images/dp500-create-a-dataflow-image10.png)
 
@@ -220,9 +220,15 @@ lab:
     提示：可以使用搜索框（位于右上角）来帮助查找数据源。
 
 1. 输入“Synapse 连接”设置。
-     - 输入 Azure 门户中的服务器名称 ![](../images/synapse-sql-pool-connection-string.png)
+
+     - 输入 Azure 门户中的服务器名称 
      
-        服务器名称应类似于：synapsewsxxxxx.sql.azuresynapse.net
+     ![](../images/synapse-sql-pool-connection-string.png)
+     
+      服务器名称应类似于：
+      
+      synapsewsxxxxx.sql.azuresynapse.net
+      
      - 确保“身份验证类型”为“组织帐户”。 如果系统提示登录，请使用实验室提供的凭据。
      ![](../images/synapse-sql-pool-sign-in.png)
 

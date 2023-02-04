@@ -47,31 +47,40 @@ lab:
    
 1. 在文件资源管理器中打开 D 驱动器，确保文件已下载。
 
-### <a name="sign-in-to-the-power-bi-service"></a>登录到 Power BI 服务
+### <a name="set-up-power-bi"></a>设置 Power BI
 
-在此任务中，你将登录到 Power BI 服务并启动试用许可证，然后创建工作区。
+在此任务中，你将设置 Power BI。
 
-重要说明：如果已在 VM 环境中设置 Power BI，请继续执行下一个任务。
+1. 若要打开 Power BI Desktop，请在任务栏上选择 Power BI Desktop 快捷方式。
 
-1. 在 Web 浏览器中，转到 https://powerbi.com。
+    ![](../images/dp500-create-a-star-schema-model-image1.png)
 
-2. 使用实验室凭据完成登录过程。
+2. 选择位于开始窗口右上角的“X”。
 
-    重要说明：请务必使用登录 Power BI Desktop 时使用的凭据。
+    ![](../images/dp500-create-a-star-schema-model-image2.png)
 
-3. 在右上角选择“个人资料”图标，然后选择“开始试用”。
+3. 如果尚未登录，请在 Power BI Desktop 右上角选择“登录”。 使用实验室凭据完成登录过程。
 
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image1.png)
+    ![](../images/dp500-create-a-star-schema-model-image3.png)
+4. 你将重定向到 Microsoft Edge 中的 Power BI 注册页面。 选择“继续”以完成注册。
 
-4. 出现提示时，选择“开始试用”。
+    ![](../images/dp500-create-a-star-schema-model-image3b.png)
 
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image2.png)
+5. 输入 10 位电话号码，然后选择“开始”。 再次选择“开始”。 你将重定向到 Power BI。
 
-5. 执行所有剩余任务以完成试用设置。
+1. 在右上角选择“个人资料”图标，然后选择“开始试用”。
+
+    ![](../images/dp500-create-a-dataflow-image3.png)
+
+1. 出现提示时，选择“开始试用”。
+
+    ![](../images/dp500-create-a-dataflow-image4.png)
+
+1. 执行所有剩余任务以完成试用设置。
 
     提示：Power BI Web 浏览器体验称为 Power BI 服务**。
 
-### <a name="create-a-workspace"></a>创建工作区
+### <a name="create-a-workspace-in-the-power-bi-service"></a>在 Power BI 服务中创建工作区
 
 在此任务中，你将创建一个工作区。
 
@@ -92,9 +101,7 @@ lab:
 
     创建后会打开该工作区。在下一项任务中，你要将数据集发布到此工作区。
 
-### <a name="set-up-power-bi-desktop"></a>设置 Power BI Desktop
-
-在此任务中，你将设置 Power BI Desktop。
+### <a name="open-the-starter-file-in-power-bi-desktop"></a>在 Power BI Desktop 中打开起始文件
 
 1. 若要打开文件资源管理器，请选择任务栏上的文件资源管理器快捷方式。
 
