@@ -4,7 +4,7 @@ permalink: index.html
 layout: home
 ---
 
-# <a name="data-analyst-exercises"></a>数据分析师练习
+# 数据分析师练习
 
 这些练习支持 Microsoft 课程 [DP-500：使用 Microsoft Azure 和 Microsoft Power BI 设计和实现企业级分析解决方案](https://docs.microsoft.com/training/courses/dp-500t00)
 
