@@ -4,9 +4,9 @@ lab:
   module: Implement advanced data visualization techniques by using Power BI
 ---
 
-# <a name="monitor-data-in-real-time"></a>实时监视数据
+# 实时监视数据
 
-## <a name="overview"></a>概述
+## 概述
 
 完成本实验室预计需要 30 分钟
 
@@ -20,11 +20,11 @@ lab:
 
 - 创建和使用更改检测功能。
 
-## <a name="get-started"></a>入门
+## 入门
 
 在本练习中，需要准备好环境。
 
-### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
+### 克隆本课程的存储库
 
 1. 在“开始”菜单上，打开“命令提示符”
 
@@ -47,7 +47,7 @@ lab:
    
 1. 在文件资源管理器中打开 D 驱动器，确保文件已下载。
 
-### <a name="set-up-the-database"></a>设置数据库
+### 设置数据库
 
 在此任务中，你将使用 SQL Server Management Studio (SSMS) 通过运行两个脚本来设置数据库。
 
@@ -59,8 +59,6 @@ lab:
     ![](../images/dp500-monitor-data-in-real-time-image2.png)
 
 3. 选择“连接”。
-    
-    ![](../images/dp500-monitor-data-in-real-time-image3.png)
 
 4. 若要打开脚本文件，请在“文件”菜单上选择“打开” > “文件”  。
 
@@ -94,13 +92,11 @@ lab:
 
 13. 运行此脚本，使其一直运行到实验室结束。
 
-### <a name="set-up-power-bi-desktop"></a>设置 Power BI Desktop
+### 设置 Power BI Desktop
 
 在此任务中，你将打开预先开发的 Power BI Desktop 解决方案。
 
 1. 若要打开文件资源管理器，请选择任务栏上的文件资源管理器快捷方式。
-
-    ![](../images/dp500-monitor-data-in-real-time-image8.png)
 
 2. 转到 D:\DP500\Allfiles\14\Starter 文件夹。
 
@@ -112,7 +108,7 @@ lab:
 
 6. 选择“保存”。
 
-### <a name="review-the-report"></a>查看报表
+### 查看报表
 
 在此任务中，你将查看预先开发的报表。
 
@@ -142,13 +138,13 @@ lab:
 
     设计用于实时分析的报表时，必须有一种比要求用户不断刷新报表页更好的方法。在下一个练习中设置自动页面刷新时，你将有更好的实现方法。
 
-## <a name="set-up-automatic-page-refresh"></a>设置自动页面刷新
+## 设置自动页面刷新
 
 在本练习中，你将使用更改检测功能来设置自动页面刷新和试验。
 
 自动页面刷新要求至少有一个设置为使用 DirectQuery 存储模式的模型表。
 
-### <a name="set-up-automatic-page-refresh"></a>设置自动页面刷新
+### 设置自动页面刷新
 
 在此任务中，将设置自动页面刷新。
 
@@ -182,7 +178,7 @@ lab:
 
     发布到 Power BI 服务后，如果刷新间隔少于 30 分钟，则需要将报表保存到分配给高级容量的工作区。此外，容量管理员必须启用并设置容量才能支持这种频繁的间隔。有关详细信息，请参阅 [Power BI 中的自动页面刷新](https://docs.microsoft.com/power-bi/create-reports/desktop-automatic-page-refresh)。
 
-### <a name="set-up-change-detection"></a>设置更改检测
+### 设置更改检测
 
 在此任务中，将设置更改检测。
 
@@ -234,7 +230,7 @@ lab:
 
     这是因为数据库当时没有插入新的 Internet 销售订单。此设置现在更高效，因为报表视觉对象仅在必要时刷新。
 
-### <a name="finish-up"></a>完成
+### 完成
 
 在此任务中，你将完成操作。
 
