@@ -4,9 +4,9 @@ lab:
   module: Design and build tabular models
 ---
 
-# <a name="enforce-model-security"></a>强制实施模型安全性
+# 强制实施模型安全性
 
-## <a name="overview"></a>概述
+## 概述
 
 **预估完成本实验室需要 45 分钟**
 
@@ -22,11 +22,11 @@ lab:
 
 - 将安全主体映射到数据集角色。
 
-## <a name="get-started"></a>入门
+## 入门
 
 在本练习中，需要准备好环境。
 
-### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
+### 克隆本课程的存储库
 
 1. 在“开始”菜单上，打开“命令提示符”
 
@@ -49,13 +49,11 @@ lab:
    
 1. 在文件资源管理器中打开 D 驱动器，确保文件已下载。
 
-### <a name="set-up-power-bi-desktop"></a>设置 Power BI Desktop
+### 设置 Power BI Desktop
 
 在此任务中，你将设置 Power BI Desktop。
 
 1. 若要打开文件资源管理器，请选择任务栏上的文件资源管理器快捷方式。
-
-    ![](../images/dp500-enforce-model-security-image1.png)
 
 2. 转到 D:\DP500\Allfiles\09\Starter 文件夹。
 
@@ -73,7 +71,7 @@ lab:
 
     你将更新 Power BI Desktop 解决方案以强制实施行级别安全性。
 
-### <a name="sign-in-to-the-power-bi-service"></a>登录到 Power BI 服务
+### 登录到 Power BI 服务
 
 在此任务中，你将登录到 Power BI 服务并启动试用许可证，然后创建工作区。
 
@@ -91,14 +89,11 @@ lab:
 
 4. 出现提示时，选择“开始试用”。
 
-    ![](../images/dp500-enforce-model-security-image4.png)
-
 5. 执行所有剩余任务以完成试用设置。
 
     提示：Power BI Web 浏览器体验称为 Power BI 服务**。
 
-
-### <a name="create-a-workspace"></a>创建工作区
+### 创建工作区
 
 在此任务中，你将创建一个工作区。
 
@@ -115,11 +110,9 @@ lab:
 
 3. 选择“保存”。
 
-    ![](../images/dp500-enforce-model-security-image7.png)
-
     创建后会打开该工作区。在下一个练习中，你要将数据集发布到此工作区。
 
-### <a name="review-the-data-model"></a>查看数据模型
+### 查看数据模型
 
 在此任务中，你将查看数据模型。
 
@@ -142,11 +135,11 @@ lab:
 
     “Region”列存储 Adventure Works 销售区域。在此组织中，销售人员只能查看与其指定销售区域相关的数据。在本实验室中，你将实现两种不同的行级别安全技术以强制实施数据权限。
 
-## <a name="create-static-roles"></a>创建静态角色
+## 创建静态角色
 
 在本练习中，你将创建并验证静态角色，然后了解如何将安全主体映射到数据集角色。
 
-### <a name="create-static-roles"></a>创建静态角色
+### 创建静态角色
 
 在此任务中，你将创建两个静态角色。
 
@@ -199,7 +192,7 @@ lab:
 
     ![](../images/dp500-enforce-model-security-image20.png)
 
-### <a name="validate-the-static-roles"></a>验证静态角色
+### 验证静态角色
 
 在此任务中，你将验证其中一个静态角色。
 
@@ -228,7 +221,7 @@ lab:
 
     ![](../images/dp500-enforce-model-security-image26.png)
 
-### <a name="publish-the-report"></a>发布报表
+### 发布报表
 
 在此任务中，你将发布报表。
 
@@ -249,7 +242,7 @@ lab:
 
     ![](../images/dp500-enforce-model-security-image30.png)
 
-### <a name="configure-row-level-security-optional"></a>配置行级别安全性（可选）
+### 配置行级别安全性（可选）
 
 在此任务中，你将了解如何在 Power BI 服务中配置行级别安全性。 
 
@@ -297,7 +290,7 @@ lab:
 8. 若要返回到工作区登陆页面，请在“导航”窗格中选择工作区。
 
 
-### <a name="clean-up-the-solution"></a>清理解决方案
+### 清理解决方案
 
 在此任务中，你将通过移除数据集和模型角色来清理解决方案。
 
@@ -333,11 +326,11 @@ lab:
     ![](../images/dp500-enforce-model-security-image42.png)
 
 
-## <a name="create-a-dynamic-role"></a>创建动态角色
+## 创建动态角色
 
 在本练习中，你将向模型添加一个表，创建并验证动态角色，然后将安全主体映射到数据集角色。
 
-### <a name="add-the-salesperson-table"></a>添加“Salesperson”表
+### 添加“Salesperson”表
 
 在此任务中，你将向模型添加“Salesperson”表。
 
@@ -416,7 +409,7 @@ lab:
 
 17. 已将表添加到模型时，请注意，会自动创建与“Sales Territory”表的关系。
 
-### <a name="configure-the-relationship"></a>配置关系
+### 配置关系
 
 在此任务中，你将配置新关系的属性。
 
@@ -444,7 +437,7 @@ lab:
     “Salesperson”表的目的是强制实施数据权限。隐藏时，报表作者和问答体验将看不到此表或其字段。
  
 
-### <a name="create-a-dynamic-role"></a>创建动态角色
+### 创建动态角色
 
 在此任务中，你将创建一个动态角色，该角色基于模型中的数据强制实施权限。
 
@@ -482,7 +475,7 @@ lab:
 
     ![](../images/dp500-enforce-model-security-image67.png)
 
-### <a name="validate-the-dynamic-role"></a>验证动态角色
+### 验证动态角色
 
 在此任务中，你将验证动态角色。
 
@@ -518,7 +511,7 @@ lab:
 
     ![](../images/dp500-enforce-model-security-image74.png)
 
-### <a name="finalize-the-design"></a>完成设计
+### 完成设计
 
 在此任务中，通过发布报表并将安全组映射到角色即可完成设计。
 
