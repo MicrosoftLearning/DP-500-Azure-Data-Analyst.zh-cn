@@ -4,9 +4,9 @@ lab:
   module: Optimize enterprise-scale tabular models
 ---
 
-# <a name="use-tools-to-optimize-power-bi-performance"></a>使用工具优化 Power BI 性能
+# 使用工具优化 Power BI 性能
 
-## <a name="overview"></a>概述
+## 概述
 
 完成实验室预计需要花费 30 分钟
 
@@ -18,8 +18,8 @@ lab:
 
 - 使用 DAX Studio。
 
-## <a name="get-started"></a>入门
-### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
+## 入门
+### 克隆本课程的存储库
 
 1. 在“开始”菜单上，打开“命令提示符”
 
@@ -42,14 +42,14 @@ lab:
    
 1. 在文件资源管理器中打开 D 驱动器，确保文件已下载。
 
-## <a name="use-best-practice-analyzer"></a>使用最佳做法分析器
+## 使用最佳做法分析器
 
 在本练习中，你将安装表格编辑器 2 并加载最佳做法分析器 (BPA) 规则。 你将查看 BPA 规则，然后解决在数据模型中发现的具体问题。
 
 *BPA 是一款免费的第三方工具，可提醒你潜在的建模错误或可作出哪些更改来改进模型设计和性能。它包括关于命名、用户体验和常用优化的建议，你可以应用这些建议来提高性能。有关详细信息，请参阅[提高模型性能的最佳做法规则](https://powerbi.microsoft.com/blog/best-practice-rules-to-improve-your-models-performance/)。*
 
 
-### <a name="download-and-install-tabular-editor-2"></a>下载并安装表格编辑器 2
+### 下载并安装表格编辑器 2
 
 下载并安装表格编辑器 2 才能创建计算组。
 
@@ -75,29 +75,19 @@ lab:
 
 1.  在“许可协议”步骤中，如果同意，请选择“我同意”，然后选择“下一步”  。
 
-    ![图形用户界面，应用程序 自动生成的描述](../images/image3.png)
-
 1.  在“选择安装文件夹”步骤中，选择“下一步” 。
 
-    ![形状 描述自动生成，具有中等置信度](../images/image4.png)
-
 1.  在“应用程序快捷方式”步骤中，选择“下一步” 。
-
-    ![形状 描述自动生成，具有中等置信度](../images/image4.png)
 
 1.  在“确认安装”步骤中，选择“下一步” 。 
 
     如果出现提示，请选择“是”以允许应用进行更改**。
 
-    ![形状 描述自动生成，具有中等置信度](../images/image4.png)
-
 1. 安装完成后，选择“关闭”。
-
-    ![包含形状的图片 描述自动生成](../images/image5.png)
 
     表格编辑器现已安装，并注册为 Power BI Desktop 外部工具。
 
-### <a name="set-up-power-bi-desktop"></a>设置 Power BI Desktop
+### 设置 Power BI Desktop
 
 在此任务中，你将打开预先开发的 Power BI Desktop 解决方案。
 
@@ -121,7 +111,7 @@ lab:
 
     在本练习的后面部分，你将通过表格编辑器来使用 BPA。
 
-### <a name="review-the-data-model"></a>查看数据模型
+### 查看数据模型
 
 在此任务中，你将查看数据模型。
 
@@ -137,7 +127,7 @@ lab:
 
     在本练习中，你将使用 BPA 检测模型问题并修复它们。
 
-### <a name="load-bpa-rules"></a>加载 BPA 规则
+### 加载 BPA 规则
 
 在此任务中，你将加载 BPA 规则。
 
@@ -180,7 +170,7 @@ lab:
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image15.png)
 
-### <a name="review-the-bpa-rules"></a>查看 BPA 规则
+### 查看 BPA 规则
 
 在此任务中，你将查看在上一个任务中加载的 BPA 规则。
 
@@ -216,7 +206,7 @@ lab:
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image19.png)
 
-### <a name="address-bpa-issues"></a>解决 BPA 问题
+### 解决 BPA 问题
 
 在此任务中，你将打开 BPA 并查看检查结果。
 
@@ -296,13 +286,13 @@ lab:
 
     还必须保存 Power BI Desktop 文件，以确保保存表格编辑器更改。
 
-## <a name="use-dax-studio"></a>使用 DAX Studio
+## 使用 DAX Studio
 
 下载并安装 DAX Studio。
 
 根据其网站，DAX Studio 是“针对 Microsoft 表格模型执行和分析 DAX 查询的终极工具”。它是一种具有丰富功能的工具，可用于 DAX 创作、诊断、性能优化和分析。功能包括对象浏览、集成跟踪、带有详细统计信息的查询执行明细、DAX 语法突出显示和格式设置。
 
-### <a name="download-dax-studio"></a>下载 DAX Studio
+### 下载 DAX Studio
 
 在此任务中，你将下载 DAX Studio。
 
@@ -354,15 +344,13 @@ lab:
 
 1. 如有必要，使 DAX Studio 窗口最大化。
 
-### <a name="use-dax-studio-to-optimize-a-query"></a>使用 DAX Studio 优化查询
+### 使用 DAX Studio 优化查询
 
 在此任务中，你将使用改进的度量值公式优化查询。
 
 请注意，当数据模型量较小时，很难优化查询。本练习重点介绍如何使用 DAX Studio 而不是优化 DAX 查询。
 
-1. 在“文件”功能区选项卡上，选择“浏览” 。
-
-    ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image32.png)
+1. 在“文件”菜单中，选择“浏览” 。
 
 2. 在“打开”窗口中，转到 D:\DP500\Allfiles\13\Assets 文件夹 。
 
@@ -422,7 +410,7 @@ lab:
 
     在这种情况下，可以确定使用变量和时间智能函数的“better”查询具有更好的性能，在查询执行时间方面几乎减少了 50% 的时间。
 
-### <a name="finish-up"></a>完成
+### 完成
 
 在此任务中，你将完成操作。
 

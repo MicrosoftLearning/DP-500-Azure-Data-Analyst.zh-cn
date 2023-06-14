@@ -4,9 +4,9 @@ lab:
   module: Manage the analytics development lifecycle
 ---
 
-# <a name="create-reusable-power-bi-assets"></a>创建可重用的 Power BI 资产
+# 创建可重用的 Power BI 资产
 
-## <a name="overview"></a>概述
+## 概述
 
 **预估完成本实验室需要 45 分钟**
 
@@ -20,11 +20,11 @@ lab:
 
 - 使用世系视图发现依赖项 Power BI 资产。
 
-## <a name="get-started"></a>入门
+## 入门
 
 在本练习中，需要准备好环境。
 
-### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
+### 克隆本课程的存储库
 
 1. 在“开始”菜单上，打开“命令提示符”
 
@@ -47,17 +47,13 @@ lab:
    
 1. 在文件资源管理器中打开 D 驱动器，确保文件已下载。
 
-### <a name="set-up-power-bi"></a>设置 Power BI
+### 设置 Power BI
 
 在此任务中，你将设置 Power BI。
 
 1. 若要打开 Power BI Desktop，请在任务栏上选择 Power BI Desktop 快捷方式。
 
-    ![](../images/dp500-create-a-star-schema-model-image1.png)
-
-2. 选择位于开始窗口右上角的“X”。
-
-    ![](../images/dp500-create-a-star-schema-model-image2.png)
+2. 关闭“入门”窗口。
 
 3. 如果尚未登录，请在 Power BI Desktop 右上角选择“登录”。 使用实验室凭据完成登录过程。
 
@@ -68,19 +64,18 @@ lab:
 
 5. 输入 10 位电话号码，然后选择“开始”。 再次选择“开始”。 你将重定向到 Power BI。
 
-1. 在右上角选择“个人资料”图标，然后选择“开始试用”。
+6. 在右上角选择“个人资料”图标，然后选择“开始试用”。
 
     ![](../images/dp500-create-a-dataflow-image3.png)
 
-1. 出现提示时，选择“开始试用”。
+7. 出现提示时，选择“开始试用”。
 
-    ![](../images/dp500-create-a-dataflow-image4.png)
 
-1. 执行所有剩余任务以完成试用设置。
+8. 执行所有剩余任务以完成试用设置。
 
     提示：Power BI Web 浏览器体验称为 Power BI 服务**。
 
-### <a name="create-a-workspace-in-the-power-bi-service"></a>在 Power BI 服务中创建工作区
+### 在 Power BI 服务中创建工作区
 
 在此任务中，你将创建一个工作区。
 
@@ -101,11 +96,9 @@ lab:
 
     创建后会打开该工作区。在下一项任务中，你要将数据集发布到此工作区。
 
-### <a name="open-the-starter-file-in-power-bi-desktop"></a>在 Power BI Desktop 中打开起始文件
+### 在 Power BI Desktop 中打开起始文件
 
 1. 若要打开文件资源管理器，请选择任务栏上的文件资源管理器快捷方式。
-
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image6.png)
 
 2. 转到 D:\DP500\Allfiles\16\Starter 文件夹。
 
@@ -115,7 +108,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image7.png)
 
-### <a name="review-the-data-model"></a>查看数据模型
+### 查看数据模型
 
 在此任务中，你将查看数据模型。
 
@@ -129,7 +122,7 @@ lab:
 
     该模型包括六个维度表和一个事实数据表。Sales 事实数据表存储销售订单详细信息。这是一种典型的星型架构设计**。
 
-### <a name="publish-the-data-model"></a>发布数据模型
+### 发布数据模型
 
 在此任务中，你将发布数据模型。
 
@@ -141,11 +134,7 @@ lab:
 
 2. 在“发布到 Power BI”窗口中选择工作区（请勿选择个人工作区），然后选择“选择” 。
 
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image11.png)
-
 3. 发布成功后，选择“知道了”。
-
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image12.png)
 
     *发布后，模型将成为 Power BI 数据集。在此实验室中，此数据集是可供业务分析师进行扩展以创建专用数据集的核心数据集。在下一个练习中，你将创建专用数据集来解决特定的业务要求。*
 
@@ -153,23 +142,17 @@ lab:
 
 5. 当系统提示你保存更改时，请选择“不保存”。
 
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image13.png)
-
-## <a name="create-a-specialized-dataset"></a>创建专用数据集
+## 创建专用数据集
 
 在本练习中，你将创建一个专用数据集，以便分析美国人均销售额。 因为核心数据集不包含总体值，所以需添加新表以扩展模型。
 
-### <a name="create-a-live-connection"></a>创建实时连接
+### 创建实时连接
 
 在此任务中，你将创建一个新报表，该报表使用与“销售分析 - 创建可重用的 Power BI 项目”数据集（在上一练习中发布的数据集）的实时连接。
 
 1. 若要打开 Power BI Desktop，请在任务栏上选择“Power BI Desktop”快捷方式。
 
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image14.png)
-
-2. 选择位于入门窗口右上角的“X”。
-
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image15.png)
+2. 关闭“入门”窗口。
 
 3. 若要保存文件，请在“文件”功能区上选择“另存为” 。
 
@@ -185,37 +168,39 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image17.png)
 
-8. 在“选择一个数据集来创建报表”窗口中选择“Sales Analysis - Create reusable Power BI artifacts”数据集 。
+8. 在“数据中心”窗口中，选择“Sales Analysis - Create reusable Power BI artifacts”数据集 。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image18.png)
 
-9. 选择“创建”。
+9. 选择“连接”。
 
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image19.png)
+10. 在“连接数据”对话框中，选中 Sales Analysis - Create reusable Power BI artifacts 旁边的框，然后选择“提交”以连接到数据源  。
 
-10. 在左下角的状态栏中，请注意报表将实时连接到数据集。
+11. 如果系统提示存在潜在安全风险，请阅读通知，然后选择“确定”。
+
+12. 在左下角的状态栏中，请注意报表将实时连接到数据集。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image20.png)
 
-11. 切换到“模型”视图。
+13. 切换到“模型”视图。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image21.png)
 
-12. 如有必要，可通过选择右下角的“适应屏幕”来调整模型图的大小以适应屏幕。
+14. 如有必要，可通过选择右下角的“适应屏幕”来调整模型图的大小以适应屏幕。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image22.png)
 
-13. 将光标悬停在任何表格标题上，可显示工具提示，请注意数据源类型为 SQL Server Analysis Services，服务器引用工作区，数据库是数据集。
+15. 将光标悬停在任何表格标题上，可显示工具提示，请注意数据源类型为 SQL Server Analysis Services，服务器引用工作区，数据库是数据集。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image23.png)
 
     这些属性指示远程模型托管表。在下一项任务中，你将对模型进行更改以对其进行扩展。该过程将创建本地 DirectQuery 模型，可以通过多种方式进行修改。
 
-14. 保存 Power BI Desktop 文件。
+16. 保存 Power BI Desktop 文件。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image24.png)
 
-### <a name="create-a-local-directquery-model"></a>创建本地 DirectQuery 模型
+### 创建本地 DirectQuery 模型
 
 在此任务中，你将创建本地 DirectQuery 模型。
 
@@ -232,11 +217,13 @@ lab:
 
     *该模型现在是 DirectQuery 模型。现在可以通过修改某些表或列属性或者添加计算列来增强模型。甚至可以使用从其他数据源获取数据的新表扩展模型。你将通过添加表来向模型添加美国人口数据。*
 
-3. 将光标悬停在任何表格标题上，可显示工具提示，请注意表存储模式设置为 DirectQuery。
+3. 在“连接数据”对话框中，确认选中了 Sales Analysis - Create reusable Power BI artifacts 旁边的框，然后选择“提交”以更改数据源存储模式  。
+
+4. 将光标悬停在任何表格标题上，可显示工具提示，请注意表存储模式设置为 DirectQuery。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image27.png)
 
-### <a name="design-the-report-layout"></a>设计报表布局
+### 设计报表布局
 
 在此任务中，你将设计报表布局以分析美国州销售额。
 
@@ -244,7 +231,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image28.png)
 
-2. 在“字段”窗格（位于右侧）中展开“Reseller”表 。
+2. 在“数据”窗格（位于右侧）中展开 Reseller 表 。
 
 3. 右键单击“Country-Region”字段，并选择“添加到筛选器” > “报表级筛选器”  。
 
@@ -262,21 +249,20 @@ lab:
 
 7. 重新调整该表的位置和大小，使其占据整个页面。
 
-8. 在“字段”窗格中的“Reseller”表中，拖动“State-Province”字段并将其放置到表视觉对象中  。
+8. 在“数据”窗格的 Reseller 表中，拖动“State-Province”字段并将其放置到表视觉对象中  。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image32.png)
 
-9. 在“字段”窗格中展开“Sales”表，然后将“销售额”字段添加到表视觉对象中  。
+9. 在“数据”窗格中展开 Sales 表，然后将“Sales Amount”字段添加到表视觉对象中  。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image33.png)
 
-10. 若要按销售额降序对各州进行排序，请选择“销售额”标题。
+10. 若要按销售额降序对各州进行排序，请选择“Sum of Sales Amount”标题。
 
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image34.png)
 
     *此报表布局现在提供有关美国州销售额的基本详细信息。但额外的要求是显示人均销售额，并按该度量值的降序对各州进行排序。*
 
-### <a name="add-a-table"></a>添加表
+### 添加表
 
 在此任务中，你将添加从网页获取数据的美国人口数据表。
 
@@ -374,7 +360,7 @@ lab:
 
     表不需要对报表作者可见。
 
-### <a name="add-a-measure"></a>添加度量值
+### 添加度量值
 
 在此任务中，你将添加一个度量值来计算人均销售额。
 
@@ -382,7 +368,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image53.png)
 
-2. 在“字段”窗格中，右键单击“Sales”表，然后选择“新建度量值”  。
+2. 在“数据”窗格中，右键单击 Sales 表，然后选择“新建度量值”  。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image54.png)
 
@@ -404,7 +390,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image55.png)
 
-5. 若要将度量值添加到矩阵视觉对象，请在“字段”窗格中，从“Sales”表中将“Sales per Capita”字段拖动到表视觉对象中  。
+5. 若要将度量值添加到矩阵视觉对象，请在“数据”窗格中，从 Sales 表中将“Sales per Capita”字段拖动到表视觉对象中  。
 
     *该度量值通过将 Power BI 服务中来自远程模型的数据源与来自新模型本地导入表的数据相结合来评估结果。*
 
@@ -412,7 +398,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image56.png)
 
-### <a name="publish-the-solution"></a>发布解决方案
+### 发布解决方案
 
 在此任务中，你将发布包括专用数据模型和报表的解决方案。
 
@@ -438,7 +424,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image61.png)
 
-### <a name="review-the-specialized-dataset"></a>查看专用数据集
+### 查看专用数据集
 
 在此任务中，你将查看 Power BI 服务中的专用数据集。
 
