@@ -4,9 +4,9 @@ lab:
   module: Design and build tabular models
 ---
 
-# <a name="create-a-composite-model"></a>创建复合模型
+# 创建复合模型
 
-## <a name="overview"></a>概述
+## 概述
 
 完成本实验室预计需要 30 分钟。
 
@@ -20,11 +20,11 @@ lab:
 
 - 创建度量值。
 
-## <a name="get-started"></a>入门
+## 入门
 
 在本练习中，需要准备好环境。
 
-### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
+### 克隆本课程的存储库
 
 1. 在“开始”菜单上，打开“命令提示符”
 
@@ -47,21 +47,19 @@ lab:
    
 1. 在文件资源管理器中打开 D 驱动器，确保文件已下载。
 
-### <a name="set-up-power-bi-desktop"></a>设置 Power BI Desktop
+### 设置 Power BI Desktop
 
 在此任务中，你将打开预先开发的 Power BI 模板文件。
 
 1. 若要打开文件资源管理器，请选择任务栏上的文件资源管理器快捷方式。
 
-    ![](../images/dp500-create-a-composite-model-image1.png)
+2. 转到 D:\DP500\Allfiles\08\Starter 文件夹。
 
-1. 转到 D:\DP500\Allfiles\08\Starter 文件夹。
+3. 若要打开预先开发的 Power BI Desktop 文件，请双击“Sales Analysis - Create a composite model.pbit”文件。 
 
-1. 若要打开预先开发的 Power BI Desktop 文件，请双击“Sales Analysis - Create a composite model.pbit”文件。 
+4. 出现批准潜在安全风险的提示时，请选择“确定”。
 
-1. 出现批准潜在安全风险的提示时，请选择“确定”。
-
-1. 输入如下所示的 SQLServerInstance、SqlServerDatabase 和 Culture。 选择“加载”。
+5. 输入如下所示的 SQLServerInstance、SqlServerDatabase 和 Culture。 选择“加载”。
 
     SqlServerInstance = ```localhost```
 
@@ -71,19 +69,19 @@ lab:
 
     ![](../images/dp500-create-a-composite-model-image3.png)
 
-1. 在 SQL Server 数据库连接提示符下，选择“连接”。
+6. 在 SQL Server 数据库连接提示符下，选择“连接”。
 
-1. 在“加密支持”窗口中，选择“确定”。
+7. 在“加密支持”窗口中，选择“确定”。
 
-1. 在“原生数据库查询”窗口中，选择“运行”。
+8. 在“原生数据库查询”窗口中，选择“运行”。
 
-1. 保存文件。 在“文件”功能区选项卡上，选择“另存为” 。
+9. 保存文件。 在“文件”菜单中，选择“另存为” 。
 
-1. 在“另存为”窗口中，转到 D:\DP500\Allfiles\08\MySolution 文件夹 。 文件名为“Sales Analysis - Create a composite model.pbix”。
+10. 在“另存为”窗口中，转到 D:\DP500\Allfiles\08\MySolution 文件夹 。 文件名为“Sales Analysis - Create a composite model.pbix”。
 
-1. 选择“保存”。
+11. 选择“保存”。
 
-### <a name="review-the-report"></a>查看报表
+### 查看报表
 
 在此任务中，你将查看预先开发的报表。
 
@@ -105,7 +103,7 @@ lab:
 
     务必要了解切片器选择会更改应用于柱形图视觉对象的筛选器。Power BI 刷新柱形图视觉对象。这涉及从源数据库中检索数据。这样，柱形图视觉对象会显示最新的源数据。（可能会出现一些报表级别的缓存，这意味着报表可能会重用以前查询的数据。）
 
-### <a name="review-the-data-model"></a>查看数据模型
+### 查看数据模型
 
 在此任务中，你将查看预先开发的数据模型。
 
@@ -121,13 +119,13 @@ lab:
 
     你将使用另一个事实数据表扩展模型，以支持分析销售目标事实。
 
-## <a name="create-a-composite-model"></a>创建复合模型
+## 创建复合模型
 
 在本练习中，你将添加一个将 DirectQuery 模型转换为复合模型的导入表。
 
 *复合模型包含多个源组。*
 
-### <a name="add-a-table"></a>添加表
+### 添加表
 
 在此任务中，你将添加一个表，用于存储源自 Excel 工作簿的销售目标。
 
@@ -187,7 +185,7 @@ lab:
 
     缺少此栏表示表属于导入源组。
 
-### <a name="create-model-relationships"></a>创建模型关系
+### 创建模型关系
 
 在此任务中，你将创建两种模型关系。
 
@@ -229,7 +227,7 @@ lab:
 
     ![](../images/dp500-create-a-composite-model-image25.png)
 
-### <a name="set-model-properties"></a>设置模型属性
+### 设置模型属性
 
 在此任务中，将设置新表的模型属性。
 
@@ -247,7 +245,7 @@ lab:
 
     ![](../images/dp500-create-a-composite-model-image27.png)
 
-### <a name="add-measures"></a>添加度量值
+### 添加度量值
 
 在此任务中，你将添加两个度量值，用于分析销售目标差异。
 
@@ -255,7 +253,7 @@ lab:
 
     ![](../images/dp500-create-a-composite-model-image28.png)
 
-1. 若要创建度量值，请在“字段”窗格（位于右侧）中右键单击 Targets 表，然后选择“新建度量值”  。
+1. 若要创建度量值，请在“数据”窗格（位于右侧）中右键单击 Targets 表，然后选择“新建度量值”  。
 
     ![](../images/dp500-create-a-composite-model-image29.png)
 
@@ -297,17 +295,17 @@ lab:
 
     ![](../images/dp500-create-a-composite-model-image31.png)
 
-1. 在“字段”窗格的 Targets 表中，验证是否有两个度量值 。
+1. 在“数据”窗格的 Targets 表中，验证是否有两个度量值 。
 
     ![](../images/dp500-create-a-composite-model-image32.png)
 
-### <a name="update-the-report-layout"></a>更新报表布局
+### 更新报表布局
 
 在此任务中，你将更新报表以使用新度量值。
 
 1. 在报表中，选择柱形图视觉对象。
 
-1. 在“字段”窗格中，将 Target Amount 字段拖到“可视化效果”窗格中，在“值”井内直接拖放到 Sales Amount 字段下方    。
+1. 在“数据”窗格中，将“Target Amount”字段拖到“可视化效果”窗格中，在“值”井内直接拖放到“Sales Amount”字段下方    。
 
     ![](../images/dp500-create-a-composite-model-image33.png)
 
@@ -323,7 +321,7 @@ lab:
 
     现在已创建完组合 DirectQuery 和导入表的复合模型。可通过将维度表设置为使用双存储模式并添加聚合来优化模型以提高查询性能。但这些增强功能是其他实验室的学习目标。
 
-### <a name="finish-up"></a>完成
+### 完成
 
 在此任务中，你将完成操作。
 

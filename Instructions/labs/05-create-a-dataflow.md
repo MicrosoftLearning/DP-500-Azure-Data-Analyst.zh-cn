@@ -4,9 +4,9 @@ lab:
   module: Prepare data for tabular models in Power BI
 ---
 
-# <a name="create-a-dataflow"></a>创建数据流
+# 创建数据流
 
-## <a name="overview"></a>概述
+## 概述
 
 **预估完成本实验室需要 45 分钟**
 
@@ -18,11 +18,11 @@ lab:
 
 - 借助 Power BI Desktop 使用数据流。
 
-## <a name="get-started"></a>入门
+## 入门
 
 在本练习中，需要准备好环境。
 
-### <a name="load-data-into-azure-synapse-analytics"></a>将数据加载到 Azure Synapse Analytics
+### 将数据加载到 Azure Synapse Analytics
 
    > 注意：如果已使用 git 克隆将数据加载到 Azure Synapse Analytics 中，则可以跳过此任务并继续“设置 Power BI” 。
 
@@ -57,7 +57,7 @@ lab:
 
 1. 在创建 Synapse 工作区和 SQL 池并加载数据后，脚本将暂停池以防止产生不必要的 Azure 费用。 准备好在 Azure Synapse Analytics 中使用数据时，需要恢复 SQL 池。
 
-### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
+### 克隆本课程的存储库
 
 1. 在“开始”菜单上，打开“命令提示符”
 
@@ -82,15 +82,13 @@ lab:
    
 3. 在文件资源管理器中打开 D 驱动器，确保文件已下载。
 
-### <a name="set-up-power-bi-desktop"></a>设置 Power BI Desktop
+### 设置 Power BI Desktop
 
 在此任务中，你将设置 Power BI Desktop。
 
 1. 若要打开文件资源管理器，请选择任务栏上的文件资源管理器快捷方式。
 
-    ![](../images/dp500-create-a-dataflow-image1.png)
-
-1. 转到 D:\DP500\Allfiles\05\Starter 文件夹。
+1. 导航到 D:\DP500\Allfiles\05\Starter 文件夹。
 
 1. 若要打开预先开发的 Power BI Desktop 文件，请双击“Sales Analysis - Create a dataflow.pbix”文件。
 
@@ -106,7 +104,7 @@ lab:
 
     你将更新 Power BI Desktop 解决方案以使用数据流来获取日期维度数据。
 
-### <a name="sign-in-to-the-power-bi-service"></a>登录到 Power BI 服务
+### 登录到 Power BI 服务
 
 在此任务中，你将登录到 Power BI 服务并启动试用许可证，然后创建工作区。
 
@@ -124,36 +122,22 @@ lab:
 
 1. 出现提示时，选择“开始试用”。
 
-    ![](../images/dp500-create-a-dataflow-image4.png)
 
-1. 执行所有剩余任务以完成试用设置。
+2. 执行所有剩余任务以完成试用设置。
 
     提示：Power BI Web 浏览器体验称为 Power BI 服务**。
 
-  
+9. 选择“工作区”和“创建工作区”。
 
-### <a name="create-a-workspace"></a>创建工作区
+    ![](../images/dp500-create-a-star-schema-model-image2a.png)
 
-在此任务中，你将创建一个工作区。
+10. 创建名为 DP500 labs 的工作区，然后选择“保存”。
 
-1. 若要在 Power BI 服务中创建工作区，请在“导航”窗格中（位于左侧）选择“工作区”，然后选择“创建工作区”  。
+    注意：工作区名称在租户中必须是唯一的。如果收到错误，请更改工作区名称。
 
-    ![](../images/dp500-create-a-dataflow-image5.png)
+创建后会打开该工作区。 在下一个练习中，你将为此工作区创建数据流。
 
-
-1. 在“创建工作区”窗格（位于右侧）的“工作区名称”框中，输入工作区的名称 。
-
-    工作区名称在租户内必须是唯一的。
-
-    ![](../images/dp500-create-a-dataflow-image6.png)
-
-1. 选择“保存”。
-
-    ![](../images/dp500-create-a-dataflow-image7.png)
-
-    创建后会打开该工作区。在下一个练习中，你将为此工作区创建数据流。
-
-### <a name="start-the-sql-pool"></a>启动 SQL 池
+### 启动 SQL 池
 
 在此任务中，你将启动 SQL 池。
 
@@ -175,11 +159,11 @@ lab:
 
     重要说明：SQL 池是一种成本高昂的资源。请在使用此实验室时限制此资源的使用。此实验室中的最终任务会指示你暂停使用资源。
 
-## <a name="develop-a-dataflow"></a>开发数据流
+## 开发数据流
 
 在本练习中，你将开发用于支持 Power BI 模型开发的数据流。 它将提供数据仓库日期维度表的一致表示。
 
-### <a name="review-the-data-model"></a>查看数据模型
+### 查看数据模型
 
 在此任务中，你将查看在 Power BI Desktop 中开发的数据模型。
 
@@ -195,17 +179,13 @@ lab:
 
     Date 表是由业务分析师创建的。它不表示与日期相关的数据的一致定义，并且不包括用于支持相对日期筛选器的有用偏移列。在稍后的练习中，将此表替换为源自数据流的新表。
 
-### <a name="create-a-dataflow"></a>创建数据流
+### 创建数据流
 
 在此任务中，你将创建表示与日期相关的数据的一致定义的数据流。
 
 1. 在 Power BI 服务中，依次选择“新建”、“数据流” 。
 
     ![](../images/dp500-create-a-dataflow-image10.png)
-
-1. 要创建数据流，请选择“数据流”磁贴。
-
-    ![](../images/dp500-create-a-dataflow-image11.png)
 
 1. 在“定义新表”磁贴中，选择“添加新表” 。
 
@@ -419,11 +399,11 @@ lab:
 
     除了配置设置外，还应授予所有内容创建者使用数据流的权限。
 
-## <a name="consume-a-dataflow"></a>使用数据流
+## 使用数据流
 
 在本练习中，在 Power BI Desktop 解决方案中，你将现有的 Date 表替换为从数据流中获取其数据的新表。
 
-### <a name="remove-the-original-date-table"></a>删除原始 Date 表
+### 删除原始 Date 表
 
 在此任务中，你将删除原始 Date 表。
 
@@ -440,7 +420,7 @@ lab:
   
 
 
-### <a name="add-a-new-date-table"></a>添加新的 Date 表
+### 添加新的 Date 表
 
 在此任务中，你将添加从数据流中获取其数据的新 Date 表。
 
@@ -491,7 +471,7 @@ lab:
 
     还有许多其他可以完成的模型配置，例如隐藏列或创建层次结构。
 
-### <a name="validate-the-model"></a>验证模型
+### 验证模型
 
 在此任务中，通过创建简单的报表布局来测试模型。
 
@@ -507,11 +487,11 @@ lab:
 
   
 
-1. 在“字段”窗格中，展开 Date 表，然后将“Month Offset Filter”字段拖到条形图视觉对象中  。
+1. 在“数据”窗格中，展开 Date 表，然后将“Month Offset Filter”字段拖到条形图视觉对象中  。
 
     ![](../images/dp500-create-a-dataflow-image48.png)
 
-1. 在“字段”窗格中，展开 Sales 表，然后将“Sales Amount”字段拖到条形图视觉对象中  。
+1. 在“数据”窗格中，展开 Sales 表，然后将“Sales Amount”字段拖到条形图视觉对象中  。
 
     ![](../images/dp500-create-a-dataflow-image49.png)
 
@@ -520,7 +500,7 @@ lab:
 
     ![](../images/dp500-create-a-dataflow-image50.png)
 
-1. 为确保月份偏移筛选器值按时间顺序排序，请在“字段”窗格中选择“Month Offset Filter”字段 。
+1. 为确保月份偏移筛选器值按时间顺序排序，请在“数据”窗格中选择“Month Offset Filter”字段 。
 
 1. 在“列工具”功能区选项卡上，选择“排序”组中的“排序”，然后选择“Month Offset”   。
 
@@ -534,7 +514,7 @@ lab:
 
 1. 关闭 Power BI Desktop。
 
-### <a name="pause-the-sql-pool"></a>暂停 SQL 池
+### 暂停 SQL 池
 
 在此任务中，你将停止 SQL 池。
 

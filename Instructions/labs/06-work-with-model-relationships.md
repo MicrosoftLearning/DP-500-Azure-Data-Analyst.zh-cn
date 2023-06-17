@@ -4,9 +4,9 @@ lab:
   module: Design and build tabular models
 ---
 
-# <a name="work-with-model-relationships"></a>处理模型关系
+# 处理模型关系
 
-## <a name="overview"></a>概述
+## 概述
 
 **预估完成本实验室需要 45 分钟**
 
@@ -20,12 +20,12 @@ lab:
 
 - 使用用于修改关系行为的 DAX 函数。
 
-## <a name="explore-model-relationships"></a>探索模型关系
+## 探索模型关系
 
 在本练习中，你将打开预先开发的 Power BI Desktop 解决方案来了解数据模型。 然后，你将探索活动模型关系的行为。
 
-## <a name="get-started"></a>入门
-### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
+## 入门
+### 克隆本课程的存储库
 
 1. 在“开始”菜单上，打开“命令提示符”
    
@@ -49,13 +49,11 @@ lab:
    
 1. 在文件资源管理器中打开 D 驱动器，确保文件已下载。
 
-### <a name="set-up-power-bi-desktop"></a>设置 Power BI Desktop
+### 设置 Power BI Desktop
 
 在此任务中，你将打开预先开发的 Power BI Desktop 解决方案。
 
 1. 若要打开文件资源管理器，请选择任务栏上的文件资源管理器快捷方式。
-
-    ![](../images/dp500-work-with-model-relationships-image1.png)
 
 2. 在文件资源管理器中，转到 D:\DP500\Allfiles\06\Starter 文件夹。
 
@@ -67,7 +65,7 @@ lab:
 
 6. 选择“保存”。
 
-### <a name="review-the-data-model"></a>查看数据模型
+### 查看数据模型
 
 在此任务中，你将查看数据模型。
 
@@ -97,7 +95,7 @@ lab:
 
     在本实验室中，你将了解如何设计用于支持角色扮演维度的模型。
 
-### <a name="visualize-date-data"></a>可视化日期数据
+### 可视化日期数据
 
 在此任务中，你将按日期可视化销售数据并切换关系的活动状态。
 
@@ -109,7 +107,7 @@ lab:
 
     ![](../images/dp500-work-with-model-relationships-image6.png)
 
-3. 若要向表视觉对象添加列，请在“字段”窗格（位于右侧）中，首先展开 Date 表 。
+3. 若要向表视觉对象添加列，请在“数据”窗格（位于右侧）中，首先展开 Date 表 。
 
     ![](../images/dp500-work-with-model-relationships-image7.png)
 
@@ -143,7 +141,7 @@ lab:
 
     ![](../images/dp500-work-with-model-relationships-image13.png)
 
-### <a name="modify-relationship-active-status"></a>修改关系活动状态
+### 修改关系活动状态
 
 在此任务中，你将修改两个关系的活动状态。
 
@@ -191,15 +189,15 @@ lab:
 
     在下一个练习中，你将了解如何在 DAX 公式中激活关系。
 
-## <a name="use-inactive-relationships"></a>使用非活动关系
+## 使用非活动关系
 
 在本练习中，你将了解如何在 DAX 公式中激活关系。
 
-### <a name="use-inactive-relationships"></a>使用非活动关系
+### 使用非活动关系
 
 在此任务中，你将使用 USERELATIONSHIP 函数来激活非活动关系。
 
-1. 在“字段”窗格中，右键单击“Sales”表，然后选择“新建度量值”  。
+1. 在“数据”窗格中，右键单击 Sales 表，然后选择“新建度量值”  。
 
     ![](../images/dp500-work-with-model-relationships-image21.png)
 
@@ -236,11 +234,11 @@ lab:
 
     ![](../images/dp500-work-with-model-relationships-image25.png)
 
-## <a name="add-another-date-table"></a>添加另一个 Date 表
+## 添加另一个 Date 表
 
 在本练习中，你将添加用于支持发货日期分析的日期表。
 
-### <a name="remove-the-inactive-relationships"></a>删除非活动关系
+### 删除非活动关系
 
 在此任务中，你将删除与“ShipDateKey”列的现有关系。
 
@@ -258,7 +256,7 @@ lab:
 
     删除关系将导致“Sales Shipped”度量值出错。你将在本实验室的后面部分重写度量值公式。
 
-### <a name="disable-relationship-options"></a>禁用关系选项
+### 禁用关系选项
 
 在此任务中，你将禁用两个关系选项。
 
@@ -280,7 +278,7 @@ lab:
 
     ![](../images/dp500-work-with-model-relationships-image32.png)
 
-### <a name="add-another-date-table"></a>添加另一个日期表
+### 添加另一个日期表
 
 在此任务中，你将创建用于将另一个日期表添加到模型中的查询。
 
@@ -326,7 +324,7 @@ lab:
 
 9. 请注意，现在 Ship Date 表和 Sales 表之间存在活动关系 。
 
-### <a name="visualize-ship-date-data"></a>可视化发货日期数据
+### 可视化发货日期数据
 
 在此任务中，你将在新的表视觉对象中可视化发货日期数据。
 
@@ -352,7 +350,7 @@ lab:
 
     ![](../images/dp500-work-with-model-relationships-image42.png)
 
-7. 在“字段”窗格中，展开以打开 Ship Date 表 。
+7. 在“数据”窗格中，展开以打开 Ship Date 表 。
 
 8. 要向新的表视觉对象添加新字段，请将 Ship Date 表中的“Ship Year”字段拖到“Sales Amount”字段上方的“值”井中   。
 
@@ -368,15 +366,15 @@ lab:
 
     最后，不可能在一个视觉对象中实现筛选器的组合。例如，如果不创建度量值，就不可能在同一个视觉对象中将 Sales Ordered 与 Sales Shipped 合并。你将在下一个练习中创建该度量值。
 
-## <a name="explore-other-relationship-functions"></a>探索其他关系函数
+## 探索其他关系函数
 
 在本练习中，你将使用其他 DAX 关系函数。
 
-### <a name="explore-other-relationship-functions"></a>探索其他关系函数
+### 探索其他关系函数
 
 在此任务中，你将使用 CROSSFILTER 和 TREATAS 函数来修改计算期间的关系行为。
 
-1. 在“字段”窗格的 Sales 表中，选择“Sales Shipped”度量值  。
+1. 在“数据”窗格的 Sales 表中，选择“Sales Shipped”度量值  。
 
     ![](../images/dp500-work-with-model-relationships-image45.png)
 
@@ -408,7 +406,7 @@ lab:
 
     由于“OrderDateKey”列中没有 BLANK，因此未生成 BLANK 组。显示未发货销售额将需要不同的方法。
 
-### <a name="show-unshipped-sales"></a>显示未发货的销售额
+### 显示未发货的销售额
 
 在此任务中，你将创建用于显示未发货的销售额的度量值。
 
@@ -439,7 +437,7 @@ lab:
 
     ![](../images/dp500-work-with-model-relationships-image50.png)
 
-### <a name="finish-up"></a>完成
+### 完成
 
 在此任务中，你将完成操作。
 
