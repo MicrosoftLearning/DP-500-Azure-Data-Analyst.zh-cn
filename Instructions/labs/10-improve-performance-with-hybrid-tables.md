@@ -4,9 +4,9 @@ lab:
   module: Optimize enterprise-scale tabular models
 ---
 
-# <a name="improve-performance-with-hybrid-tables"></a>使用混合表提高性能
+# 使用混合表提高性能
 
-## <a name="overview"></a>概述
+## 概述
 
 **预估完成本实验室需要 45 分钟**
 
@@ -18,11 +18,11 @@ lab:
 
 - 查看表分区。
 
-## <a name="get-started"></a>入门
+## 入门
 
 在本练习中，需要准备好环境。
 
-### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
+### 克隆本课程的存储库
 
 1. 在“开始”菜单上，打开“命令提示符”。
 
@@ -43,13 +43,11 @@ lab:
    
 1. 克隆存储库后，在文件资源管理器中打开 D 驱动器，以确保文件已下载。 “关闭命令提示符”窗口。
 
-### <a name="deploy-an-azure-sql-database"></a>部署 Azure SQL 数据库 
+### 部署 Azure SQL 数据库 
 
 在此任务中，你将创建一个 Azure SQL 数据库，该数据库将用作 Power BI 的数据源。 运行安装脚本就会创建 Azure SQL 数据库服务器并加载 AdventureWorksDW2022 数据库。
 
 1. 若要打开“文件资源管理器”，请选择任务栏上的“文件资源管理器”快捷方式。
-
-    ![](../images/dp500-improve-performance-with-hybrid-tables-image13.png)
 
 2. 转到 D:\DP500\Allfiles\10 文件夹。
 
@@ -60,8 +58,6 @@ lab:
 5. 在任务栏上的搜索框中，键入 `PowerShell`.  
    
    当搜索结果出现时，选择“以管理员身份运行”
-    
-    ![](../images/run-powershell-admin.png)
     
     如果出现提示，请选择“是”以允许此应用对设备进行更改。
 1. 在 PowerShell 中，输入以下 2 行文本以运行脚本。 
@@ -86,7 +82,7 @@ lab:
 
 3. 脚本完成后，关闭 PowerShell 窗口。
 
-### <a name="set-up-the-azure-sql-database"></a>设置 Azure SQL 数据库
+### 设置 Azure SQL 数据库
 
 在此任务中，将设置 Azure SQL 数据库，以便从虚拟机的 (VM) IP 地址建立连接。 输入用户名、密码和资源组后，此脚本大约需要 10 分钟才能运行。
 
@@ -118,9 +114,9 @@ lab:
 
 8. 使 Azure 门户 Web 浏览器会话保持打开状态。 需要在“设置 Power BI Desktop任务”中复制数据库连接字符串。
 
-### <a name="set-up-power-bi"></a>设置 Power BI
+### 设置 Power BI
 
-#### <a name="set-up-a-power-bi-account-in-power-bi-desktop"></a>在 Power BI Desktop 中设置 Power BI 帐户
+#### 在 Power BI Desktop 中设置 Power BI 帐户
 
 在此任务中，你将设置 Power BI Desktop。
 
@@ -142,7 +138,7 @@ lab:
 
 1. 在“另存为”窗口中，转到 D:\DP500\Allfiles\10\MySolution 文件夹 。
 
-#### <a name="set-up-power-bi-premium-trial"></a>设置 Power BI Premium 试用版
+#### 设置 Power BI Premium 试用版
 
 在此任务中，你将登录到 Power BI 服务并启动试用许可证。
 
@@ -166,7 +162,7 @@ lab:
 
     提示：Power BI Web 浏览器体验称为 Power BI 服务**。
 
-### <a name="create-a-workspace"></a>创建工作区
+### 创建工作区
 
 在此任务中，你将创建一个工作区。
 
@@ -196,7 +192,7 @@ lab:
 
     创建后，Power BI 服务将打开工作区。稍后将在此实验室中返回到此工作区。
 
-### <a name="set-up-power-bi-desktop"></a>设置 Power BI Desktop
+### 设置 Power BI Desktop
 
 在此任务中，你将打开预先开发的 Power BI Desktop 解决方案，设置数据源设置和权限，然后刷新数据模型。
 
@@ -265,7 +261,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image22.png)
 
-### <a name="review-the-report"></a>查看报表
+### 查看报表
 
 在此任务中，你将查看预先开发的报表。
 
@@ -275,7 +271,7 @@ lab:
 
     报表页有一个标题和两个视觉对象。切片器视觉对象允许按单个会计年度进行筛选，而条形图视觉对象显示每月销售额。在此实验室中，你将通过设置增量刷新和混合表来提高报表的性能。
 
-### <a name="review-the-data-model"></a>查看数据模型
+### 查看数据模型
 
 在此任务中，你将查看预先开发的数据模型。
 
@@ -291,13 +287,13 @@ lab:
 
     在此实验室中，将设置销售表以使用增量刷新，并将其制成混合表。混合表包含表示最新时间段的 DirectQuery 分区。该分区可确保数据源中的当前数据在 Power BI 报表中可用。**
 
-## <a name="set-up-incremental-refresh"></a>设置增量刷新
+## 设置增量刷新
 
 在本练习中，你将设置增量刷新。
 
 增量刷新为经常加载新数据和更新数据的数据集表提供自动分区创建和管理，来扩展计划的刷新操作。这有助于减少刷新时间，降低源数据和 Power BI 的负担。还可以帮助更快地将当前数据呈现到 Power BI 报表。
 
-### <a name="add-parameters"></a>添加参数
+### 添加参数
 
 在此任务中，将添加两个参数。
 
@@ -353,7 +349,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image32.png)
 
-### <a name="filter-the-query"></a> 筛选查询
+###  筛选查询
 
 在此任务中，你将向 Sales 查询添加筛选器。
 
@@ -397,7 +393,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image40.png)
 
-### <a name="set-up-incremental-refresh"></a>设置增量刷新
+### 设置增量刷新
 
 在此任务中，将为 Sales 表设置增量刷新策略。
 
@@ -435,7 +431,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image47.png)
 
-### <a name="publish-the-dataset"></a>发布数据集
+### 发布数据集
 
 在此任务中，你将发布数据集。
 
@@ -457,7 +453,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image51.png)
 
-### <a name="set-up-the-dataset"></a>设置数据集
+### 设置数据集
 
 在此任务中，你将设置数据源凭据并刷新数据集。
 
@@ -525,7 +521,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image62.png)
 
-### <a name="review-the-table-partitions"></a>查看表分区
+### 查看表分区
 
 在此任务中，你将使用 SSMS 查看表分区。
 
@@ -567,11 +563,11 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image68.png)
 
-## <a name="test-the-hybrid-table"></a>测试混合表
+## 测试混合表
 
 在本练习中，你将打开报表，添加销售订单，然后查看报表数据更新。
 
-### <a name="open-the-report"></a>打开报表
+### 打开报表
 
 在此任务中，你将打开报表。
 
@@ -587,7 +583,7 @@ lab:
 
     请注意，2022 年 8 月开始不属于 2022 财年，这是切片器的默认值。
 
-### <a name="add-an-order-to-the-database"></a>向数据库添加一个订单
+### 向数据库添加一个订单
 
 在此任务中，你将向数据库添加一个订单。
 
@@ -621,7 +617,7 @@ lab:
 
 11. 若要关闭文件，请在“文件”菜单上选择“关闭” 。
 
-### <a name="refresh-the-report"></a>刷新报表
+### 刷新报表
 
 在此任务中，你将刷新报表。
 
@@ -639,7 +635,7 @@ lab:
 
     提示：混合表特别适用于自动页面刷新，这是自动刷新 Power BI 报表的功能。
 
-### <a name="finish-up"></a>完成
+### 完成
 
 在此任务中，你将完成操作。 打开 SSMS 并确保已连接到数据库 AdventureWorksDW2022-DP500。
 
