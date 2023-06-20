@@ -4,9 +4,9 @@ lab:
   module: Optimize enterprise-scale tabular models
 ---
 
-# <a name="improve-query-performance-with-aggregations"></a>使用聚合提高查询性能
+# 使用聚合提高查询性能
 
-## <a name="overview"></a>概述
+## 概述
 
 预估完成本实验室需要 30 分钟
 
@@ -18,11 +18,11 @@ lab:
 
 - 使用性能分析器确定 Power BI 是否使用聚合。
 
-## <a name="get-started"></a>入门
+## 入门
 
 在本练习中，需要准备好环境。
 
-### <a name="clone-the-repository-for-this-course"></a>克隆本课程的存储库
+### 克隆本课程的存储库
 
 1. 在“开始”菜单上，打开“命令提示符”
 
@@ -45,13 +45,11 @@ lab:
    
 1. 在文件资源管理器中打开 D 驱动器，确保文件已下载。
 
-### <a name="set-up-power-bi-desktop"></a>设置 Power BI Desktop
+### 设置 Power BI Desktop
 
 在此任务中，你将打开预先开发的 Power BI Desktop 解决方案。
 
 1. 若要打开文件资源管理器，请选择任务栏上的文件资源管理器快捷方式。
-
-    ![](../images/dp500-improve-query-performance-with-aggregations-image1.png)
 
 2. 转到 D:\DP500\Allfiles\12\Starter 文件夹。
 
@@ -67,7 +65,7 @@ lab:
 
 6. 选择“保存”。
 
-### <a name="review-the-report"></a>查看报表
+### 查看报表
 
 在此任务中，你将查看预先开发的报表。
 
@@ -83,7 +81,7 @@ lab:
 
     此报表页有一个标题和两个视觉对象。可切片器视觉对象按某个会计年度进行筛选，而柱形图视觉对象可显示季度销售额和目标金额。在此实验室中，你会通过添加聚合来提高报表性能。
 
-### <a name="review-the-data-model"></a>查看数据模型
+### 查看数据模型
 
 在此任务中，你将查看预先开发的数据模型。
 
@@ -101,7 +99,7 @@ lab:
 
     在此实验室中，你将添加聚合以提高特定“Sales”表的查询性能**。
 
-### <a name="use-performance-analyzer"></a>使用性能分析器
+### 使用性能分析器
 
 在此任务中，你将打开性能分析器，并用它来检查刷新事件。
 
@@ -135,13 +133,13 @@ lab:
 
     在此实验室中，你将添加“Sales”表数据的聚合，以专门提升按日期和销售区域查询“Sales Amount”列总和的视觉对象刷新性能* *。
 
-## <a name="set-up-an-aggregation"></a>设置聚合
+## 设置聚合
 
 在本练习中，你将设置聚合。
 
 Power BI 中的聚合可以提高针对异常大型的 DirectQuery 表的查询性能。通过使用聚合，数据模型在内存中缓存聚合级别的数据。Power BI 会在聚合可用时自动使用聚合。
 
-### <a name="add-an-aggregation-table"></a>添加聚合表
+### 添加聚合表
 
 在此任务中，你将向模型添加聚合表。
 
@@ -207,7 +205,7 @@ Power BI 中的聚合可以提高针对异常大型的 DirectQuery 表的查询�
 
     ![](../images/dp500-improve-query-performance-with-aggregations-image23.png)
 
-### <a name="set-model-properties"></a>设置模型属性
+### 设置模型属性
 
 在此任务中，将设置新表的模型属性。
 
@@ -257,7 +255,7 @@ Power BI 中的聚合可以提高针对异常大型的 DirectQuery 表的查询�
 
     ![](../images/dp500-improve-query-performance-with-aggregations-image31.png)
 
-### <a name="create-model-relationships"></a>创建模型关系
+### 创建模型关系
 
 在此任务中，你将创建两种模型关系。
 
@@ -289,7 +287,7 @@ Power BI 中的聚合可以提高针对异常大型的 DirectQuery 表的查询�
 
     ![](../images/dp500-improve-query-performance-with-aggregations-image36.png)
 
-### <a name="set-up-an-aggregation"></a>设置聚合
+### 设置聚合
 
 在此任务中，你将设置聚合。
 
@@ -343,7 +341,7 @@ Power BI 中的聚合可以提高针对异常大型的 DirectQuery 表的查询�
 
     现在，每当视觉对象查询“Sales”表的“Sales Amount”列总和时，根据“Order Date”或“Sales Territory”表的任一列分组，Power BI 都将改用聚合*   *。
 
-### <a name="test-the-aggregation"></a>测试聚合
+### 测试聚合
 
 在此任务中，你将测试聚合并确定 Power BI 是否使用聚合。
 
@@ -403,7 +401,7 @@ Power BI 中的聚合可以提高针对异常大型的 DirectQuery 表的查询�
 
     现在你已通过允许 Power BI 从模型缓存中检索数据提高了特定查询的性能。关键要点是聚合可以提高事实数据表查询的性能，尤其是针对特定度量值和高级别的分组。此外，双重存储模式和聚合协同运作，让 Power BI 能有机会避免使用与源数据之间昂贵的 DirectQuery 连接。
 
-### <a name="finish-up"></a>完成
+### 完成
 
 在此任务中，你将完成操作。
 
