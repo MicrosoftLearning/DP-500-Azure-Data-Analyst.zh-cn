@@ -4,17 +4,17 @@ lab:
   module: 'Model, query, and explore data in Azure Synapse'
 ---
 
-# <a name="explore-a-relational-data-warehouse"></a>探索关系数据仓库
+# 探索关系数据仓库
 
 Azure Synapse Analytics 基于可缩放集功能构建，以支持企业数据仓库；包括数据湖中的基于文件的数据分析以及用于加载数据的大型关系数据仓库和数据传输与转换管道。 在本实验室中，你将了解如何使用 Azure Synapse Analytics 中的专用 SQL 池在关系数据仓库中存储和查询数据。
 
 完成本实验室大约需要 45 分钟。
 
-## <a name="before-you-start"></a>准备工作
+## 准备工作
 
 需要一个你在其中具有管理级权限的 [Azure 订阅](https://azure.microsoft.com/free)。
 
-## <a name="provision-an-azure-synapse-analytics-workspace"></a>预配 Azure Synapse Analytics 工作区
+## 预配 Azure Synapse Analytics 工作区
 
 Azure Synapse Analytics 工作区提供用于管理数据和数据处理运行时的中心点。 可以使用 Azure 门户中的交互式界面预配工作区，也可以使用脚本或模板在其中部署工作区和资源。 在大多数生产方案中，最好使用脚本和模板自动预配，以便可以将资源部署合并到可重复的开发和操作 (DevOps) 过程中。
 
@@ -50,11 +50,11 @@ Azure Synapse Analytics 工作区提供用于管理数据和数据处理运行�
 
 8. 等待脚本完成 - 这通常需要大约 15 分钟，但在某些情况下可能需要更长的时间。 等待时，请查看 Azure Synapse Analytics 文档中的[什么是 Azure Synapse Analytics 中的专用 SQL 池](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)一文。
 
-## <a name="explore-the-data-warehouse-schema"></a>浏览数据仓库架构
+## 浏览数据仓库架构
 
 在此实验室中，数据仓库托管在 Azure Synapse Analytics 的专用 SQL 池中。
 
-### <a name="start-the-dedicated-sql-pool"></a>启动专用 SQL 池
+### 启动专用 SQL 池
 
 1. 脚本完成后，在 Azure 门户中转到创建的 dp500-*xxxxxxx* 资源组，然后选择 Synapse 工作区。
 2. 在 Synapse 工作区“概述”页的“打开 Synapse Studio”卡中，选择“打开”，以在新浏览器标签页中打开 Synapse Studio；如果出现提示，请进行登录  。
@@ -62,7 +62,7 @@ Azure Synapse Analytics 工作区提供用于管理数据和数据处理运行�
 4. 在“管理”页上，确保选择了“SQL 池”选项卡，然后选择 sql*xxxxxxx* 专用 SQL 池，并使用其 &#9655; 图标启动它；确认在出现系统提示时进行恢复   。
 5. 等待 SQL 池恢复。 这可能需要几分钟的时间。 使用“&#8635; 刷新”按钮定期检查其状态。 状态将在准备就绪时显示为“联机”。
 
-### <a name="view-the-tables-in-the-database"></a>查看数据库中的表
+### 查看数据库中的表
 
 1. 在 Synapse Studio 中，选择“数据”页并确保“工作区”选项卡已选定并包含“SQL 数据库”  类别。
 2. 展开“SQL 数据库”、sql*xxxxxxx* 池及其“表”文件夹以查看数据库中的表。
@@ -85,11 +85,11 @@ Azure Synapse Analytics 工作区提供用于管理数据和数据处理运行�
 
     数据仓库中的时间维度通常作为维度表实现，其中包含每个最小时态粒度单位（通常称为维度的粒度）的行，你想要通过该行聚合事实数据表中的度量值。 在这种情况下，可聚合度量值的最低粒度是单个日期，表包含从数据中引用的第一个日期到最后一个日期的每个日期的行。 借助 DimDate 表中的属性，分析师能够使用一组一致的时态属性基于事实数据表中的任何日期键聚合度量值（例如，根据订单日期按月查看订单）。 FactInternetSales 表包含三个与 DimDate 表相关的键：OrderDateKey、DueDateKey 和 ShipDateKey   。
 
-## <a name="query-the-data-warehouse-tables"></a>查询数据仓库表
+## 查询数据仓库表
 
 既然你已经了解了数据仓库架构的一些更重要的方面，现在可以查询表并检索某些数据。
 
-### <a name="query-fact-and-dimension-tables"></a>查询事实数据表和维度表
+### 查询事实数据表和维度表
 
 关系数据仓库中的数值存储在事实表中，其中相关维度表可用于跨多个属性聚合数据。 此设计意味着关系数据仓库中的大多数查询都涉及（使用聚合函数和 GROUP BY 子句）在相关表（使用 JOIN 子句）中对数据进行聚合和分组。
 
@@ -160,7 +160,7 @@ Azure Synapse Analytics 工作区提供用于管理数据和数据处理运行�
 
 8. 发布脚本以进行保存。
 
-### <a name="use-ranking-functions"></a>使用排名函数
+### 使用排名函数
 
 分析大量数据时的另一个常见要求是按分区对数据进行分组，并根据特定指标确定分区中每个实体的排名。
 
@@ -246,7 +246,7 @@ Azure Synapse Analytics 工作区提供用于管理数据和数据处理运行�
 
 > 提示：ROW_NUMBER 和 RANK 是 Transact-SQL 中的可用排名函数的示例。 有关详细信息，请参阅 Transact-SQL 语言文档中的[排名函数](https://docs.microsoft.com/sql/t-sql/functions/ranking-functions-transact-sql)参考。
 
-### <a name="retrieve-an-approximate-count"></a>检索近似计数
+### 检索近似计数
 
 在浏览大量数据时，查询可能需要大量的时间和资源才能运行。 通常，数据分析不需要绝对精确的值 - 近似值的比较可能就已足够。
 
@@ -283,7 +283,7 @@ Azure Synapse Analytics 工作区提供用于管理数据和数据处理运行�
 
 > **提示**：有关更多详细信息，请参阅 [APPROX_COUNT_DISTINCT](https://docs.microsoft.com/sql/t-sql/functions/approx-count-distinct-transact-sql) 函数文档。
 
-## <a name="challenge---analyze-reseller-sales"></a>挑战 - 分析经销商销售
+## 挑战 - 分析经销商销售
 
 1. 为 sql*xxxxxxx* SQL 池创建新的空脚本，并使用“分析经销商销售”名称进行保存 。
 2. 在脚本中创建 SQL 查询，以基于 FactResellerSales 事实数据表及其相关的维度表查找以下信息：
@@ -298,7 +298,7 @@ Azure Synapse Analytics 工作区提供用于管理数据和数据处理运行�
 3. 闲暇时尝试使用查询来探索数据仓库架构中的其余表。
 4. 完成后，在“管理”页上暂停 sql*xxxxxxx* 专用 SQL 池 。
 
-## <a name="delete-azure-resources"></a>删除 Azure 资源
+## 删除 Azure 资源
 
 你已完成对 Azure Synapse Analytics 的探索，现在应删除已创建的资源，以避免产生不必要的 Azure 成本。
 

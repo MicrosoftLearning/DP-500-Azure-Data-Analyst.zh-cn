@@ -4,17 +4,17 @@ lab:
   module: 'Model, query, and explore data in Azure Synapse'
 ---
 
-# <a name="query-files-using-a-serverless-sql-pool"></a>使用无服务器 SQL 池查询文件
+# 使用无服务器 SQL 池查询文件
 
 SQL 可能是世界上处理数据最常用的语言。 大多数数据分析师都擅长使用 SQL 查询来检索、筛选和聚合数据 - 这在关系数据库中最常见。 随着组织越来越多地利用可缩放的文件存储来创建 Data Lake，SQL 通常仍是查询数据的首选选项。 Azure Synapse Analytics 提供了无服务器 SQL 池，使你能够将 SQL 查询引擎与数据存储分离，并针对通用文件格式（如分隔文本和 Parquet）的数据文件运行查询。
 
 完成本实验室大约需要 40 分钟。
 
-## <a name="before-you-start"></a>开始之前
+## 开始之前
 
 需要一个你在其中具有管理级权限的 [Azure 订阅](https://azure.microsoft.com/free)。
 
-## <a name="provision-an-azure-synapse-analytics-workspace"></a>预配 Azure Synapse Analytics 工作区
+## 预配 Azure Synapse Analytics 工作区
 
 需要一个 Azure Synapse Analytics 工作区才能访问 Data Lake Storage。 可以使用内置的无服务器 SQL 池查询 Data Lake 中的文件。
 
@@ -50,11 +50,11 @@ SQL 可能是世界上处理数据最常用的语言。 大多数数据分析师
 
 8. 等待脚本完成 - 此过程通常需要大约 10 分钟；但在某些情况下可能需要更长的时间。 等待时，请查看 Azure Synapse Analytics 文档中的 [Azure Synapse Analytics 中的无服务器 SQL 池](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)一文。
 
-## <a name="query-data-in-files"></a>查询文件中的数据
+## 查询文件中的数据
 
 该脚本预配 Azure Synapse Analytics 工作区和 Azure 存储帐户来托管 Data Lake，然后将一些数据文件上传到 Data Lake。
 
-### <a name="view-files-in-the-data-lake"></a>查看 Data Lake 中的文件
+### 查看 Data Lake 中的文件
 
 1. 脚本完成后，在 Azure 门户中转到创建的 dp500-*xxxxxxx* 资源组，然后选择 Synapse 工作区。
 2. 在 Synapse 工作区“概述”页的“打开 Synapse Studio”卡中，选择“打开”，以在新浏览器标签页中打开 Synapse Studio；如果出现提示，请进行登录  。
@@ -70,7 +70,7 @@ SQL 可能是世界上处理数据最常用的语言。 大多数数据分析师
 12. 在 sales 文件夹中，打开 parquet 文件夹，注意它包含（2019-2021 年）每年的子文件夹，每个子文件夹中名为 orders.snappy.parquet 的每个文件包含该年份的订单数据  。 
 13. 返回到 sales 文件夹，以便可以看到 csv、 json 和 parquet 文件夹   。
 
-### <a name="use-sql-to-query-csv-files"></a>使用 SQL 查询 CSV 文件
+### 使用 SQL 查询 CSV 文件
 
 1. 选择 csv 文件夹，然后在工具栏上的“新建 SQL 脚本”列表中，选中“选择前 100 行”  。
 2. 在“文件类型”列表中，选择“文本格式”，然后应用设置以打开查询文件夹中数据的新 SQL 脚本 。
@@ -132,7 +132,7 @@ SQL 可能是世界上处理数据最常用的语言。 大多数数据分析师
 
 8. 将更改发布到脚本，然后关闭脚本窗格。
 
-### <a name="use-sql-to-query-parquet-files"></a>使用 SQL 查询 parquet 文件
+### 使用 SQL 查询 parquet 文件
 
 虽然 CSV 是一种易于使用的格式，但在大数据处理场景中通常使用已针对压缩、索引和分区进行优化的文件格式。 其中最常见的一种格式是 parquet。
 
@@ -189,7 +189,7 @@ SQL 可能是世界上处理数据最常用的语言。 大多数数据分析师
 
 7. 将脚本命名为“Sales Parquet 查询”，然后发布。 然后关闭脚本窗格。
 
-### <a name="use-sql-to-query-json-files"></a>使用 SQL 查询 JSON 文件
+### 使用 SQL 查询 JSON 文件
 
 JSON 是另一种常用的数据格式，因此有助于实现够查询无服务器 SQL 池中的 .json 文件。
 
@@ -249,11 +249,11 @@ JSON 是另一种常用的数据格式，因此有助于实现够查询无服务
 
 7. 将脚本命名为“Sales JSON 查询”，然后发布。 然后关闭脚本窗格。
 
-## <a name="access-external-data-in-a-database"></a>访问数据库中的外部数据
+## 访问数据库中的外部数据
 
 到目前为止，已在 SELECT 查询中使用 OPENROWSET 函数从 Data Lake 中的文件检索数据。 查询已在无服务器 SQL 池的 master 数据库上下文中运行。 此方法适用于初始探索数据，但如果计划创建更复杂的查询，则使用 Synapse SQL 的 PolyBase 功能在数据库中创建引用外部数据位置的对象可能更有效。
 
-### <a name="create-an-external-data-source"></a>创建外部数据源
+### 创建外部数据源
 
 通过在数据库中定义外部数据源，可以使用它引用存储文件的 Data Lake 位置。
 
@@ -306,7 +306,7 @@ JSON 是另一种常用的数据格式，因此有助于实现够查询无服务
     WHERE orders.filepath(1) = '2019'
     ```
 
-### <a name="create-an-external-table"></a>创建外部表
+### 创建外部表
 
 虽然使用外部数据源可以更轻松地访问 Data Lake 中的文件，但使用 SQL 的大多数数据分析师需要处理数据库中的表。 幸运的是，还可以定义外部文件格式和外部表，在数据集表中封装文件的行集。
 
@@ -348,7 +348,7 @@ JSON 是另一种常用的数据格式，因此有助于实现够查询无服务
 3. 在 dbo.orders 表的“...”菜单中，选择“新建 SQL 脚本” > “选择前 100 行”   。
 4. 运行已生成的 SELECT 脚本，并验证它是否从表中检索前 100 行数据，从而引用 Data Lake 中的文件。
 
-## <a name="visualize-query-results"></a>可视化查询结果
+## 可视化查询结果
 
 现在，你已了解了使用 SQL 查询来查询 Data Lake 中文件的各种方法，还可以分析这些查询的结果，以便深入了解数据。 通常，通过在图表中可视化查询结果更容易发现见解；在 Synapse Studio 查询编辑器中使用集成图表功能可以轻松进行可视化。
 
@@ -374,7 +374,7 @@ JSON 是另一种常用的数据格式，因此有助于实现够查询无服务
 
 7. 在查询编辑器中试验图表功能。 它提供了一些可以在以交互方式浏览数据时使用的基本图表功能，并且你可以将图表另存为图像以包含在报表中。 但是，功能与 Microsoft Power BI 等企业数据可视化工具相比是有限的。
 
-## <a name="delete-azure-resources"></a>删除 Azure 资源
+## 删除 Azure 资源
 
 你已完成对 Azure Synapse Analytics 的探索，现在应删除已创建的资源，以避免产生不必要的 Azure 成本。
 
