@@ -187,7 +187,7 @@ SQL 可能是世界上处理数据最常用的语言。 大多数数据分析师
 
 8. 查看结果，注意它们仅包括 2019 年和 2020 年的销售计数。 实现此过滤的方式是添加 BULK 路径中的分区文件夹值的通配符 (year=) 和基于 OPENROWSET 返回的结果的 filepath 属性的 WHERE 子句（在本例中具有别名 [result]） *\**  。
 
-7. 将脚本命名为“Sales Parquet 查询”，然后发布。 然后关闭脚本窗格。
+9. 将脚本命名为“Sales Parquet 查询”，然后发布。 然后关闭脚本窗格。
 
 ### 使用 SQL 查询 JSON 文件
 
@@ -348,6 +348,8 @@ JSON 是另一种常用的数据格式，因此有助于实现够查询无服务
 3. 在 dbo.orders 表的“...”菜单中，选择“新建 SQL 脚本” > “选择前 100 行”   。
 4. 运行已生成的 SELECT 脚本，并验证它是否从表中检索前 100 行数据，从而引用 Data Lake 中的文件。
 
+    >注意：应始终选择最适合你的特定需求和使用场景的方法。 有关更多详细信息，可查看[如何在 Azure Synapse Analytics 中通过无服务器 SQL 池使用 OPENROWSET](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-openrowset) 和[在 Azure Synapse Analytics 中使用无服务器 SQL 池访问外部存储](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-storage-files-overview?tabs=impersonation)文章。
+
 ## 可视化查询结果
 
 现在，你已了解了使用 SQL 查询来查询 Data Lake 中文件的各种方法，还可以分析这些查询的结果，以便深入了解数据。 通常，通过在图表中可视化查询结果更容易发现见解；在 Synapse Studio 查询编辑器中使用集成图表功能可以轻松进行可视化。
@@ -363,6 +365,7 @@ JSON 是另一种常用的数据格式，因此有助于实现够查询无服务
     GROUP BY YEAR(OrderDate)
     ORDER BY OrderYear;
     ```
+
 4. 在“结果”窗格中，选择“图表”并查看为你创建的图表；该图表应为折线图 。
 5. 将“类别列”更改为 OrderYear，以便折线图显示 2019 年到 2021 年三年内的收入趋势 ：
 
