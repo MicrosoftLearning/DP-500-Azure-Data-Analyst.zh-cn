@@ -484,7 +484,7 @@ lab:
     ![](../images/dp500-enforce-model-security-image68.png)
 
 
-2. 在“以角色身份查看”窗口中，勾选“其他用户”，然后在相应的框中输入：michael9@adventure-works.com  
+2. 在“以角色身份查看”窗口中，勾选“其他用户”，然后在相应的框中输入：michael9@adventure-works.com
 
     ![](../images/dp500-enforce-model-security-image69.png)
 

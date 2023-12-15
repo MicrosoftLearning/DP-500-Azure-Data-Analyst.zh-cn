@@ -201,7 +201,7 @@ lab:
 
 1. 输入“Synapse 连接”设置。
 
-     - 输入 Azure 门户中的服务器名称 
+     - 输入 Azure 门户中的服务器名称
      
      ![](../images/synapse-sql-pool-connection-string.png)
      
@@ -367,7 +367,7 @@ lab:
 
 1. 在“保存数据流”窗口的“名称”框中，输入“公司日期”  。
 
-1. 在“说明”框中，输入：在所有 Adventure Works 数据集中使用的一致日期定义 
+1. 在“说明”框中，输入：在所有 Adventure Works 数据集中使用的一致日期定义
 
 1. 提示：可从 D:\DP500\Allfiles\05\Assets\Snippets.txt 复制和粘贴此说明。
 

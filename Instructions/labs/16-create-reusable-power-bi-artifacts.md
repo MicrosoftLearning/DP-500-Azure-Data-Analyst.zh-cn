@@ -126,7 +126,7 @@ lab:
 
 在此任务中，你将发布数据模型。
 
-1. 若要发布报表，请在“主页”功能区选项卡上选择“发布”。  
+1. 若要发布报表，请在“主页”功能区选项卡上选择“发布”。 
 
     当系统提示选择是否保存更改时，请选择“保存”**。
 
@@ -274,7 +274,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image36.png)
 
-3. 在 URL 框中输入以下文件路径：D:\DP500\Allfiles\16\Assets\us-resident-population-estimates-2020.html 
+3. 在 URL 框中输入以下文件路径：D:\DP500\Allfiles\16\Assets\us-resident-population-estimates-2020.html
 
     为了达到此实验室的目的，Power BI Desktop 将从文件系统访问网页。
 
@@ -406,7 +406,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image57.png)
 
-2. 若要发布解决方案，请在“主页”功能区选项卡上选择“发布”。 
+2. 若要发布解决方案，请在“主页”功能区选项卡上选择“发布”。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image58.png)
 

@@ -309,11 +309,11 @@ lab:
 
 22. 为以下列重命名：
 
-- 将 EnglishMonthName 重命名为 Month 
+- 将 EnglishMonthName 重命名为 Month
 
-- 将 FiscalQuarter 重命名为 Quarter 
+- 将 FiscalQuarter 重命名为 Quarter
 
-- 将 FiscalYear 重命名为 Year 
+- 将 FiscalYear 重命名为 Year
 
 23. 若要验证查询设计，请在状态栏（位于窗口底部）中，验证查询是否包含五列。
 
@@ -399,9 +399,9 @@ lab:
 
 44. 为以下列重命名：
 
-- 将 EnglishProductName 重命名为 Product 
+- 将 EnglishProductName 重命名为 Product
 
-- 将 Product Details.EnglishProductCategoryName 重命名为 Subcategory 
+- 将 Product Details.EnglishProductCategoryName 重命名为 Subcategory
 
 - 将 Product Details. 重命名为 Category
 
@@ -445,9 +445,9 @@ lab:
 
 53. 为以下列重命名：
 
-- 将 BusinessType 重命名为 Business Type（用空格分开） 
+- 将 BusinessType 重命名为 Business Type（用空格分开）
 
-- 将 ResellerName 重命名为 Reseller 
+- 将 ResellerName 重命名为 Reseller
 
 54. 验证查询是否包含三列。
 
@@ -471,11 +471,11 @@ lab:
 
 58. 为以下列重命名：
 
-- 将 SalesTerritoryRegion 重命名为 Region 
+- 将 SalesTerritoryRegion 重命名为 Region
 
-- 将 SalesTerritoryCountry 重命名为 Country 
+- 将 SalesTerritoryCountry 重命名为 Country
 
-- 将 SalesTerritoryGroup 重命名为 Group 
+- 将 SalesTerritoryGroup 重命名为 Group
 
 59. 验证查询是否包含四列。
 
@@ -505,9 +505,9 @@ lab:
 
 63. 为以下列重命名：
 
-- 将 OrderQuantity 重命名为 Quantity 
+- 将 OrderQuantity 重命名为 Quantity
 
-- 将 UnitPrice 重命名为 Price 
+- 将 UnitPrice 重命名为 Price
 
 64. 若要添加计算列，请在“添加列”功能区选项卡上的“常规”组中，选择“自定义列”  。
 
