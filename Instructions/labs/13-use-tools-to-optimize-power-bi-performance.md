@@ -303,7 +303,7 @@ lab:
     ```https://daxstudio.org/downloads/```
     
 1. 选择“DAX Studio v.2.x.x (安装程序)”- 这将启动文件安装。
-                    注意：随着时间的推移，DAX Studio 的版本会略有变化。请下载最新版本。
+    注意：随着时间的推移，DAX Studio 的版本会略有变化。请下载最新版本。
 
 1. 完成后，选择“打开文件”以运行安装程序。
 

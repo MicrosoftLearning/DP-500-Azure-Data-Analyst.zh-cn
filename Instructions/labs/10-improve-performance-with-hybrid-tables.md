@@ -176,7 +176,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image4.png)
 
-3. 在“说明”框下方，展开“高级”部分。 
+3. 在“说明”框下方，展开“高级”部分。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image5.png)
 
@@ -204,15 +204,15 @@ lab:
 
 3. 若要打开预先开发的 Power BI Desktop 文件，请双击“ Sales 分析 - 使用混合表.pbix 文件提高性能。
 
-4. 若要编辑数据库数据源，请在“主页”功能区选项卡上的“查询”组中，选择“转换数据”下拉列表，然后选择“数据源设置”。   
+4. 若要编辑数据库数据源，请在“主页”功能区选项卡上的“查询”组中，选择“转换数据”下拉列表，然后选择“数据源设置”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image14.png)
 
-5. 在“数据源设置”窗口中，选择“更改源”。 
+5. 在“数据源设置”窗口中，选择“更改源”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image15.png)
 
-6. 在“SQL Server 数据库”窗口中的“服务器”框中，将文本替换为实验室 Azure SQL 数据库服务器。  这位于 SQL Azure 门户 SQL 数据库中。
+6. 在“SQL Server 数据库”窗口中的“服务器”框中，将文本替换为实验室 Azure SQL 数据库服务器。 这位于 SQL Azure 门户 SQL 数据库中。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image15a.png)
 
@@ -224,7 +224,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image17.png)
 
-9. 若要编辑数据库凭据，在“编辑权限”窗口中选择“编辑”。 
+9. 若要编辑数据库凭据，在“编辑权限”窗口中选择“编辑”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image18.png)
 
@@ -239,7 +239,7 @@ lab:
 11.  选择“确定”。
     ![](../images/dp500-improve-performance-with-hybrid-tables-image19.png)
 
-12. 在“数据源设置”窗口中，选择“关闭”。 
+12. 在“数据源设置”窗口中，选择“关闭”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image20.png)
 
@@ -311,19 +311,19 @@ lab:
 
     若要设置增量刷新，必须创建参数，Power BI 将用该参数筛选此列以创建表分区。
 
-4. 若要创建参数，请在“主页”功能区选项卡上，选择“管理参数”图标。 
+4. 若要创建参数，请在“主页”功能区选项卡上，选择“管理参数”图标。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image28.png)
 
-5. 在“管理参数”窗口中，选择“新建” 
+5. 在“管理参数”窗口中，选择“新建”
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image29.png)
 
 6. 在“名称”框中，将文本替换为 RangeStart 。
 
-7. 在“类型”下拉列表中选择“日期/时间”。 
+7. 在“类型”下拉列表中选择“日期/时间”。
 
-8. 在“当前值”框中输入 6/1/2022（2022 年 6 月 1 日 - VM 使用美国日期格式）。  
+8. 在“当前值”框中输入 6/1/2022（2022 年 6 月 1 日 - VM 使用美国日期格式）。 
 
     请注意，对于非 MM-DD-YYYY 格式位置，日期应输入为 1/6/2022
 
@@ -349,17 +349,17 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image32.png)
 
-###  筛选查询
+### 筛选查询
 
 在此任务中，你将向 Sales 查询添加筛选器。
 
-1. 在“查询”窗格中，选择 Sales 查询。 
+1. 在“查询”窗格中，选择 Sales 查询。
 
-2. 在 OrderDate 列的标题中，选择向下箭头，然后选择“日期/时间筛选器” > “两者之间”。  
+2. 在 OrderDate 列的标题中，选择向下箭头，然后选择“日期/时间筛选器” > “两者之间”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image33.png)
 
-3. 在“筛选器行”窗口中，选择第一个日历图标下拉列表，然后选择参数。 
+3. 在“筛选器行”窗口中，选择第一个日历图标下拉列表，然后选择参数。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image34.png)
 
@@ -379,7 +379,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image37.png)
 
-8. 在“主页”功能区选项卡的“关闭”组内，单击“关闭并应用”图标。  
+8. 在“主页”功能区选项卡的“关闭”组内，单击“关闭并应用”图标。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image38.png)
 
@@ -435,7 +435,7 @@ lab:
 
 在此任务中，你将发布数据集。
 
-1. 若要发布报表，请在“主页”功能区选项卡上，选择“发布”。 
+1. 若要发布报表，请在“主页”功能区选项卡上，选择“发布”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image48.png)
 
@@ -507,7 +507,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image59.png)
 
-14. 在“设置”窗格中，选择“高级”选项卡。 
+14. 在“设置”窗格中，选择“高级”选项卡。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image60.png)
 
@@ -529,15 +529,15 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image63.png)
 
-2. 在“连接到服务器”窗口的“服务器类型”下拉列表中，选择“分析服务”。  
+2. 在“连接到服务器”窗口的“服务器类型”下拉列表中，选择“分析服务”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image64.png)
 
     可以使用 SSMS 通过 XMLA 读/写终结点连接到工作区。该终结点仅适用于高级工作区。
 
-3. 在“服务器名称”框中，将文本粘贴到工作区连接中（按 Ctrl+V 键）以进行替换。 
+3. 在“服务器名称”框中，将文本粘贴到工作区连接中（按 Ctrl+V 键）以进行替换。
 
-4. 在“身份验证”下拉列表中，选择“Azure Active Directory - 密码”。 
+4. 在“身份验证”下拉列表中，选择“Azure Active Directory - 密码”。
 
 5. 输入你的实验室凭据。
 
@@ -545,11 +545,11 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image65.png)
 
-7. 在对象资源管理器（位于左侧）中，依次展开 Databases 文件夹、Sales Analysis... 数据库（数据集）和 Tables 文件夹。  
+7. 在对象资源管理器（位于左侧）中，依次展开 Databases 文件夹、Sales Analysis... 数据库（数据集）和 Tables 文件夹。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image66.png)
 
-8. 右键单击 Sales 表，然后选择“分区”。 
+8. 右键单击 Sales 表，然后选择“分区”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image67.png)
 
@@ -593,7 +593,7 @@ lab:
 
 3. 在“打开文件”窗口中，转到 D:\DP500\Allfiles\10\Assets 文件夹 。
 
-4. 选择 1-InsertOrder.sql 文件，然后选择“打开”。 
+4. 选择 1-InsertOrder.sql 文件，然后选择“打开”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image70.png)
 
