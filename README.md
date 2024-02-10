@@ -1,3 +1,5 @@
+**本课程将于 **2024 年 4 月 30 日**停用。课程停用后，将移除所有 GitHub 存储库。谢谢。**
+
 # DP-500：使用 Microsoft Azure 设计和实现企业级分析解决方案
 
 - 你是 MCT 吗？ - 查看 [MCT GitHub 用户指南](https://microsoftlearning.github.io/MCT-User-Guide/)
