@@ -1,4 +1,4 @@
-**本课程将于 **2024 年 4 月 30 日**停用。课程停用后，将移除所有 GitHub 存储库。谢谢。**
+**本课程将于 **2024 年 4 月 30 日**停用。我们将不再监视此存储库中的问题和拉取请求。课程停用后，将移除所有 GitHub 存储库。可以在 [Microsoft Fabric 存储库](https://github.com/MicrosoftLearning/mslearn-fabric) 中找到相关内容。**
 
 # DP-500：使用 Microsoft Azure 设计和实现企业级分析解决方案
 

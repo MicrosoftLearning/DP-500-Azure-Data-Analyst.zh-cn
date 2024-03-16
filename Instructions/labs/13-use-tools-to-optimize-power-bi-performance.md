@@ -235,7 +235,7 @@ lab:
     提示：所有公式都可从 D:\DP500\Allfiles\13\Assets\Snippets.txt 复制和粘贴**。
 
     ```
-    DIVIDE ( [Profit], SUM ( 'Sales'[Sales Amount] ) )C#
+    DIVIDE ( [Profit], SUM ( 'Sales'[Sales Amount] ) )
     ```
 
 7. 若要保存模型更改，请在工具栏上选择“保存对连接的数据库的更改”命令（或按 Ctrl+S） 。
