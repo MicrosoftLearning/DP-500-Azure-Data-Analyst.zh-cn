@@ -603,19 +603,23 @@ lab:
 
 7. 输入用户名 sqladmin 和密码。
 
-8. 选择“连接”。
+8. 选择“连接” 。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image71.png)
 
-9. 查看脚本。
+9. 使用 SQL Server Management Studio 工具栏中的下拉菜单将数据库上下文从 `master` 更改为 `AdventureWorksDW2022-DP500`
+
+    ![](../images/dp500-improve-performance-with-hybrid-tables-image72a.png)
+   
+10. 查看脚本。
 
     此脚本把今天作为订单日期，将单个订单插入 FactInternetSales 表中。**
 
-10. 若要运行脚本，请在工具栏上选择“执行”（或按 F5） 。
+11. 若要运行脚本，请在工具栏上选择“执行”（或按 F5） 。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image72.png)
 
-11. 若要关闭文件，请在“文件”菜单上选择“关闭” 。
+12. 若要关闭文件，请在“文件”菜单上选择“关闭” 。
 
 ### 刷新报表
 

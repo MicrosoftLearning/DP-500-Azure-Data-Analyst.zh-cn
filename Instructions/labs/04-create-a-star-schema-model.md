@@ -28,7 +28,7 @@ lab:
 
    > 注意：如果已使用 git 克隆将数据加载到 Azure Synapse Analytics 中，则可以跳过此任务并继续“设置 Power BI” 。
 
-1. 使用 VM 右侧“资源”选项卡上的登录信息登录到 [Azure 门户](https://portal.azure.com)。
+1. 使用组织凭据（或提供给你的凭据）登录到 [Azure 门户](https://portal.azure.com)。
 2. 使用页面顶部搜索栏右侧的 [\>_] 按钮在 Azure 门户中创建新的 Cloud Shell，在出现提示时选择“PowerShell”环境并创建存储。 Cloud Shell 在 Azure 门户底部的窗格中提供命令行界面，如下所示：
 
     ![具有 Cloud Shell 窗格的 Azure 门户](../images/cloud-shell.png)
@@ -85,7 +85,7 @@ lab:
 
 2. 通过选择右上角的“X”来关闭入门窗口。
 
-3. 如果尚未登录，请在 Power BI Desktop 右上角选择“登录”。 使用实验室凭据完成登录过程。
+3. 如果尚未登录，请在 Power BI Desktop 右上角选择“登录”。 使用组织凭据（或提供给你的实验室凭据）完成登录过程。
 
 4. 你将重定向到 Microsoft Edge 中的 Power BI 注册页面。 选择“继续”以完成注册。
 
@@ -401,9 +401,9 @@ lab:
 
 - 将 EnglishProductName 重命名为 Product
 
-- 将 Product Details.EnglishProductCategoryName 重命名为 Subcategory
+- **产品 Details.EnglishProductCategoryName** 作为**类别**
 
-- 将 Product Details. 重命名为 Category
+- **产品 Details.ChineseProductSubCategoryName** 作为**子类别**
 
 45. 删除所有列，以下列除外：
 
