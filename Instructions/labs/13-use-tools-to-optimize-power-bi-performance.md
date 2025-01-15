@@ -49,9 +49,9 @@ lab:
 *BPA 是一款免费的第三方工具，可提醒你潜在的建模错误或可作出哪些更改来改进模型设计和性能。它包括关于命名、用户体验和常用优化的建议，你可以应用这些建议来提高性能。有关详细信息，请参阅[提高模型性能的最佳做法规则](https://powerbi.microsoft.com/blog/best-practice-rules-to-improve-your-models-performance/)。*
 
 
-### 下载并安装表格编辑器 2
+### 下载并安装 Tabular Editor 2
 
-下载并安装表格编辑器 2 才能创建计算组。
+下载并安装 Tabular Editor 2 才能创建计算组。
 
 重要提示：如果已在 VM 环境中安装了表格编辑器 2，请继续执行下一个任务。
 
