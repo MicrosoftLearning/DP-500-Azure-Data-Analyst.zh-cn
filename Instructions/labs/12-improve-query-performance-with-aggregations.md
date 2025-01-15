@@ -307,7 +307,7 @@ Power BI 中的聚合可以提高针对异常大型的 DirectQuery 表的查询�
 
 3. 对于“Sales Amount”列，请设置以下属性：
 
-    - 摘要：Sum
+    - 摘要：求和
 
     - 详细信息表：Sales
 
@@ -383,7 +383,7 @@ Power BI 中的聚合可以提高针对异常大型的 DirectQuery 表的查询�
 
     ![](../images/dp500-improve-query-performance-with-aggregations-image50.png)
 
-11. 在“组”切片器中任选一个组（空白组除外）。
+11. 在“Group”切片器中任选一个组（空白组除外）。
 
     ![](../images/dp500-improve-query-performance-with-aggregations-image51.png)
 
