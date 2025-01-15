@@ -167,7 +167,7 @@ lab:
 
     ![](../images/dp500-create-a-composite-model-image16.png)
 
-1. 若要应用查询，请在“主页”功能区选项卡上的“关闭”组内，选择“关闭”&amp;“应用”图标  。
+1. 若要应用查询，请在“主页”功能区选项卡上的“关闭”组内，选择“关闭与应用”图标。
 
     ![](../images/dp500-create-a-composite-model-image17.png)
 
