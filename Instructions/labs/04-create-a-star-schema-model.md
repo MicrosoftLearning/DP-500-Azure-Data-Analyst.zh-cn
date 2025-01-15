@@ -201,7 +201,7 @@ lab:
 
 在此任务中，你将创建五个 Power Query 查询，每个查询将作为表加载到模型。
 
-1. 在 Power BI Desktop 的“SQL Server数据库”窗口中，在左侧选择“Microsoft 帐户” 。
+1. 在 Power BI Desktop 的“SQL Server 数据库”窗口中，在左侧选择“Microsoft 帐户” 。
 
  ![](../images/dp500-create-a-star-schema-model-image10.png)
 
