@@ -97,7 +97,7 @@ lab:
 
     此报表页有一个标题和两个视觉对象。利用切片器视觉对象可按一个会计年度筛选，而柱形图视觉对象显示季度销售额。你将通过向柱形图视觉对象添加销售目标来改进此设计。
 
-1. 在“会计年度”切片器中，选择“FY2021” 。
+1. 在“Fiscal Year”切片器中，选择“FY2021” 。
 
     ![](../images/dp500-create-a-composite-model-image6.png)
 
@@ -163,7 +163,7 @@ lab:
 
     ![](../images/dp500-create-a-composite-model-image15.png)
 
-1. 若要修改第三列的数据类型，在 Target Amount 列标题中，选择数据类型图标 (123)，然后选择“固定十进制数” 。
+1. 若要修改第三列的数据类型，在 Target Amount 列标题中，选择数据类型图标 (123)，然后选择“定点小数” 。
 
     ![](../images/dp500-create-a-composite-model-image16.png)
 
@@ -217,7 +217,7 @@ lab:
 
     由于两列都包含重复值，Power BI Desktop 会自动将基数设置为多对多。但默认的交叉筛选器方向不正确。
 
-1. 在“交叉筛选器方向”下拉列表中，选择“单向(Order Date 筛选 Targets)” 。
+1. 在“交叉筛选器方向”下拉列表中，选择“单一(Order Date 筛选 Targets)” 。
 
     ![](../images/dp500-create-a-composite-model-image24.png)
 
