@@ -44,32 +44,32 @@ lab:
 
 ## 使用最佳做法分析器
 
-在本练习中，你将安装表格编辑器 2 并加载最佳做法分析器 (BPA) 规则。 你将查看 BPA 规则，然后解决在数据模型中发现的具体问题。
+在本练习中，你将安装Tabular Editor 2 并加载最佳做法分析器 (BPA) 规则。 你将查看 BPA 规则，然后解决在数据模型中发现的具体问题。
 
 *BPA 是一款免费的第三方工具，可提醒你潜在的建模错误或可作出哪些更改来改进模型设计和性能。它包括关于命名、用户体验和常用优化的建议，你可以应用这些建议来提高性能。有关详细信息，请参阅[提高模型性能的最佳做法规则](https://powerbi.microsoft.com/blog/best-practice-rules-to-improve-your-models-performance/)。*
 
 
-### 下载并安装表格编辑器 2
+### 下载并安装Tabular Editor 2
 
-下载并安装表格编辑器 2 才能创建计算组。
+下载并安装Tabular Editor 2 才能创建计算组。
 
-重要提示：如果已在 VM 环境中安装了表格编辑器 2，请继续执行下一个任务。
+重要提示：如果已在 VM 环境中安装了Tabular Editor 2，请继续执行下一个任务。
 
-表格编辑器是一个替代工具，可用于创作 Analysis Services 和 Power BI 的表格模型。表格编辑器 2 是一个开源代码项目，可以在不访问模型中的任何数据的情况下编辑 BIM 文件。
+Tabular Editor是一个替代工具，可用于创作 Analysis Services 和 Power BI 的表格模型。Tabular Editor 2 是一个开源代码项目，可以在不访问模型中的任何数据的情况下编辑 BIM 文件。
 
 1.  确保关闭 Power BI Desktop。
 
-1.  在 Microsoft Edge 中，导航到表格编辑器发布页。
+1.  在 Microsoft Edge 中，导航到Tabular Editor发布页。
 
     ```https://github.com/TabularEditor/TabularEditor/releases```
     
-1. 向下滚动到“资产”部分，然后选择 TabularEditor.Installer.msi 文件 。 该操作将启动文件安装。
+1. 向下滚动到“Assets”部分，然后选择 TabularEditor.Installer.msi 文件 。 该操作将启动文件安装。
 
 1. 完成后，选择“打开文件”以运行安装程序。
 
     ![图形用户界面，应用程序 自动生成的描述](../images/calculationgroups-downloadTE.png)
 
-1.  在“表格编辑器安装程序”窗口中，选择“下一步”。
+1.  在“Tabular Editor安装程序”窗口中，选择“下一步”。
 
     ![图形用户界面，应用程序 自动生成的描述](../images/image2.png)
 
@@ -85,7 +85,7 @@ lab:
 
 1. 安装完成后，选择“关闭”。
 
-    表格编辑器现已安装，并注册为 Power BI Desktop 外部工具。
+    Tabular Editor现已安装，并注册为 Power BI Desktop 外部工具。
 
 ### 设置 Power BI Desktop
 
@@ -105,11 +105,11 @@ lab:
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image8.png)
 
-7. 请注意，可以从此功能区选项卡启动表格编辑器。
+7. 请注意，可以从此功能区选项卡启动Tabular Editor。
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image9.png)
 
-    在本练习的后面部分，你将通过表格编辑器来使用 BPA。
+    在本练习的后面部分，你将通过Tabular Editor来使用 BPA。
 
 ### 查看数据模型
 
@@ -123,7 +123,7 @@ lab:
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image11.png)
 
-    该模型包含八个维度表和一个事实数据表。Sales 事实数据表存储销售订单详细信息。这是一种典型的星型架构设计，其中包括表示产品维度的雪花维度表（“类别”>“子类别” > “产品”）** 。
+    *该模型包含八个维度表和一个事实数据表。Sales 事实数据表存储销售订单详细信息。这是一种典型的星型架构设计，其中包括表示产品维度的雪花维度表（Category > Subcategory > Product）*。
 
     在本练习中，你将使用 BPA 检测模型问题并修复它们。
 
@@ -131,23 +131,23 @@ lab:
 
 在此任务中，你将加载 BPA 规则。
 
-在表格编辑器安装过程中不会添加 BPA 规则。必须下载并安装它们。
+在Tabular Editor安装过程中不会添加 BPA 规则。必须下载并安装它们。
 
-1. 在“外部工具”功能区上，选择“表格编辑器”。
+1. 在“外部工具”功能区上，选择“Tabular Editor”。
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image12.png)
 
-    表格编辑器在新窗口中打开，并实时连接到 Power BI Desktop 中托管的数据模型。保存在表格编辑器中对模型所做的更改之前，这些更改不会传播到 Power BI Desktop。
+    Tabular Editor在新窗口中打开，并实时连接到 Power BI Desktop 中托管的数据模型。保存在Tabular Editor中对模型所做的更改之前，这些更改不会传播到 Power BI Desktop。
 
 2. 若要加载 BPA 规则，请选择“C# 脚本”选项卡。
 
-    注意：在旧版表格编辑器中，可能将其称为“高级脚本编写”选项卡。
+    注意：在旧版Tabular Editor中，可能将其称为“高级脚本编写”选项卡。
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image13.png)
 
 3. 粘贴到以下脚本中。
 
-    提示：此脚本可从 D:\DP500\Allfiles\13\Assets\Snippets.txt 复制和粘贴**。
+    *提示：此脚本可从 D:\DP500\Allfiles\13\Assets\Snippets.txt 复制和粘贴*。
 
     ```
     System.Net.WebClient w = new System.Net.WebClient(); 
@@ -162,11 +162,11 @@ lab:
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image14.png)
 
-    若要使用 BPA 规则，必须关闭并重新打开表格编辑器。
+    若要使用 BPA 规则，必须关闭并重新打开Tabular Editor。
 
-5. 关闭表格编辑器。
+5. 关闭Tabular Editor。
 
-6. 若要重新打开表格编辑器，在 Power BI Desktop 的“外部工具”功能区上选择“表格编辑器” 。
+6. 若要重新打开Tabular Editor，在 Power BI Desktop 的“外部工具”功能区上选择“Tabular Editor” 。
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image15.png)
 
@@ -174,7 +174,7 @@ lab:
 
 在此任务中，你将查看在上一个任务中加载的 BPA 规则。
 
-1. 在表格编辑器的菜单中，选择“工具” > “管理 BPA 规则” 。
+1. 在Tabular Editor的菜单中，选择“工具” > “管理 BPA 规则” 。
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image16.png)
 
@@ -186,7 +186,7 @@ lab:
 
     提示：可以拖动右下角以放大窗口。
 
-    在几秒钟内，表格编辑器可以根据每个规则扫描整个模型，并提供关于所有满足每个规则中的条件的模型对象的报告。
+    在几秒钟内，Tabular Editor可以根据每个规则扫描整个模型，并提供关于所有满足每个规则中的条件的模型对象的报告。
 
 4. 请注意，BPA 将规则分组为不同的类别。
 
@@ -228,7 +228,7 @@ lab:
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image22.png)
 
-    此命令切换到表格编辑器，并重点关注对象。这样可以轻松修复问题。
+    此命令切换到Tabular Editor，并重点关注对象。这样可以轻松修复问题。
 
 6. 在表达式编辑器中，修改 DAX 公式以使用更高效（和安全的）[DIVIDE](https://docs.microsoft.com/dax/divide-function-dax) 函数，如下所示。
 
@@ -260,9 +260,9 @@ lab:
 
 12. 当系统通知 BPA 已将修复脚本复制到剪贴板时，选择“确定”。
 
-13. 切换到表格编辑器，然后选择“C# 脚本”选项卡。
+13. 切换到Tabular Editor，然后选择“C# 脚本”选项卡。
 
-    注意：在旧版表格编辑器中，可能将其称为“高级脚本编写”选项卡。
+    注意：在旧版Tabular Editor中，可能将其称为“高级脚本编写”选项卡。
     
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image13.png)
 
@@ -278,13 +278,13 @@ lab:
 
 16. 保存模型更改。
 
-17. 若要关闭表格编辑器，请在菜单中选择“文件” > “退出” 。
+17. 若要关闭Tabular Editor，请在菜单中选择“文件” > “退出” 。
 
 18. 保存 Power BI Desktop 文件。
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image29.png)
 
-    还必须保存 Power BI Desktop 文件，以确保保存表格编辑器更改。
+    还必须保存 Power BI Desktop 文件，以确保保存Tabular Editor更改。
 
 ## 使用 DAX Studio
 
