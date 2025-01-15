@@ -113,7 +113,7 @@ lab:
 
 11. 导航回 Power BI Desktop。 如果在屏幕右上角看到“登录”，请使用实验室环境的“资源”选项卡上提供的凭据再次登录。 如果已登录，请继续下一步。
 
-12. 转到 Power BI Desktop，依次选择“文件”、“选项和设置”、“选项”、“安全”，然后在“身份验证浏览器”下选中“使用我的默认 Web 浏览器”，然后选择“确定”     。 关闭 Power BI Desktop。 请勿保存文件。
+12. 转到 Power BI Desktop，依次选择“文件”、“选项和设置”、“选项”、“安全性”，然后在“身份验证浏览器”下选中“使用我的默认 Web 浏览器”，然后选择“确定”     。 关闭 Power BI Desktop。 请勿保存文件。
 
     在下一个练习中，你将再次打开 Power BI Desktop。
 
@@ -155,7 +155,7 @@ lab:
 
 ![](../images/dp500-create-a-star-schema-model-image3h.png)
 
-1. 导航到“管理”并选择“全部发布”以确保发布更改 。
+1. 导航到“Manage”并选择“全部发布”以确保发布更改 。
 
 ## 开发数据模型
 
@@ -165,11 +165,11 @@ lab:
 
 在此任务中，你将从 Synapse Studio 中下载 Power BI 数据源文件。
 
-1. 在 Synapse Studio 的左侧，选择“开发”中心 。
+1. 在 Synapse Studio 的左侧，选择“Develop”中心 。
 
  ![](../images/dp500-create-a-star-schema-model-image4.png)
 
-2. 在“开发”窗格中，展开 Power BI，然后展开工作区，然后选择“Power BI 数据集”  。 如果不存在，请单击“全部发布”以发布工作区并刷新浏览器。
+2. 在“Develop”窗格中，展开 Power BI，然后展开工作区，然后选择“Power BI 数据集”  。 如果不存在，请单击“全部发布”以发布工作区并刷新浏览器。
 
  ![](../images/dp500-create-a-star-schema-model-image5.png)
 
@@ -323,25 +323,25 @@ lab:
 
  现在，Date 查询设计就完成了**。
 
-24. 在“已应用步骤”窗格中，右键单击最后一步，然后选择“查看原生查询” 。
+24. 在“应用的步骤”窗格中，右键单击最后一步，然后选择“查看本机查询” 。
 
  ![](../images/dp500-create-a-star-schema-model-image27.png)
 
-25. 在“原生查询”窗口中，查看反映查询设计的 SELECT 语句。
+25. 在“本机查询”窗口中，查看反映查询设计的 SELECT 语句。
 
  这个概念很重要。原生查询是 Power BI 用于查询数据源的内容。为确保最佳性能，数据库开发人员应通过创建适当的索引等方式来确保此查询得到优化。
 
-26. 若要关闭“原生查询”窗口，请选择“确定” 。
+26. 若要关闭“本机查询”窗口，请选择“确定” 。
 
  ![](../images/dp500-create-a-star-schema-model-image28.png)
 
 27. 选择 DimProductCategory 表。
 
-28. 将查询重命名为“产品详细信息”。
+28. 将查询重命名为“Product Details”。
 
 29. 在功能区“主页”选项卡上的“合并”组中，选择“合并查询”。
 
- 注意：我们正在合并查询以获取产品详细信息、类别和子类别。这将在“产品”维度中使用。
+ 注意：我们正在合并查询以获取产品详细信息、类别和子类别。这将在“Product”维度中使用。
 
 30. 选择 DimProductSubcategory 表，然后选择每个表中的 ProductCategoryKey 列 。 选择“确定”。
 
@@ -379,13 +379,13 @@ lab:
 
 37. 在功能区“主页”选项卡上的“合并”组中，选择“合并查询”。
 
-38. 选择“产品详细信息”表，然后在“产品”表和“产品详细信息”表中选择 ProductSubcategoryKey 列 。
+38. 选择“Product Details”表，然后在“Product”表和“Product Details”表中选择 ProductSubcategoryKey 列 。
 
     ![](../images/dp500-create-a-star-schema-model-image30a.png)
 
 39. 选择“确定”。
 
-40. 展开“产品详细信息”列，然后选择 EnglishProductSubcategoryName 和 EnglishProductCategoryName 列 。
+40. 展开“Product Details”列，然后选择 EnglishProductSubcategoryName 和 EnglishProductCategoryName 列 。
 
     ![](../images/dp500-create-a-star-schema-model-image30b.png)
 
@@ -417,13 +417,13 @@ lab:
 
 - 类别
 
-46. 在“已应用步骤”窗格中，右键单击最后一步，然后选择“查看原生查询” 。
+46. 在“应用的步骤”窗格中，右键单击最后一步，然后选择“查看本机查询” 。
 
  ![](../images/dp500-create-a-star-schema-model-image33.png)
 
-47. 在“原生查询”窗口中，查看反映查询设计的 SELECT 语句。
+47. 在“本机查询”窗口中，查看反映查询设计的 SELECT 语句。
 
-48. 若要关闭“原生查询”窗口，请选择“确定” 。
+48. 若要关闭“本机查询”窗口，请选择“确定” 。
 
 49. 验证查询是否包含五列。
 
@@ -525,17 +525,17 @@ lab:
 
 67. 选择“确定”。
 
-68. 若要修改列数据类型，请在“收入”列标题中选择 ABC123，然后选择“十进制数”  。
+68. 若要修改列数据类型，请在“Revenue”列标题中选择 ABC123，然后选择“小数”  。
 
  ![](../images/dp500-create-a-star-schema-model-image40.png)
 
-69. 查看原生查询，注意 Revenue 列计算逻辑。
+69. 查看本机查询，注意 Revenue 列计算逻辑。
 
 70. 验证查询是否包含七列。
 
  现在，Sales 查询设计就完成了**。
 
-71. 右键单击“产品详细信息”表，然后取消选择“启用加载” 。 这样会禁止将“产品详细信息”表加载到数据模型，并且不会显示在报表中。
+71. 右键单击“Product Details”表，然后取消选择“启用加载” 。 这样会禁止将“Product Details”表加载到数据模型，并且不会显示在报表中。
 
  ![](../images/dp500-create-a-star-schema-model-image40a.png)
 
