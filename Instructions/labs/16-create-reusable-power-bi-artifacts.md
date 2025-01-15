@@ -148,7 +148,7 @@ lab:
 
 ### 创建实时连接
 
-在此任务中，你将创建一个新报表，该报表使用与“销售分析 - 创建可重用的 Power BI 项目”数据集（在上一练习中发布的数据集）的实时连接。
+在此任务中，你将创建一个新报表，该报表使用与“Sales Analysis - Create reusable Power BI artifacts”数据集（在上一练习中发布的数据集）的实时连接。
 
 1. 若要打开 Power BI Desktop，请在任务栏上选择“Power BI Desktop”快捷方式。
 
@@ -257,7 +257,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image33.png)
 
-10. 若要按销售额降序对各州进行排序，请选择“Sum of Sales Amount”标题。
+10. 若要按Sales Amount降序对各州进行排序，请选择“Sum of Sales Amount”标题。
 
 
     *此报表布局现在提供有关美国州销售额的基本详细信息。但额外的要求是显示人均销售额，并按该度量值的降序对各州进行排序。*
@@ -344,7 +344,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image49.png)
 
-20. 在“创建关系”窗口的“交叉筛选方向”下拉列表中，选择“双向”。
+20. 在“创建关系”窗口的“交叉筛选方向”下拉列表中，选择“两个”。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image50.png)
 
@@ -435,7 +435,7 @@ lab:
     ![](../images/dp500-create-reusable-power-bi-artifacts-image62.png)
 
 
-3. 将光标悬停在“US Sales Analysis”数据集上，出现省略号时，选择省略号，然后选择“世系视图” 。
+3. 将光标悬停在“US Sales Analysis”数据集上，出现省略号时，选择省略号，然后选择“查看世系” 。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image63.png)
 
