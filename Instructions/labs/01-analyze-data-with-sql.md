@@ -59,7 +59,7 @@ SQL 可能是世界上处理数据最常用的语言。 大多数数据分析师
 1. 脚本完成后，在 Azure 门户中转到创建的 dp500-*xxxxxxx* 资源组，然后选择 Synapse 工作区。
 2. 在 Synapse 工作区“概述”页的“打开 Synapse Studio”卡中，选择“打开”，以在新浏览器标签页中打开 Synapse Studio；如果出现提示，请进行登录  。
 3. 在 Synapse Studio 左侧，使用 &rsaquo;&rsaquo; 图标展开菜单，这将显示 Synapse Studio 中用于管理资源和执行数据分析任务的不同页面。
-4. 在“数据”页上，查看“已链接”选项卡并验证工作区是否包含 Azure Data Lake Storage Gen2 存储帐户的链接，该帐户的名称应类似于 synapsexxxxxxx* (Primary - datalake xxxxxxx*) ** 。
+4. 在“Data”页上，查看“Linked”选项卡并验证工作区是否包含 Azure Data Lake Storage Gen2 存储帐户的链接，该帐户的名称应类似于 synapsexxxxxxx* (Primary - datalake xxxxxxx*) ** 。
 5. 展开存储帐户，验证它是否包含名为 files 的文件系统容器。
 6. 选择“files”容器，并注意它包含名为 sales 的文件夹 。 此文件夹包含要查询的数据文件。
 7. 打开 sales 文件夹及其包含的 csv 文件夹，注意此文件夹中包含具有三年销售数据的 .csv 文件 。
@@ -257,7 +257,7 @@ JSON 是另一种常用的数据格式，因此有助于实现够查询无服务
 
 通过在数据库中定义外部数据源，可以使用它引用存储文件的 Data Lake 位置。
 
-1. 在 Synapse Studio 的“开发”页上的“+”菜单中，选择“SQL 脚本”  。
+1. 在 Synapse Studio 的“Develop”页上的“+”菜单中，选择“SQL 脚本”  。
 2. 在新脚本窗格中，添加以下代码（将 datalakexxxxxxx 替换为 Data Lake Storage 帐户的名称）以创建新数据库并向其添加外部数据源。
 
     ```sql
@@ -276,8 +276,8 @@ JSON 是另一种常用的数据格式，因此有助于实现够查询无服务
 
 3. 修改脚本属性以将其名称更改为“创建销售数据库”，然后发布。
 4. 确保脚本已连接到内置 SQL 池和 master 数据库，然后运行 。
-5. 切换回“数据”页，并使用 Synapse Studio 右上角的“&#8635;”按钮刷新页面 。 然后，在“数据”窗格中查看“工作区”选项卡，此时会显示“SQL 数据库”列表  。 展开此列表以验证是否已创建 Sales 数据库。
-6. 展开 Sales 数据库、其 External Resources 文件夹以及其下的 External data sources 文件夹，以查看所创建的 sales_data 外部数据源   。
+5. 切换回“Data”页，并使用 Synapse Studio 右上角的“&#8635;”按钮刷新页面 。 然后，在“数据”窗格中查看“Workspace”选项卡，此时会显示“SQL 数据库”列表  。 展开此列表以验证是否已创建 Sales 数据库。
+6. 展开 Sales 数据库、其 外部資源 文件夹以及其下的 外部数据源 文件夹，以查看所创建的 sales_data 外部数据源   。
 7. 在 Sales 数据库的“...”菜单中，选择“新建 SQL 脚本” > “空脚本”   。 然后在新的脚本窗格中，输入并运行以下查询：
 
     ```sql
@@ -344,7 +344,7 @@ JSON 是另一种常用的数据格式，因此有助于实现够查询无服务
     GO
     ```
 
-2. 刷新并展开“数据”窗格中的 External tables 文件夹，并确认已在 Sales 数据库中创建了名为 dbo.orders 的表   。
+2. 刷新并展开“Data”窗格中的 外部表 文件夹，并确认已在 Sales 数据库中创建了名为 dbo.orders 的表   。
 3. 在 dbo.orders 表的“...”菜单中，选择“新建 SQL 脚本” > “选择前 100 行”   。
 4. 运行已生成的 SELECT 脚本，并验证它是否从表中检索前 100 行数据，从而引用 Data Lake 中的文件。
 
@@ -354,7 +354,7 @@ JSON 是另一种常用的数据格式，因此有助于实现够查询无服务
 
 现在，你已了解了使用 SQL 查询来查询 Data Lake 中文件的各种方法，还可以分析这些查询的结果，以便深入了解数据。 通常，通过在图表中可视化查询结果更容易发现见解；在 Synapse Studio 查询编辑器中使用集成图表功能可以轻松进行可视化。
 
-1. 在“开发”页上，新建一个空的 SQL 查询。
+1. 在“Develop”页上，新建一个空的 SQL 查询。
 2. 确保脚本已连接到内置 SQL 池和 Sales 数据库 。
 3. 输入并运行下面的 SQL 代码：
 
