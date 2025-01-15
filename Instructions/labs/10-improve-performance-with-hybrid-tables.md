@@ -355,7 +355,7 @@ lab:
 
 1. 在“查询”窗格中，选择 Sales 查询。
 
-2. 在 OrderDate 列的标题中，选择向下箭头，然后选择“日期/时间筛选器” > “两者之间”。
+2. 在 OrderDate 列的标题中，选择向下箭头，然后选择“日期/时间筛选器” > “介于”。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image33.png)
 
@@ -537,7 +537,7 @@ lab:
 
 3. 在“服务器名称”框中，将文本粘贴到工作区连接中（按 Ctrl+V 键）以进行替换。
 
-4. 在“身份验证”下拉列表中，选择“Azure Active Directory - 密码”。
+4. 在“身份验证”下拉列表中，选择“Azure Active Directory - Password”。
 
 5. 输入你的实验室凭据。
 
