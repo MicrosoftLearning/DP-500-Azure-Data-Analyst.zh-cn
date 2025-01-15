@@ -59,8 +59,8 @@ Apache Spark 是用于分布式数据处理的开放源代码引擎，广泛用�
 1. 脚本完成后，在 Azure 门户中转到创建的 dp500-*xxxxxxx* 资源组，然后选择 Synapse 工作区。
 2. 在 Synapse 工作区“概述”页的“打开 Synapse Studio”卡中，选择“打开”，以在新浏览器标签页中打开 Synapse Studio；如果出现提示，请进行登录  。
 3. 在 Synapse Studio 左侧，使用 &rsaquo;&rsaquo; 图标展开菜单，这将显示 Synapse Studio 中用于管理资源和执行数据分析任务的不同页面。
-4. 在“管理”页上，选择“Apache Spark 池”选项卡，请注意工作区中已预配名称类似于 spark*xxxxxxx* 的 Spark 池  。 稍后，你将使用此 Spark 池从工作区的 Data Lake Storage 的文件中加载和分析数据。
-5. 在“数据”页上，查看“已链接”选项卡并验证工作区是否包含 Azure Data Lake Storage Gen2 存储帐户的链接，该帐户的名称应类似于 synapsexxxxxxx* (Primary - datalake xxxxxxx*) ** 。
+4. 在“Manage”页上，选择“Apache Spark Pools”选项卡，请注意工作区中已预配名称类似于 spark*xxxxxxx* 的 Spark 池  。 稍后，你将使用此 Spark 池从工作区的 Data Lake Storage 的文件中加载和分析数据。
+5. 在“Data”页上，查看“Linked”选项卡并验证工作区是否包含 Azure Data Lake Storage Gen2 存储帐户的链接，该帐户的名称应类似于 synapsexxxxxxx* (Primary - datalake xxxxxxx*) ** 。
 6. 展开存储帐户，验证它是否包含名为 files 的文件系统容器。
 7. 选择“files”容器，并注意它包含名为 sales 和 synapse 的文件夹  。 synapse 文件夹由 Azure Synapse 使用，而 sales 文件夹包含要查询的数据文件 。
 8. 打开 sales 文件夹及其包含的 orders 文件夹，并观察 orders 文件夹中包含具有三年销售数据的 .csv 文件  。
@@ -69,7 +69,7 @@ Apache Spark 是用于分布式数据处理的开放源代码引擎，广泛用�
 ### 使用 Spark 浏览数据
 
 1. 选择 orders 文件夹中的任意文件，然后在工具栏上的“新建笔记本”列表中选择“加载到 DataFrame”  。 数据帧是 Spark 中表示表格数据集的结构。
-2. 在打开的新“笔记本 1”选项卡中的“附加到”列表中，选择 Spark 池 (*sparkxxxxxxx***) 。 然后使用“&#9655; 全部运行”运行笔记本中的所有单元格（目前只有一个！）。
+2. 在打开的新“Notebook 1”选项卡中的“附加到”列表中，选择 Spark 池 (*sparkxxxxxxx***) 。 然后使用“&#9655; 全部运行”运行笔记本中的所有单元格（目前只有一个！）。
 
     由于这是你第一次在此会话中运行 Spark 代码，因此必须启动 Spark 池。 这意味着会话中的第一次运行可能需要几分钟时间。 后续运行速度会更快。
 
@@ -169,7 +169,7 @@ Spark 中的 dataframe 对象类似于 Python 中的 Pandas 数据帧，它包�
     display(productSales)
     ```
 
-2. 运行添加的代码单元格，并注意结果显示按产品分组的订单数量之和。 groupBy 方法按“项”对行进行分组，随后将 sum 聚合函数应用于所有剩余的数值列（在本例中为“数量”）
+2. 运行添加的代码单元格，并注意结果显示按产品分组的订单数量之和。 groupBy 方法按“Item”对行进行分组，随后将 sum 聚合函数应用于所有剩余的数值列（在本例中为“Quantity”）
 
 3. 在笔记本中再次新增一个代码单元格，并在其中输入以下代码：
 
