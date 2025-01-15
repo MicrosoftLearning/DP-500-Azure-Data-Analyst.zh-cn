@@ -115,7 +115,7 @@ lab:
 
     ![](../images/dp500-improve-query-performance-with-dual-storage-mode-image8.png)
 
-3. 在“性能分析器”窗格（位于“可视化效果”窗格左侧）中，选择“开始录制”  。
+3. 在“性能分析器”窗格（位于“可视化效果”窗格左侧）中，选择“开始记录”  。
 
     ![](../images/dp500-improve-query-performance-with-dual-storage-mode-image9.png)
 
