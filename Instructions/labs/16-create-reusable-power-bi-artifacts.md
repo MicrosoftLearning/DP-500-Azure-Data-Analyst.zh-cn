@@ -208,7 +208,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image25.png)
 
-    *注意：如果未看到更改此模型的选项，则需要启用预览功能：适用于 PBI 数据集和 AS 的 DirectQuery*
+    *注意：如果未看到“更改此模型”选项，则需要启用预览功能：适用于 PBI 数据集和 AS 的 DirectQuery*
     - 请导航至“文件” > “选项和设置” > “选项”，然后在“预览功能”部分，选中“适用于 Power BI 数据集和 Analysis Services 的 DirectQuery”复选框来启用此预览功能  。 可能需要重新启动 Power BI Desktop 以使更改生效。 
 
 2. 出现提示时，请阅读对话框窗口消息，然后选择“添加本地模型”。
@@ -253,7 +253,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image32.png)
 
-9. 在“数据”窗格中展开 Sales 表，然后将“Sales Amount”字段添加到表视觉对象中  。
+9. 在“数据”窗格中展开 Sales 表，然后将“Sales Amount”字段添加到表视觉对象中 。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image33.png)
 
@@ -294,7 +294,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image39.png)
 
-7. 在左侧选择“任务 2”。
+7. 在左侧选择“表 2”。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image40.png)
 
