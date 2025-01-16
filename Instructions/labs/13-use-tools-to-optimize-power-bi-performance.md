@@ -49,9 +49,9 @@ lab:
 *BPA 是一款免费的第三方工具，可提醒你潜在的建模错误或可作出哪些更改来改进模型设计和性能。它包括关于命名、用户体验和常用优化的建议，你可以应用这些建议来提高性能。有关详细信息，请参阅[提高模型性能的最佳做法规则](https://powerbi.microsoft.com/blog/best-practice-rules-to-improve-your-models-performance/)。*
 
 
-### 下载并安装 Tabular Editor 2
+### 下载并安装表格编辑器 2
 
-下载并安装 Tabular Editor 2 才能创建计算组。
+下载并安装表格编辑器 2 才能创建计算组。
 
 重要提示：如果已在 VM 环境中安装了表格编辑器 2，请继续执行下一个任务。
 
@@ -63,7 +63,7 @@ lab:
 
     ```https://github.com/TabularEditor/TabularEditor/releases```
     
-1. 向下滚动到“Assets”部分，然后选择 TabularEditor.Installer.msi 文件 。 该操作将启动文件安装。
+1. 向下滚动到“资产”部分，然后选择 TabularEditor.Installer.msi 文件 。 该操作将启动文件安装。
 
 1. 完成后，选择“打开文件”以运行安装程序。
 
@@ -123,7 +123,7 @@ lab:
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image11.png)
 
-    *该模型包含八个维度表和一个事实数据表。Sales 事实数据表存储销售订单详细信息。这是一种典型的星型架构设计，其中包括表示产品维度的雪花维度表（Category > Subcategory > Product）*。
+    该模型包含八个维度表和一个事实数据表。Sales 事实数据表存储销售订单详细信息。这是一种典型的星型架构设计，其中包括表示产品维度的雪花维度表（“类别”>“子类别” > “产品”）** 。
 
     在本练习中，你将使用 BPA 检测模型问题并修复它们。
 
@@ -133,7 +133,7 @@ lab:
 
 在表格编辑器安装过程中不会添加 BPA 规则。必须下载并安装它们。
 
-1. 在“外部工具”功能区上，选择“Tabular Editor”。
+1. 在“外部工具”功能区上，选择“表格编辑器”。
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image12.png)
 
@@ -147,7 +147,7 @@ lab:
 
 3. 粘贴到以下脚本中。
 
-    *提示：此脚本可从 D:\DP500\Allfiles\13\Assets\Snippets.txt 复制和粘贴*。
+    提示：此脚本可从 D:\DP500\Allfiles\13\Assets\Snippets.txt 复制和粘贴**。
 
     ```
     System.Net.WebClient w = new System.Net.WebClient(); 
@@ -166,7 +166,7 @@ lab:
 
 5. 关闭表格编辑器。
 
-6. 若要重新打开表格编辑器，在 Power BI Desktop 的“外部工具”功能区上选择“Tabular Editor” 。
+6. 若要重新打开表格编辑器，在 Power BI Desktop 的“外部工具”功能区上选择“表格编辑器” 。
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image15.png)
 

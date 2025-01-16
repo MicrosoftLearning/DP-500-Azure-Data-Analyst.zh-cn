@@ -264,7 +264,7 @@ lab:
     ![](../images/dp500-create-a-dataflow-image22.png)
 
   
-1. 在“查询设置”窗格的“已应用步骤”列表中，请注意添加了一个用于删除其他列的步骤 。
+1. 在“查询设置”窗格的“应用步骤”列表中，请注意添加了一个用于删除其他列的步骤 。
 
     ![](../images/dp500-create-a-dataflow-image23.png)
 
@@ -365,7 +365,7 @@ lab:
 
     ![](../images/dp500-create-a-dataflow-image29.png)
 
-1. 在“保存数据流”窗口的“名称”框中，输入“Corporate Date”  。
+1. 在“保存数据流”窗口的“名称”框中，输入“公司日期”  。
 
 1. 在“说明”框中，输入：在所有 Adventure Works 数据集中使用的一致日期定义
 
@@ -381,13 +381,13 @@ lab:
 
     此操作将打开工作区的登陆页面。
 
-1. 要刷新数据流，请将光标悬停在“Corporate Date”数据流上，然后选择“立即刷新”图标 。
+1. 要刷新数据流，请将光标悬停在“公司日期”数据流上，然后选择“立即刷新”图标 。
 
     ![](../images/dp500-create-a-dataflow-image32.png)
 
   
 
-1. 要转到数据流设置，请将光标悬停在“Corporate Date”数据流上，选择省略号，然后选择“设置” 。
+1. 要转到数据流设置，请将光标悬停在“公司日期”数据流上，选择省略号，然后选择“设置” 。
 
     ![](../images/dp500-create-a-dataflow-image33.png)
 
@@ -450,7 +450,7 @@ lab:
 
     ![](../images/dp500-create-a-dataflow-image41.png)
 
-1. 在“导航器”窗口的左侧窗格中，展开工作区文件夹，然后展开“Corporate Date”数据流文件夹 。
+1. 在“导航器”窗口的左侧窗格中，展开工作区文件夹，然后展开“公司日期”数据流文件夹 。
 
     ![](../images/dp500-create-a-dataflow-image42.png)
 
