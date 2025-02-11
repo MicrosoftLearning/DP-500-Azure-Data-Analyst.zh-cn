@@ -1,3 +1,11 @@
+#README
+
+We've turned off the ability to report issues directly on this repo and do not monitor PRs.
+
+Provide feedback here: https://aka.ms/provide-feedback
+
+Or, if you are a trainer with a microsoft.com email address, please create a ticket in AzDO.
+
 ## **本课程将于 **2024 年 4 月 30 日**停用。我们将不再监视此存储库中的问题和拉取请求。课程停用后，将移除所有 GitHub 存储库。可以在 [Microsoft Fabric 存储库](https://github.com/MicrosoftLearning/mslearn-fabric)和 [DP-203 Azure 数据工程师存储库](https://github.com/MicrosoftLearning/dp-203-azure-data-engineer)中找到相关内容。**
 
 # DP-500：使用 Microsoft Azure 设计和实现企业级分析解决方案
